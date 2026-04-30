@@ -5,7 +5,11 @@
   width: 100%;
   z-index: 100;
   padding: 1.5rem 0;
-  transition: background-color 0.3s ease, border-bottom 0.3s ease, backdrop-filter 0.3s ease, top 0.3s ease;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease, backdrop-filter 0.3s ease, top 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
 }
 
 .navbar.scrolled {
@@ -83,5 +87,50 @@
 @media (min-width: 768px) {
   .navLinks {
     display: flex;
+  }
+  .navbar.hidden {
+    transform: translateY(0); /* Nie chowaj navbara na desktopach */
+  }
+}
+
+.mobileContactBubble {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobileContactBubble {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    gap: 10px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+  }
+  
+  .mobileContactBubble.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  .bubbleBtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--purple-dark);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 15px var(--purple-glow);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .bubbleBtn:active {
+    transform: scale(0.95);
   }
 }
