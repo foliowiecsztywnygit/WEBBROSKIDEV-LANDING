@@ -6,7 +6,6 @@ import styles from './Navbar.module.css';
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,19 +13,17 @@ const Navbar = () => {
       
       setScrolled(currentScrollY > 20);
       
-      // Hide navbar when scrolling down, show when scrolling up
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      // Hide navbar when scrolled down at all, only show at the very top
+      if (currentScrollY > 100) {
         setIsHidden(true);
       } else {
         setIsHidden(false);
       }
-      
-      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   return (
     <>

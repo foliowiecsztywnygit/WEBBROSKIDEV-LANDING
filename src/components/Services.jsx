@@ -9,13 +9,13 @@ const services = [
     title: 'Strony Wizytówki',
     description: 'Proste, ale wyraziste wizytówki online. <strong>Pokaż się</strong> z najlepszej strony i buduj wiarygodność.',
     number: '01.',
-    categories: ['Landing Page', 'Portfolio', 'Wizytówka firmy', 'Personal Branding']
+    categories: ['Landing Page', 'Portfolio', 'Strona z kursami']
   },
   {
     title: 'Strony Firmowe',
     description: 'Wszelkiego rodzaju wizytówki dla biznesu. Pokaż się z najlepszej strony i <strong>buduj trwałe zaufanie</strong> klientów.',
     number: '02.',
-    categories: ['Platformy B2B', 'Serwisy korporacyjne', 'Katalogi produktów', 'Blogi firmowe']
+    categories: ['Serwisy korporacyjne', 'Katalogi produktów', 'Blogi firmowe', 'Wizytówka firmy']
   },
   {
     title: 'Strony dla Pensjonatów',
@@ -80,7 +80,7 @@ const Services = () => {
     <section id="uslugi" className={`section ${styles.services}`} ref={revealRef}>
       <div className={styles.headerWrapper}>
         <div className={`${styles.header} reveal fade-in`}>
-          <SectionSubtitle>Nasze Usługi</SectionSubtitle>
+          <SectionSubtitle>Moje usługi</SectionSubtitle>
           <h2 className={`heading-lg ${styles.title}`}>Co mogę dla Ciebie zrobić?</h2>
           <p className="text-lg">Specjalizacje dopasowane do <strong>Twoich potrzeb</strong>.</p>
         </div>
