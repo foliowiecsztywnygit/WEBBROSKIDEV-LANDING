@@ -25,7 +25,7 @@ const Privacy = () => {
 
             <section className={styles.section}>
               <h2>2. Administrator Danych Osobowych</h2>
-              <p>Administratorem Twoich danych osobowych jest Krzysztof Żebrowski, prowadzący działalność gospodarczą pod nazwą WEBBROSKIDEV. Możesz skontaktować się z Administratorem:</p>
+              <p>Administratorem Twoich danych osobowych jest Krzysztof Żebrowski, działający pod marką WEBBROSKIDEV jako osoba fizyczna nieprowadząca działalności gospodarczej. Możesz skontaktować się z Administratorem:</p>
               <ul>
                 <li>Za pośrednictwem poczty elektronicznej: <strong>kontakt@webbroskidev.pl</strong></li>
                 <li>Telefonicznie: <strong>+48 600 176 361</strong></li>
@@ -83,7 +83,13 @@ const Privacy = () => {
 
             <section className={styles.section}>
               <h2>7. Odbiorcy Danych (Przekazywanie danych)</h2>
-              <p>Twoje dane mogą być przekazywane podmiotom przetwarzającym je na zlecenie Administratora (tzw. procesorom), m.in. dostawcom usług hostingowych, usług księgowych, systemom do email marketingu czy analityki (np. Vercel, Google). Podmioty te przetwarzają dane wyłącznie na podstawie umowy powierzenia.</p>
+              <p>Twoje dane mogą być przekazywane podmiotom przetwarzającym je na zlecenie Administratora (tzw. procesorom), m.in.:</p>
+              <ul>
+                <li>dostawcom usług hostingowych (np. Vercel),</li>
+                <li>platformie <strong>UseMe.com</strong> (Useme Sp. z o.o.) - w celu zawierania umów o dzieło z przeniesieniem praw autorskich i wystawiania faktur VAT Klientom, co wiąże się z realizacją płatności i wymogami prawa podatkowego.</li>
+                <li>dostawcom systemów do analityki (np. Google).</li>
+              </ul>
+              <p>Podmioty te przetwarzają dane wyłącznie na podstawie umowy powierzenia lub zaakceptowanych przez Użytkownika regulaminów platform pośredniczących.</p>
             </section>
 
             <section className={styles.section}>

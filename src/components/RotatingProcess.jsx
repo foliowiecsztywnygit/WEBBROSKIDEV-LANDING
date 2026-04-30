@@ -129,8 +129,7 @@ const RotatingProcess = () => {
             {/* Nowy horyzontalny pasek ładowania dla mobile */}
             <div className={styles.mobileProgressBar}>
               <div className={styles.track}>
-                {/* Używamy rawProgress aby pasek wypełniał się idealnie w czasie rzeczywistym i podążał 1:1 za palcem */}
-                <div className={styles.fill} style={{ width: `${rawProgress * 100}%` }} />
+                <div className={styles.fill} style={{ width: `${Math.max(rawProgress, progress) * 100}%` }} />
                 {steps.map((step, index) => {
                   const position = (index / (steps.length - 1)) * 100;
                   const isActive = index <= activeIndex;

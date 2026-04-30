@@ -19,9 +19,10 @@ const Terms = () => {
           <div className={styles.content}>
             <section className={styles.section}>
               <h2>§ 1. Postanowienia ogólne</h2>
-              <p>1. Niniejszy Regulamin określa ogólne warunki, zasady oraz sposób świadczenia usług drogą elektroniczną oraz stacjonarnie przez Krzysztofa Żebrowskiego, prowadzącego działalność gospodarczą pod marką WEBBROSKIDEV (zwanego dalej "Usługodawcą").</p>
-              <p>2. Z Usługodawcą można kontaktować się poprzez adres e-mail: <strong>kontakt@webbroskidev.pl</strong> lub pod numerem telefonu: <strong>+48 600 176 361</strong>.</p>
-              <p>3. Regulamin jest nieprzerwanie i nieodpłatnie udostępniony przez Usługodawcę na stronie internetowej w sposób umożliwiający jego pozyskanie, odtwarzanie i utrwalanie.</p>
+              <p>1. Niniejszy Regulamin określa ogólne warunki, zasady oraz sposób świadczenia usług drogą elektroniczną oraz stacjonarnie przez Krzysztofa Żebrowskiego, działającego pod marką WEBBROSKIDEV (zwanego dalej "Usługodawcą").</p>
+              <p>2. Usługodawca działa jako osoba fizyczna, nieprowadząca zarejestrowanej działalności gospodarczej. Rozliczenia z Klientami (wystawianie faktur VAT, podpisywanie umów o dzieło z przeniesieniem praw autorskich) realizowane są za pośrednictwem zewnętrznej platformy dla freelancerów – <strong>UseMe.com</strong> (Useme Sp. z o.o.).</p>
+              <p>3. Z Usługodawcą można kontaktować się poprzez adres e-mail: <strong>kontakt@webbroskidev.pl</strong> lub pod numerem telefonu: <strong>+48 600 176 361</strong>.</p>
+              <p>4. Regulamin jest nieprzerwanie i nieodpłatnie udostępniony przez Usługodawcę na stronie internetowej w sposób umożliwiający jego pozyskanie, odtwarzanie i utrwalanie.</p>
             </section>
 
             <section className={styles.section}>
@@ -48,9 +49,10 @@ const Terms = () => {
 
             <section className={styles.section}>
               <h2>§ 5. Płatności i rozliczenia</h2>
-              <p>1. Wynagrodzenie z tytułu świadczonych usług płatne jest na podstawie wystawionych faktur na rachunek bankowy Usługodawcy.</p>
-              <p>2. Domyślnie rozliczenie następuje na podstawie systemu zaliczkowego/zadatku przed przystąpieniem do prac oraz rozliczenia końcowego po wdrożeniu projektu, chyba że indywidualna umowa stanowi inaczej.</p>
-              <p>3. W przypadku braku terminowych płatności Usługodawca ma prawo wstrzymać świadczenie usług do momentu uregulowania należności.</p>
+              <p>1. Wynagrodzenie z tytułu świadczonych usług płatne jest na podstawie wystawionych faktur VAT (bądź pro-forma) wygenerowanych za pośrednictwem platformy UseMe.com.</p>
+              <p>2. UseMe Sp. z o.o. pełni rolę pośrednika (tzw. pracodawcy w umowie o dzieło), który na podstawie wykonanej pracy przejmuje obowiązki podatkowe i prawne, a następnie wystawia finalną fakturę VAT Klientowi.</p>
+              <p>3. Domyślnie rozliczenie następuje na podstawie systemu zaliczkowego/zadatku (zabezpieczonego przez UseMe) przed przystąpieniem do prac oraz rozliczenia końcowego po wdrożeniu projektu, chyba że indywidualna umowa stanowi inaczej.</p>
+              <p>4. W przypadku braku terminowych płatności Usługodawca ma prawo wstrzymać świadczenie usług do momentu uregulowania należności.</p>
             </section>
 
             <section className={styles.section}>
