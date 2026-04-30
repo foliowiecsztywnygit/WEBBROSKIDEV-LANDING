@@ -76,6 +76,135 @@
   font-weight: 800;
 }
 
+/* Nowy pasek postępu - domyślnie ukryty */
+.mobileProgressBar {
+  display: none;
+  width: 100%;
+  margin-top: 4rem;
+  padding: 0 1rem;
+}
+
+.track {
+  position: relative;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  margin-bottom: 2rem; /* Dodajemy miejsce na labelki na dole */
+}
+
+.fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--purple-dark);
+  border-radius: 4px;
+  /* transition na transform pozwala na płynniejszy ruch bez szarpania na słabszych telefonach */
+  transition: width 0.1s linear; 
+}
+
+.stop {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+}
+
+.stopDot {
+  width: 20px;
+  height: 20px;
+  background: var(--bg);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  position: relative; /* Potrzebne dla absolutnie pozycjonowanych particles wewnątrz */
+}
+
+.stopActive .stopDot {
+  border-color: var(--purple-dark);
+  background: var(--purple-dark);
+  box-shadow: 0 0 12px var(--purple-glow);
+}
+
+.stopCurrent .stopDot {
+  background: var(--text); /* Obecny aktywny punkt mocniej się wyróżnia (biały w środku) */
+  animation: popEffect 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes popEffect {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1.3); }
+}
+
+/* System cząsteczek przy aktywacji stacji */
+.particles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: particleBurst 0.8s ease-out forwards;
+}
+
+@keyframes particleBurst {
+  0% {
+    box-shadow:
+      0 0 0 0 var(--purple-dark),
+      0 0 0 0 var(--purple-dark),
+      0 0 0 0 var(--purple-dark),
+      0 0 0 0 var(--purple-dark);
+    opacity: 1;
+  }
+  100% {
+    box-shadow:
+      -25px -25px 0 -4px var(--purple-dark),
+      25px -25px 0 -4px var(--purple-dark),
+      -25px 25px 0 -4px var(--purple-dark),
+      25px 25px 0 -4px var(--purple-dark);
+    opacity: 0;
+  }
+}
+
+.stopLabel {
+  position: absolute;
+  top: 30px; /* Zwiększony odstęp od kropki aby uniknąć nakładania na scale(1.3) */
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--gray-dark);
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+
+@media (max-width: 480px) {
+  .stopLabel {
+    font-size: 0.6rem;
+    /* Łamiemy długie napisy na małych ekranach, jeśli to konieczne */
+    white-space: normal;
+    text-align: center;
+    width: 60px;
+  }
+}
+
+.stopActive .stopLabel {
+  color: var(--text);
+  opacity: 0.8;
+}
+
+.stopCurrent .stopLabel {
+  color: var(--purple-dark);
+  opacity: 1;
+}
+
 /* Prawa strona - Koło */
 .rightContent {
   flex: 1;
@@ -87,22 +216,12 @@
 
 .circleWrapper {
   position: absolute;
-  /* Center is offset to the right. 
-     If width=1600, center is at 800px from its left edge.
-     We want the leftmost text (at center - radius) to be visible.
-     Let's say we want text at viewport_width - 300px.
-     Text_X = Left_Edge + 800 - Radius.
-     Left_Edge = viewport_width - Right_Offset - 1600.
-     So viewport_width - Right_Offset - 800 - Radius = viewport_width - 300.
-     Right_Offset = -800 - Radius + 300.
-     If Radius = 600, Right_Offset = -800 - 600 + 300 = -1100px.
-     Let's use right: -1100px and radius: 600px. */
-  right: -1100px; 
+  right: -1000px; 
   top: 50%;
   transform: translateY(-50%);
   width: 1600px;
   height: 1600px;
-  --radius: 600px;
+  --radius: 480px;
 }
 
 .circle {
@@ -143,13 +262,11 @@
   width: max-content;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+  text-align: left;
   opacity: 0.2;
   transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
   color: var(--text);
-  /* Dodajemy right padding, by sam tekst "wcisnął" się jeszcze bardziej do środka promienia z uwagi na anchor point */
-  padding-right: 2rem;
 }
 
 .stationTitle {
@@ -183,18 +300,15 @@
   .leftContent {
     max-width: 100%;
     margin-bottom: 2rem;
-    margin-top: -15vh; /* Podnosimy tekst wyżej */
   }
   
-  .circleWrapper {
-    position: absolute;
-    right: -550px;
-    left: auto;
-    transform: translateY(-50%);
-    top: 75%; /* Przesuwamy koło niżej pod tekst */
-    width: 800px;
-    height: 800px;
-    --radius: 300px;
+  /* Ukrywamy całe koło na ekranach mobilnych / tabletach i pokazujemy pasek */
+  .rightContent {
+    display: none;
+  }
+  
+  .mobileProgressBar {
+    display: block;
   }
 }
 
@@ -209,19 +323,7 @@
     font-size: clamp(1.5rem, 6vw, 2rem);
   }
 
-  .circleWrapper {
-    right: -330px;
-    width: 500px;
-    height: 500px;
-    --radius: 180px;
-    top: 80%; /* Na mobile jeszcze niżej */
-  }
-
-  .stationTitle {
-    font-size: 0.875rem;
-  }
-
-  .stationActive .stationTitle {
-    font-size: 1.125rem;
+  .mobileProgressBar {
+    margin-top: 3rem; /* Troszkę ciaśniej na małych telefonach */
   }
 }

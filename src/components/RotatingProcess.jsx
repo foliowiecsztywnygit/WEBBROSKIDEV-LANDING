@@ -12,10 +12,13 @@ const steps = [
 const RotatingProcess = () => {
   const sectionRef = useRef(null);
   const [progress, setProgress] = useState(0);
+  const [rawProgress, setRawProgress] = useState(0);
 
   // Wygładzanie (Lerp)
   const currentProgressRef = useRef(0);
   const targetProgressRef = useRef(0);
+  const rawCurrentProgressRef = useRef(0);
+  const rawTargetProgressRef = useRef(0);
   const rafRef = useRef(null);
 
   useEffect(() => {
@@ -29,8 +32,11 @@ const RotatingProcess = () => {
 
       let p = scrolled / distance;
       p = Math.max(0, Math.min(1, p));
+      
+      // Zapisujemy surowy, natychmiastowy postęp dla płynnego paska na mobile
+      rawTargetProgressRef.current = p;
 
-      // Funkcja "schodkowa" (snap curve) dla efektu magnetycznego
+      // Funkcja "schodkowa" (snap curve) dla efektu magnetycznego (koło i teksty)
       const segments = steps.length - 1; // 3 segmenty: 0->1, 1->2, 2->3
       let v = p * segments;
       let step = Math.floor(v);
@@ -57,11 +63,15 @@ const RotatingProcess = () => {
     };
 
     const updateLoop = () => {
-      // Lerp
-      currentProgressRef.current += (targetProgressRef.current - currentProgressRef.current) * 0.05;
+      // Szybszy Lerp dla responsywności
+      currentProgressRef.current += (targetProgressRef.current - currentProgressRef.current) * 0.1;
+      rawCurrentProgressRef.current += (rawTargetProgressRef.current - rawCurrentProgressRef.current) * 0.15;
       
       if (Math.abs(currentProgressRef.current - targetProgressRef.current) > 0.0001) {
         setProgress(currentProgressRef.current);
+      }
+      if (Math.abs(rawCurrentProgressRef.current - rawTargetProgressRef.current) > 0.0001) {
+        setRawProgress(rawCurrentProgressRef.current);
       }
       
       rafRef.current = requestAnimationFrame(updateLoop);
@@ -115,6 +125,32 @@ const RotatingProcess = () => {
                 dangerouslySetInnerHTML={{ __html: steps[activeIndex].desc }}
               />
             </div>
+
+            {/* Nowy horyzontalny pasek ładowania dla mobile */}
+            <div className={styles.mobileProgressBar}>
+              <div className={styles.track}>
+                {/* Używamy rawProgress aby pasek wypełniał się idealnie w czasie rzeczywistym i podążał 1:1 za palcem */}
+                <div className={styles.fill} style={{ width: `${rawProgress * 100}%` }} />
+                {steps.map((step, index) => {
+                  const position = (index / (steps.length - 1)) * 100;
+                  const isActive = index <= activeIndex;
+                  const isCurrent = index === activeIndex;
+                  return (
+                    <div 
+                      key={step.id} 
+                      className={`${styles.stop} ${isActive ? styles.stopActive : ''} ${isCurrent ? styles.stopCurrent : ''}`}
+                      style={{ left: `${position}%` }}
+                    >
+                      <div className={styles.stopDot}>
+                        {/* Cząsteczki (particles) odpalane tylko gdy dana stacja staje się current */}
+                        {isCurrent && <div className={styles.particles}></div>}
+                      </div>
+                      <span className={styles.stopLabel}>{step.title}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
 
           <div className={styles.rightContent}>
@@ -149,12 +185,15 @@ const RotatingProcess = () => {
                         position: 'absolute',
                         top: '50%',
                         left: '50%',
-                        transform: `rotate(${angle}deg) translate(var(--radius, 400px)) rotate(180deg)`
+                        width: 0,
+                        height: 0,
+                        transformOrigin: '0 0',
+                        transform: `rotate(${angle}deg) translate(var(--radius, 480px)) rotate(180deg)`
                       }}
                     >
                       <div 
                         className={`${styles.station} ${isActive ? styles.stationActive : ''}`}
-                        style={{ transform: 'translate(-50%, -50%)' }}
+                        style={{ transform: 'translate(0, -50%)' }}
                       >
                         <span className={styles.stationTitle}>{step.title}</span>
                       </div>
