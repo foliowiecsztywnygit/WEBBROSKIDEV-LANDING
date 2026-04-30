@@ -17,17 +17,17 @@ const projects = [
     id: 2,
     title: 'Willa Rysy',
     description: 'Elegancka i profesjonalna strona dla Willi Rysy z góralskimi akcentami.',
-    categories: ['Strona Internetowa', 'Rezerwacje bezpośrednie'],
-    image: null,
-    link: '#'
+    categories: ['Strona Internetowa', 'Branża Hotelarska'],
+    image: '/willarysy.png',
+    link: 'https://willa-rysy.vercel.app'
   },
   { 
     id: 3,
-    title: 'Architekt Oskar Kozaczewski',
-    description: 'Wysokiej klasy wizytówka dla Architekta, Prosty ale zarazem przemawiający układ strony z artystycznym dotknięciem na życzenie klienta.',
-    categories: ['Wizytówka Osobista', 'Architektura'],
-    image: null,
-    link: '#'
+    title: 'Willa 14',
+    description: 'Prosta strona dla Willa 14, nastawiona na minimalny układ i proste CTA. Glassmorphizm i efekt śniegu / lodu na przyciskach i elementach.',
+    categories: ['Willa Górska', 'Wizytówka'],
+    image: '/willa-14.png',
+    link: 'https://willa-14.pl'
   }
 ];
 
