@@ -1,0 +1,216 @@
+.section {
+  background-color: var(--bg);
+  position: relative;
+  /* Scroll distance. 250vh daje dużo miejsca na przejście wszystkich etapów */
+  height: 300vh; 
+}
+
+.stickyWrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Odcina prawą połowę koła wychodzącą za ekran */
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1571px; /* Styl Duda */
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 2;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leftContent {
+  flex: 1;
+  max-width: 500px;
+  z-index: 10;
+}
+
+.mainTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 4rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.activeDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.activeId {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--purple-dark);
+}
+
+.activeTitle {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.activeDesc {
+  font-size: 1.125rem;
+  color: var(--gray-dark);
+  line-height: 1.6;
+}
+
+.activeDesc strong {
+  color: var(--text); /* Wyróżnienie tagów strong jasnym tekstem na ciemnym tle */
+  font-weight: 800;
+}
+
+/* Prawa strona - Koło */
+.rightContent {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Spycha koło do prawej krawędzi ekranu */
+}
+
+.circleWrapper {
+  position: absolute;
+  /* Koło przesunięte do prawej krawędzi, teksty orbitują wewnątrz */
+  right: -1400px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1600px;
+  height: 1600px;
+  /* Mocne przesunięcie napisów do środka koła - zmniejszamy promień orbity tekstu z 600px na 400px (połowa promienia głównego koła) */
+  --radius: 400px;
+}
+
+.circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Zwiększona widoczność obwódki */
+  /* Dodajemy lekkie tło dla efektu "wheel" */
+  background: radial-gradient(circle, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0) 70%);
+  transition: transform 0.1s linear; /* Wygładzanie dodatkowe z lerp w JS */
+}
+
+/* Ozdobne pierścienie wewnątrz koła */
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+/* Ozdobne szprychy wewnątrz koła */
+.spoke {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+/* Stacje na obwodzie */
+.station {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0.2;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  color: var(--text);
+  /* Dodajemy right padding, by sam tekst "wcisnął" się jeszcze bardziej do środka promienia z uwagi na anchor point */
+  padding-right: 2rem;
+}
+
+.stationTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.stationActive {
+  opacity: 1;
+}
+
+.stationActive .stationTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--purple-dark); /* Wyróżnienie aktywnego etapu kolorem wiodącym */
+  text-shadow: 0px 0px 20px var(--purple-glow);
+}
+
+/* Responsywność */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .leftContent {
+    max-width: 100%;
+    margin-bottom: 2rem;
+    margin-top: -15vh; /* Podnosimy tekst wyżej */
+  }
+  
+  .circleWrapper {
+    position: absolute;
+    right: -800px;
+    left: auto;
+    transform: translateY(-50%);
+    top: 75%; /* Przesuwamy koło niżej pod tekst */
+    width: 800px;
+    height: 800px;
+    /* Promień koła to 400px. Umieszczamy teksty znacznie głębiej - na promieniu 200px */
+    --radius: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .circleWrapper {
+    right: -650px;
+    width: 500px;
+    height: 500px;
+    /* Promień koła to 250px. Teksty wędrują do samego środka, na promień 100px */
+    --radius: 100px;
+    top: 80%; /* Na mobile jeszcze niżej */
+  }
+
+  .stationTitle {
+    font-size: 0.875rem;
+  }
+
+  .stationActive .stationTitle {
+    font-size: 1.125rem;
+  }
+}

@@ -1,0 +1,87 @@
+.navbar {
+  position: fixed;
+  top: 36px; /* Offset na wysokość TopBara */
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 1.5rem 0;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease, backdrop-filter 0.3s ease, top 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(10, 10, 10, 0.85); /* Dark mode navbar background */
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--gray-mid);
+  top: 0; /* Navbar dokleja się do samej góry po scrollu */
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.logoImage {
+  height: 96px;
+  width: auto;
+  object-fit: contain;
+  /* usunięto filter: invert(1), bo w dark mode chcemy białe logo natywnie */
+}
+
+.navLinks {
+  display: none;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.navLinks a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+}
+
+.navLinks a:not(.navBtn)::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--accent);
+  transition: var(--transition);
+}
+
+.navLinks a:not(.navBtn):hover::after {
+  width: 100%;
+}
+
+.navBtn {
+  border: 1px solid var(--text);
+  padding: 0.5rem 1.25rem;
+  transition: var(--transition);
+}
+
+.navBtn:hover {
+  background: var(--purple-dark);
+  border-color: var(--purple-dark);
+  color: var(--text);
+  box-shadow: 0 0 20px var(--purple-glow);
+}
+
+@media (min-width: 768px) {
+  .navLinks {
+    display: flex;
+  }
+}

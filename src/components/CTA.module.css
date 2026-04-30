@@ -1,0 +1,117 @@
+.cta {
+  background-color: var(--accent);
+  color: var(--bg);
+  text-align: center;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.title strong {
+  font-weight: 800;
+  display: block;
+}
+
+.description {
+  max-width: 600px;
+  margin-bottom: 4rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.description strong {
+  color: var(--bg);
+  font-weight: 700;
+}
+
+.button {
+  padding: 1.25rem 3rem;
+  font-size: 1.125rem;
+}
+
+.directContact {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contactLabel {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+}
+
+.contactLink {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--bg);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.contactLink::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--bg);
+  transition: width 0.3s ease;
+}
+
+.contactLink:hover::after {
+  width: 100%;
+}
+
+.whatsappLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.whatsappLink svg {
+  transition: transform 0.3s ease;
+}
+
+.whatsappLink:hover svg {
+  transform: scale(1.1) rotate(5deg);
+}
+
+@media (min-width: 768px) {
+  .directContact {
+    flex-direction: row;
+    gap: 4rem;
+    justify-content: center;
+  }
+  
+  .contactItem {
+    align-items: flex-start;
+  }
+  
+  .contactLabel {
+    text-align: left;
+  }
+}
