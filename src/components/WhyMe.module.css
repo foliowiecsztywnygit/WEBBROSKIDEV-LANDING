@@ -28,7 +28,7 @@
 
 .title {
   font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 800;
   line-height: 1.1;
   text-transform: none;
@@ -121,6 +121,16 @@
   min-height: 280px;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   transform-style: preserve-3d;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 2rem;
+    min-height: 200px;
+  }
+  .cardContent p {
+    font-size: 1rem;
+  }
 }
 
 .card:hover {

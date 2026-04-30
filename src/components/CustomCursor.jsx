@@ -1,10 +1,23 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './CustomCursor.module.css';
 
 const CustomCursor = () => {
   const cursorRef = useRef(null);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
+    // Sprawdzamy czy urządzenie obsługuje dotyk (np. telefony, tablety)
+    const mediaQuery = window.matchMedia('(pointer: coarse)');
+    setIsTouchDevice(mediaQuery.matches);
+    
+    const handler = (e) => setIsTouchDevice(e.matches);
+    mediaQuery.addEventListener('change', handler);
+    return () => mediaQuery.removeEventListener('change', handler);
+  }, []);
+
+  useEffect(() => {
+    if (isTouchDevice) return;
+
     let mouseX = -100;
     let mouseY = -100;
     let cursorX = -100;
@@ -52,7 +65,9 @@ const CustomCursor = () => {
       window.removeEventListener('mousemove', onMouseMove);
       cancelAnimationFrame(rafId);
     };
-  }, []);
+  }, [isTouchDevice]);
+
+  if (isTouchDevice) return null;
 
   return <div className={styles.cursorWrapper} ref={cursorRef} />;
 };

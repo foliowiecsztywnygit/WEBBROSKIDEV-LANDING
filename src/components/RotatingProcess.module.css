@@ -9,7 +9,7 @@
   position: sticky;
   top: 0;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,14 +87,22 @@
 
 .circleWrapper {
   position: absolute;
-  /* Koło przesunięte do prawej krawędzi, teksty orbitują wewnątrz */
-  right: -1400px; 
+  /* Center is offset to the right. 
+     If width=1600, center is at 800px from its left edge.
+     We want the leftmost text (at center - radius) to be visible.
+     Let's say we want text at viewport_width - 300px.
+     Text_X = Left_Edge + 800 - Radius.
+     Left_Edge = viewport_width - Right_Offset - 1600.
+     So viewport_width - Right_Offset - 800 - Radius = viewport_width - 300.
+     Right_Offset = -800 - Radius + 300.
+     If Radius = 600, Right_Offset = -800 - 600 + 300 = -1100px.
+     Let's use right: -1100px and radius: 600px. */
+  right: -1100px; 
   top: 50%;
   transform: translateY(-50%);
   width: 1600px;
   height: 1600px;
-  /* Mocne przesunięcie napisów do środka koła - zmniejszamy promień orbity tekstu z 600px na 400px (połowa promienia głównego koła) */
-  --radius: 400px;
+  --radius: 600px;
 }
 
 .circle {
@@ -180,14 +188,13 @@
   
   .circleWrapper {
     position: absolute;
-    right: -800px;
+    right: -550px;
     left: auto;
     transform: translateY(-50%);
     top: 75%; /* Przesuwamy koło niżej pod tekst */
     width: 800px;
     height: 800px;
-    /* Promień koła to 400px. Umieszczamy teksty znacznie głębiej - na promieniu 200px */
-    --radius: 200px;
+    --radius: 300px;
   }
 }
 
@@ -198,11 +205,10 @@
   }
 
   .circleWrapper {
-    right: -650px;
+    right: -330px;
     width: 500px;
     height: 500px;
-    /* Promień koła to 250px. Teksty wędrują do samego środka, na promień 100px */
-    --radius: 100px;
+    --radius: 180px;
     top: 80%; /* Na mobile jeszcze niżej */
   }
 
