@@ -19,7 +19,7 @@ const projects = [
     description: 'Elegancka i profesjonalna strona dla Willi Rysy z góralskimi akcentami.',
     categories: ['Strona Internetowa', 'Branża Hotelarska'],
     image: '/willarysy.png',
-    link: 'https://willa-rysy.vercel.app'
+    link: 'https://willa-rysy.pl'
   },
   { 
     id: 3,
