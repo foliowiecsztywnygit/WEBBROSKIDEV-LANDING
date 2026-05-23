@@ -1,7 +1,6 @@
 import styles from './LegalPages.module.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import CustomCursor from '../components/CustomCursor';
 import TopBar from '../components/TopBar';
 
 const Terms = () => {
@@ -19,7 +18,7 @@ const Terms = () => {
           <div className={styles.content}>
             <section className={styles.section}>
               <h2>§ 1. Postanowienia ogólne</h2>
-              <p>1. Niniejszy Regulamin określa ogólne warunki, zasady oraz sposób świadczenia usług drogą elektroniczną oraz stacjonarnie przez Krzysztofa Żebrowskiego, działającego pod marką WEBBROSKIDEV (zwanego dalej "Usługodawcą").</p>
+              <p>1. Niniejszy Regulamin określa ogólne warunki, zasady oraz sposób świadczenia usług drogą elektroniczną oraz stacjonarnie przez Krzysztofa Żebrowskiego, działającego pod marką WEBBROSKIDEV (zwanego dalej &quot;Usługodawcą&quot;).</p>
               <p>2. Usługodawca działa jako osoba fizyczna, nieprowadząca zarejestrowanej działalności gospodarczej. Rozliczenia z Klientami (wystawianie faktur VAT, podpisywanie umów o dzieło z przeniesieniem praw autorskich) realizowane są za pośrednictwem zewnętrznej platformy dla freelancerów – <strong>UseMe.com</strong> (Useme Sp. z o.o.).</p>
               <p>3. Z Usługodawcą można kontaktować się poprzez adres e-mail: <strong>kontakt@webbroskidev.pl</strong> lub pod numerem telefonu: <strong>+48 600 176 361</strong>.</p>
               <p>4. Regulamin jest nieprzerwanie i nieodpłatnie udostępniony przez Usługodawcę na stronie internetowej w sposób umożliwiający jego pozyskanie, odtwarzanie i utrwalanie.</p>
@@ -64,7 +63,7 @@ const Terms = () => {
             <section className={styles.section}>
               <h2>§ 7. Odpowiedzialność i gwarancja</h2>
               <p>1. Usługodawca ponosi odpowiedzialność wyłącznie za szkody powstałe z jego winy umyślnej.</p>
-              <p>2. Usługodawca udziela gwarancji na wykonane przez siebie oprogramowanie na okres ustalony w odrębnej umowie (domyślnie obejmuje on usuwanie ewentualnych błędów programistycznych "bugów" zgłoszonych w pierwszych 30 dniach po wdrożeniu, o ile kod nie był modyfikowany przez osoby trzecie).</p>
+              <p>2. Usługodawca udziela gwarancji na wykonane przez siebie oprogramowanie na okres ustalony w odrębnej umowie (domyślnie obejmuje on usuwanie ewentualnych błędów programistycznych &quot;bugów&quot; zgłoszonych w pierwszych 30 dniach po wdrożeniu, o ile kod nie był modyfikowany przez osoby trzecie).</p>
               <p>3. Usługodawca nie odpowiada za przerwy w dostępie do usług wynikające z awarii zewnętrznych dostawców (np. hosting, Vercel, serwery domen).</p>
             </section>
 

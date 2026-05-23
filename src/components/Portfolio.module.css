@@ -188,6 +188,10 @@
   line-height: 1;
   color: var(--text);
   letter-spacing: -0.02em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .actions {

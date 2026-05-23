@@ -1,7 +1,6 @@
 import styles from './LegalPages.module.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import CustomCursor from '../components/CustomCursor';
 import TopBar from '../components/TopBar';
 
 const Privacy = () => {
@@ -19,7 +18,7 @@ const Privacy = () => {
           <div className={styles.content}>
             <section className={styles.section}>
               <h2>1. Informacje ogólne</h2>
-              <p>Niniejsza Polityka Prywatności określa zasady przetwarzania i ochrony danych osobowych przekazanych przez Użytkowników w związku z korzystaniem z usług i strony internetowej prowadzonej przez WEBBROSKIDEV Krzysztof Żebrowski (dalej "Administrator").</p>
+              <p>Niniejsza Polityka Prywatności określa zasady przetwarzania i ochrony danych osobowych przekazanych przez Użytkowników w związku z korzystaniem z usług i strony internetowej prowadzonej przez WEBBROSKIDEV Krzysztof Żebrowski (dalej &quot;Administrator&quot;).</p>
               <p>Polityka jest zgodna z wymogami Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych (RODO).</p>
             </section>
 
@@ -59,7 +58,7 @@ const Privacy = () => {
               <ul>
                 <li>Prawo dostępu do treści swoich danych oraz otrzymania ich kopii.</li>
                 <li>Prawo do sprostowania (poprawiania) swoich danych.</li>
-                <li>Prawo do usunięcia danych (tzw. "prawo do bycia zapomnianym").</li>
+                <li>Prawo do usunięcia danych (tzw. &quot;prawo do bycia zapomnianym&quot;).</li>
                 <li>Prawo do ograniczenia przetwarzania danych.</li>
                 <li>Prawo do przenoszenia danych.</li>
                 <li>Prawo wniesienia sprzeciwu wobec przetwarzania.</li>

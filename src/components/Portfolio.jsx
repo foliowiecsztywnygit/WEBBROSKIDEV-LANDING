@@ -7,27 +7,39 @@ import styles from './Portfolio.module.css';
 const projects = [
   { 
     id: 1,
+    title: 'Willa Szymkówka',
+    description: 'Prosta ale zarazem elegancka wizytówka dla Willa Szymkówka, Duża galeria zdjęć i działanie na wszystkich urządzeniach z czytelnym CTA.',
+    categories: ['Branża Hotelarska', 'Strona Wizerunkowa'],
+    image: '/willaszymkowka.png',
+    link: 'https://willaszymkowka.pl',
+    scale: 3.0
+  },
+  { 
+    id: 2,
     title: 'Meble Maku',
     description: 'Lekka Wizytówka Firmowa dla pracowni stolarskiej Meble Maku, Nacisk na obszerną galerię oraz czytelność na wszystkich urządzeniach.',
     categories: ['Wizytówka Firmowa', 'Strona Wizerunkowa'],
     image: '/meblemakupl.png',
-    link: 'https://meblemaku.pl'
+    link: 'https://meblemaku.pl',
+    scale: 1.0
   },
   { 
-    id: 2,
+    id: 3,
     title: 'Willa Rysy',
     description: 'Elegancka i profesjonalna strona dla Willi Rysy z góralskimi akcentami.',
     categories: ['Strona Internetowa', 'Branża Hotelarska'],
     image: '/willarysy.png',
-    link: 'https://willa-rysy.pl'
+    link: 'https://willa-rysy.pl',
+    scale: 1.0
   },
   { 
-    id: 3,
+    id: 4,
     title: 'Willa 14',
     description: 'Prosta strona dla Willa 14, nastawiona na minimalny układ i proste CTA. Glassmorphizm i efekt śniegu / lodu na przyciskach i elementach.',
     categories: ['Willa Górska', 'Wizytówka'],
     image: '/willa-14.png',
-    link: 'https://willa-14.pl'
+    link: 'https://willa-14.pl',
+    scale: 1.0
   }
 ];
 
@@ -69,7 +81,12 @@ const Portfolio = () => {
         <div className={`${styles.carousel} reveal fade-in delay-100`} key={currentProject.id}>
           <div className={styles.imageColumn}>
             {currentProject.image ? (
-              <img src={currentProject.image} alt={currentProject.title} className={styles.image} />
+              <img 
+                src={currentProject.image} 
+                alt={currentProject.title} 
+                className={styles.image} 
+                style={{ transform: `scale(${currentProject.scale || 1})` }}
+              />
             ) : (
               <div className={styles.placeholder}>Brak zdjęcia mockupu</div>
             )}

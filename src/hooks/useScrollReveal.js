@@ -4,6 +4,7 @@ export const useScrollReveal = () => {
   const revealRef = useRef(null);
 
   useEffect(() => {
+    const target = revealRef.current;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -20,13 +21,13 @@ export const useScrollReveal = () => {
       }
     );
 
-    if (revealRef.current) {
-      observer.observe(revealRef.current);
+    if (target) {
+      observer.observe(target);
     }
 
     return () => {
-      if (revealRef.current) {
-        observer.unobserve(revealRef.current);
+      if (target) {
+        observer.unobserve(target);
       }
     };
   }, []);
