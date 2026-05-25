@@ -152,3 +152,35 @@
     text-align: left;
   }
 }
+
+.calendarSection {
+  margin-top: 5rem;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.calendarTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.calendarSubtitle {
+  font-size: 1.125rem;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.calendarContainer {
+  width: 100%;
+  height: 600px;
+  background: white; /* cal.com light theme looks best on white */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}

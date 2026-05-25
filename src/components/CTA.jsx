@@ -1,9 +1,60 @@
+import { useEffect } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import GooeyButton from './ui/GooeyButton';
 import styles from './CTA.module.css';
 
 const CTA = () => {
   const revealRef = useScrollReveal();
+
+  useEffect(() => {
+    (function (C, A, L) {
+      let p = function (a, ar) {
+        a.q.push(ar);
+      };
+      let d = C.document;
+      C.Cal =
+        C.Cal ||
+        function () {
+          let cal = C.Cal;
+          let ar = arguments;
+          if (!cal.loaded) {
+            cal.ns = {};
+            cal.q = cal.q || [];
+            d.head.appendChild(d.createElement('script')).src = A;
+            cal.loaded = true;
+          }
+          if (ar[0] === L) {
+            const api = function () {
+              p(api, arguments);
+            };
+            const namespace = ar[1];
+            api.q = api.q || [];
+            if (typeof namespace === 'string') {
+              cal.ns[namespace] = cal.ns[namespace] || api;
+              p(cal.ns[namespace], ar);
+              p(cal, ['initNamespace', namespace]);
+            } else p(cal, ar);
+            return;
+          }
+          p(cal, ar);
+        };
+    })(window, 'https://app.cal.com/embed/embed.js', 'init');
+
+    Cal('init', 'rozmowa-przedstawienie-oferty-omowienie-planu-działania', {
+      origin: 'https://app.cal.com',
+    });
+
+    Cal.ns['rozmowa-przedstawienie-oferty-omowienie-planu-działania']('inline', {
+      elementOrSelector: '#my-cal-inline-rozmowa-przedstawienie-oferty-omowienie-planu-działania',
+      config: { layout: 'month_view', useSlotsViewOnSmallScreen: 'true' },
+      calLink: 'webbroskidev/rozmowa-przedstawienie-oferty-omowienie-planu-działania',
+    });
+
+    Cal.ns['rozmowa-przedstawienie-oferty-omowienie-planu-działania']('ui', {
+      hideEventTypeDetails: false,
+      layout: 'month_view',
+    });
+  }, []);
 
   return (
     <section id="kontakt" className={`section ${styles.cta}`} ref={revealRef}>
@@ -43,6 +94,17 @@ const CTA = () => {
               WhatsApp
               <span className={styles.pointerEmoji} style={{ animationDelay: '0.6s' }}>👆</span>
             </a>
+          </div>
+        </div>
+        
+        <div className={`${styles.calendarSection} reveal fade-in delay-300`}>
+          <h3 className={styles.calendarTitle}>Albo umówmy się na bezpłatną konsultację</h3>
+          <p className={styles.calendarSubtitle}>Wybierz dogodny dla siebie termin z kalendarza poniżej</p>
+          <div className={styles.calendarContainer}>
+            <div 
+              style={{ width: '100%', height: '100%', overflow: 'scroll' }} 
+              id="my-cal-inline-rozmowa-przedstawienie-oferty-omowienie-planu-działania"
+            ></div>
           </div>
         </div>
       </div>
