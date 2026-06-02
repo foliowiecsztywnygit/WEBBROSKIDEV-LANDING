@@ -29,6 +29,15 @@
   margin: 0;
 }
 
+.seoFooterText {
+  font-size: 0.875rem;
+  color: var(--gray-dark);
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
 .legalInfo {
   display: flex;
   flex-wrap: wrap;

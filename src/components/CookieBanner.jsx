@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './CookieBanner.module.css';
 
 const CookieBanner = () => {
@@ -53,12 +54,12 @@ const CookieBanner = () => {
         {!showSettings ? (
           <div className={styles.mainView}>
             <div className={styles.content}>
-              <h3 className={styles.title}>Szanujemy Twoją prywatność</h3>
+              <h3 className={styles.title}>Szanuję Twoją prywatność</h3>
               <p className={styles.text}>
-                Używamy plików cookies, aby ułatwić Ci korzystanie z naszego serwisu oraz do celów statystycznych. 
+                Używam plików cookies, aby ułatwić Ci korzystanie z mojej strony oraz do celów statystycznych. 
                 Jeśli zgadzasz się na wykorzystanie wszystkich ciasteczek, kliknij „Akceptuję wszystkie”. 
                 Możesz również dostosować swoje zgody klikając „Ustawienia”. 
-                Więcej informacji znajdziesz w naszej <a href="/polityka-prywatnosci" className={styles.link}>Polityce Prywatności</a>.
+                Więcej informacji znajdziesz w mojej <Link to="/polityka-prywatnosci" className={styles.link}>Polityce Prywatności</Link>.
               </p>
             </div>
             <div className={styles.actions}>
@@ -86,7 +87,7 @@ const CookieBanner = () => {
               <div className={styles.optionRow}>
                 <div className={styles.optionInfo}>
                   <h4>Analityczne</h4>
-                  <p>Pomagają nam zrozumieć, w jaki sposób odwiedzający wchodzą w interakcję ze stroną.</p>
+                  <p>Pomagają mi zrozumieć, w jaki sposób odwiedzający wchodzą w interakcję ze stroną.</p>
                 </div>
                 <div className={styles.toggle}>
                   <label className={styles.switch}>

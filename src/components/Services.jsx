@@ -12,19 +12,19 @@ const services = [
     categories: ['Landing Page', 'Portfolio', 'Strona z kursami']
   },
   {
-    title: 'Strony Firmowe',
+    title: 'Nowoczesne Strony Internetowe dla Firm',
     description: 'Wszelkiego rodzaju wizytówki dla biznesu. Pokaż się z najlepszej strony i <strong>buduj trwałe zaufanie</strong> klientów.',
     number: '02.',
     categories: ['Serwisy korporacyjne', 'Katalogi produktów', 'Blogi firmowe', 'Wizytówka firmy']
   },
   {
-    title: 'Strony dla Pensjonatów',
+    title: 'Dedykowane Strony dla Pensjonatów i Hoteli',
     description: 'Prestiżowy design dla branży noclegowej. Wyróżnij swój obiekt i <strong>zwiększ liczbę rezerwacji</strong>.',
     number: '03.',
     categories: ['Hotele', 'Apartamenty', 'Agroturystyka', 'Ośrodki wypoczynkowe']
   },
   {
-    title: 'Integracje Hotres',
+    title: 'Wdrożenia i Integracje Systemu Hotres',
     description: 'Oszczędzaj na rezerwacjach online. Wdrażam systemy rezerwacji działające <strong>bez żadnych przerw</strong>.',
     number: '04.',
     categories: ['Booking Engine', 'Channel Manager', 'Płatności online', 'Automatyzacja rezerwacji', 'Rezerwacje bezpośrednie']
@@ -81,7 +81,7 @@ const Services = () => {
       <div className={styles.headerWrapper}>
         <div className={`${styles.header} reveal fade-in`}>
           <SectionSubtitle>Moje usługi</SectionSubtitle>
-          <h2 className={`heading-lg ${styles.title}`}>Co mogę dla Ciebie zrobić?</h2>
+          <h2 className={`heading-lg ${styles.title}`}>Projektowanie Stron Internetowych i Integracje Systemów Rezerwacji</h2>
           <p className="text-lg">Specjalizacje dopasowane do <strong>Twoich potrzeb</strong>.</p>
         </div>
       </div>

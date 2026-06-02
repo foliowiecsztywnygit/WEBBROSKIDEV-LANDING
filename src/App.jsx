@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom';
 import TopBar from './components/TopBar';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -7,12 +8,14 @@ import RotatingProcess from './components/RotatingProcess';
 import Portfolio from './components/Portfolio';
 import Partners from './components/Partners';
 import WhyMe from './components/WhyMe';
+import FAQ from './components/FAQ';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import CookieBanner from './components/CookieBanner';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import NotFound from './pages/NotFound';
 
 const GooeyFilter = () => (
   <svg style={{ visibility: 'hidden', position: 'absolute' }} width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
@@ -26,41 +29,37 @@ const GooeyFilter = () => (
   </svg>
 );
 
+const Home = () => (
+  <>
+    <TopBar />
+    <Navbar />
+    <main>
+      <Hero />
+      <AboutMe />
+      <Services />
+      <Portfolio />
+      <RotatingProcess />
+      <Partners />
+      <WhyMe />
+      <FAQ />
+      <CTA />
+    </main>
+    <Footer />
+  </>
+);
+
 function App() {
-  const path = window.location.pathname;
-
-  const renderContent = () => {
-    if (path === '/polityka-prywatnosci') {
-      return <Privacy />;
-    }
-    if (path === '/regulamin') {
-      return <Terms />;
-    }
-    return (
-      <>
-        <TopBar />
-        <Navbar />
-        <main>
-          <Hero />
-          <AboutMe />
-          <Services />
-          <Portfolio />
-          <RotatingProcess />
-          <Partners />
-          <WhyMe />
-          <CTA />
-        </main>
-        <Footer />
-      </>
-    );
-  };
-
   return (
     <>
       <CookieBanner />
       <GooeyFilter />
       <CustomCursor />
-      {renderContent()}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/polityka-prywatnosci" element={<Privacy />} />
+        <Route path="/regulamin" element={<Terms />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </>
   );
 }

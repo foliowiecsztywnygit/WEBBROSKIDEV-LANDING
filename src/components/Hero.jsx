@@ -38,8 +38,12 @@ const Hero = () => {
             <SectionSubtitle>Profesjonalny Webdesign</SectionSubtitle>
           </div>
           <h1 className={`heading-xl ${styles.title} fade-in reveal delay-100`}>
-            ZAMIENIAM <span className={styles.artisticWord}>Pomysły</span> W COŚ CO <strong>WIDAĆ</strong>
+            ZAMIENIAM <span className={styles.artisticWord}>Pomysły</span> W COŚ CO <strong>WIDAĆ</strong><br/>
+            <span className={styles.seoSubtitle}>– Tworzenie Nowoczesnych Stron WWW i Systemów Rezerwacji</span>
           </h1>
+          <p className={`${styles.description} fade-in reveal delay-200`}>
+            Projektuję i wdrażam szybkie strony internetowe, które pracują na Twój zysk. Specjalizuję się w tworzeniu dedykowanych rozwiązań dla branży hotelarskiej – wdrażam systemy rezerwacji bezpośrednich, które eliminują wysokie prowizje portali takich jak Booking.com, zwiększając rentowność Twojego biznesu.
+          </p>
           <div className={`${styles.actions} fade-in reveal delay-300`}>
             <GooeyButton href="/#kontakt" variant="outline">Darmowa wycena</GooeyButton>
             <GooeyButton href="/#portfolio" variant="outline">Zobacz realizacje</GooeyButton>

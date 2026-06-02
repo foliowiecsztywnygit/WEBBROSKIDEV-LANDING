@@ -3,10 +3,10 @@ import SectionSubtitle from './ui/SectionSubtitle';
 import styles from './RotatingProcess.module.css';
 
 const steps = [
-  { id: '01', title: 'Kontakt', desc: 'Opowiedz mi o <strong>swojej wizji</strong> i celu strony.' },
-  { id: '02', title: 'Umowa', desc: 'Podpisujemy umowę przez platformę UseMe, Zbieramy Materiały i <strong>ustalamy szczegóły</strong> działania. ' },
-  { id: '03', title: 'Projekt', desc: 'Tworzę dedykowany design i <strong>czysty kod</strong> od zera. Bez kompromisów.' },
-  { id: '04', title: 'Wdrożenie', desc: 'Ostatnie szlify, testy optymalizacji, wyświetlania na wszystkich urządzeniach i <strong>start online</strong>.' }
+  { id: '01', title: 'Kontakt', desc: 'Opowiedz mi o <strong>swojej wizji</strong> i celu. Przeanalizujemy, czy potrzebujesz prostej wizytówki, czy zaawansowanego <strong>systemu rezerwacji</strong>.' },
+  { id: '02', title: 'Umowa', desc: 'Podpisujemy umowę przez platformę UseMe, zbieramy materiały i <strong>ustalamy szczegóły architektury SEO</strong> oraz docelowego designu.' },
+  { id: '03', title: 'Projekt', desc: 'Tworzę dedykowany design i piszę <strong>czysty kod React/Vite</strong> od zera. Zapewniam pełną optymalizację pod <strong>Core Web Vitals</strong>.' },
+  { id: '04', title: 'Wdrożenie', desc: 'Ostatnie testy szybkości, responsywności (RWD) oraz integracji (np. z systemem Hotres). Finalny <strong>start online</strong> gotowej strony.' }
 ];
 
 const RotatingProcess = () => {

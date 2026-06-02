@@ -60,6 +60,16 @@
   display: inline-block;
 }
 
+.seoSubtitle {
+  display: block;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 500;
+  color: var(--gray-dark);
+  margin-top: 0.5rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
 .description {
   margin-bottom: 3rem;
   max-width: 600px;

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -6,12 +7,15 @@ const Footer = () => {
       <div className={`container ${styles.container}`}>
         <div className={styles.brand}>
           <h2 className={styles.authorName}>Krzysztof Żebrowski</h2>
+          <p className={styles.seoFooterText}>
+            WEBBROSKIDEV — Nowoczesne strony www dla hoteli i firm. Działam lokalnie: Kraków, Zakopane, Podhale oraz zdalnie w całej Polsce.
+          </p>
           <div className={styles.legalInfo}>
             <span>&copy; {new Date().getFullYear()} WEBBROSKIDEV</span>
             <span className={styles.separator}>|</span>
-            <a href="/regulamin">Regulamin</a>
+            <Link to="/regulamin">Regulamin</Link>
             <span className={styles.separator}>|</span>
-            <a href="/polityka-prywatnosci">Polityka prywatności</a>
+            <Link to="/polityka-prywatnosci">Polityka prywatności</Link>
           </div>
         </div>
       </div>
