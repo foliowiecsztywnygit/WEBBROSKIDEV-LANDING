@@ -7,6 +7,15 @@ import styles from './Portfolio.module.css';
 const projects = [
   { 
     id: 1,
+    title: 'Domki na Zrąbku pod gubałówką',
+    description: 'Elegancka wizytówka dla domków pod Gubałówką, z naciskiem na integrację przycisku do szybkiego sprawdzenia terminu w systemie Roomadmin. Stylizacja drewnem i nowoczesnym alpine luxury.',
+    categories: ['Branża Hotelarska', 'Zakopane'],
+    image: '/domkinazrabku.png',
+    link: 'https://domkinazrabku.pl',
+    scale: 3.0
+  },
+  { 
+    id: 2,
     title: 'Willa Szymkówka',
     description: 'Prosta ale zarazem elegancka wizytówka dla Willa Szymkówka, Duża galeria zdjęć i działanie na wszystkich urządzeniach z czytelnym CTA.',
     categories: ['Branża Hotelarska', 'Strona Wizerunkowa'],
@@ -15,7 +24,7 @@ const projects = [
     scale: 3.0
   },
   { 
-    id: 2,
+    id: 3,
     title: 'Meble Maku',
     description: 'Lekka Wizytówka Firmowa dla pracowni stolarskiej Meble Maku, Nacisk na obszerną galerię oraz czytelność na wszystkich urządzeniach.',
     categories: ['Wizytówka Firmowa', 'Strona Wizerunkowa'],
@@ -24,7 +33,7 @@ const projects = [
     scale: 1.0
   },
   { 
-    id: 3,
+    id: 4,
     title: 'Willa Rysy',
     description: 'Elegancka i profesjonalna strona dla Willi Rysy z góralskimi akcentami.',
     categories: ['Strona Internetowa', 'Branża Hotelarska'],
@@ -33,7 +42,7 @@ const projects = [
     scale: 1.0
   },
   { 
-    id: 4,
+    id: 5,
     title: 'Willa 14',
     description: 'Prosta strona dla Willa 14, nastawiona na minimalny układ i proste CTA. Glassmorphizm i efekt śniegu / lodu na przyciskach i elementach.',
     categories: ['Willa Górska', 'Wizytówka'],
