@@ -21,7 +21,7 @@ const faqs = [
     answer: 'Tak, pracuję z wdrożeniami booking engine i dopasowuję stronę do sposobu, w jaki użytkownik ma przechodzić do sprawdzenia terminu i rezerwacji. Chodzi nie tylko o samą integrację, ale o to, żeby była dobrze osadzona w całej ścieżce zakupu.'
   },
   {
-    question: 'Czy taka strona pomoże obiektowi być lepiej widocznym na Zakopane, Podhale czy inne regiony?',
+    question: 'Czy taka strona pomoże obiektowi być lepiej widocznym na Zakopane, Szczyrk i Podhale?',
     answer: 'Tak. Fundament buduję pod widoczność lokalną: odpowiednie treści, układ sekcji, szybkość działania i jasne informacje o lokalizacji. Dzięki temu strona lepiej pracuje na osoby, które szukają noclegu właśnie w Twojej okolicy.'
   },
   {

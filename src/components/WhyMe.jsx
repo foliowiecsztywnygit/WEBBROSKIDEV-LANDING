@@ -20,7 +20,7 @@ const reasons = [
   },
   { 
     id: 3,
-    title: 'Lepsza widoczność na Zakopane i okolice', 
+    title: 'Lepsza widoczność na Zakopane, Szczyrk i regiony turystyczne', 
     desc: 'Fundament strony układam tak, żeby obiekt był łatwiej znajdowany przez osoby szukające noclegu w Twojej okolicy.',
     number: '03',
     colorClass: styles.colorGreen

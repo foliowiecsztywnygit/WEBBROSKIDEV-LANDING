@@ -5,11 +5,11 @@ import styles from './AboutMe.module.css';
 
 const segments = [
   {
-    title: 'Pensjonaty i wille',
+    title: 'Dla pensjonatów i willi całorocznych',
     description: 'Strony, które porządkują ofertę pokoi, pokazują standard obiektu i prowadzą gościa prosto do kontaktu lub rezerwacji.'
   },
   {
-    title: 'Apartamenty i domki',
+    title: 'Dla niezależnych apartamentów i domków',
     description: 'Układy pod obiekty sezonowe z naciskiem na telefon, galerię, mapę i szybkie sprawdzenie terminu.'
   },
   {
