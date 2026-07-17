@@ -11,9 +11,8 @@ const basePartners = [
   { name: "Useme", img: "/tech_partners_white/useme_logo.png", colorImg: "/tech_partners/useme_logo.png" }
 ];
 
-// Powielamy bazową listę wielokrotnie, żeby zapewnić odpowiednią długość elementu marquee
-// na bardzo szerokich ekranach, co gwarantuje nieprzerwaną pętlę.
-const partners = [...basePartners, ...basePartners, ...basePartners];
+// Dwa zestawy wystarczają do płynnej pętli, a zmniejszają liczbę renderowanych logotypów.
+const partners = [...basePartners, ...basePartners];
 
 const Partners = () => {
   const revealRef = useScrollReveal();
@@ -33,9 +32,9 @@ const Partners = () => {
                 <div key={index} className={styles.partnerItem}>
                   {partner.img ? (
                     <div className={styles.imageWrapper}>
-                      <img src={partner.img} alt={partner.name} className={`${styles.partnerLogo} ${styles.whiteLogo}`} />
+                      <img src={partner.img} alt={partner.name} className={`${styles.partnerLogo} ${styles.whiteLogo}`} loading="lazy" decoding="async" />
                       {partner.colorImg && (
-                        <img src={partner.colorImg} alt={partner.name} className={`${styles.partnerLogo} ${styles.colorLogo}`} />
+                        <img src={partner.colorImg} alt="" aria-hidden="true" className={`${styles.partnerLogo} ${styles.colorLogo}`} loading="lazy" decoding="async" />
                       )}
                     </div>
                   ) : (
@@ -50,9 +49,9 @@ const Partners = () => {
                 <div key={`dup-${index}`} className={styles.partnerItem}>
                   {partner.img ? (
                     <div className={styles.imageWrapper}>
-                      <img src={partner.img} alt={partner.name} className={`${styles.partnerLogo} ${styles.whiteLogo}`} />
+                      <img src={partner.img} alt="" aria-hidden="true" className={`${styles.partnerLogo} ${styles.whiteLogo}`} loading="lazy" decoding="async" />
                       {partner.colorImg && (
-                        <img src={partner.colorImg} alt={partner.name} className={`${styles.partnerLogo} ${styles.colorLogo}`} />
+                        <img src={partner.colorImg} alt="" aria-hidden="true" className={`${styles.partnerLogo} ${styles.colorLogo}`} loading="lazy" decoding="async" />
                       )}
                     </div>
                   ) : (

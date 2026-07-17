@@ -6,28 +6,32 @@ import styles from './Services.module.css';
 
 const services = [
   {
-    title: 'Strony Wizytówki',
-    description: 'Proste, ale wyraziste wizytówki online. <strong>Pokaż się</strong> z najlepszej strony i buduj wiarygodność.',
+    title: 'Strony dla pensjonatów i willi',
+    description: 'Projektuję strony, które pokazują standard obiektu, porządkują ofertę noclegów i prowadzą gościa do <strong>rezerwacji bezpośredniej</strong> albo szybkiego kontaktu.',
     number: '01.',
-    categories: ['Landing Page', 'Portfolio', 'Strona z kursami']
+    categories: ['Pokoje i apartamenty', 'Galeria', 'Mapa i atrakcje', 'CTA do rezerwacji'],
+    href: '/strony-dla-pensjonatow'
   },
   {
-    title: 'Nowoczesne Strony Internetowe dla Firm',
-    description: 'Wszelkiego rodzaju wizytówki dla biznesu. Pokaż się z najlepszej strony i <strong>buduj trwałe zaufanie</strong> klientów.',
+    title: 'Strony dla apartamentów i domków',
+    description: 'Buduję lekkie, mobilne układy dla obiektów sezonowych i premium, w których liczy się <strong>szybkość, prostota i łatwy kontakt</strong> dla gościa.',
     number: '02.',
-    categories: ['Serwisy korporacyjne', 'Katalogi produktów', 'Blogi firmowe', 'Wizytówka firmy']
+    categories: ['Telefon', 'Galeria', 'Szybki kontakt', 'Układ pod telefon'],
+    href: '/strony-dla-apartamentow'
   },
   {
-    title: 'Dedykowane Strony dla Pensjonatów i Hoteli',
-    description: 'Prestiżowy design dla branży noclegowej. Wyróżnij swój obiekt i <strong>zwiększ liczbę rezerwacji</strong>.',
+    title: 'Wdrożenia systemów rezerwacji',
+    description: 'Integruję system rezerwacji z Twoją stroną tak, aby gość mógł sprawdzić termin i zarezerwować pobyt bez zbędnych kroków, a Ty miał(a) więcej zamówień z własnej strony.',
     number: '03.',
-    categories: ['Hotele', 'Apartamenty', 'Agroturystyka', 'Ośrodki wypoczynkowe']
+    categories: ['Hotres', 'Roomadmin', 'Rezerwacje bezpośrednie', 'Kalendarz i płatności'],
+    href: '/wdrozenia-hotres'
   },
   {
-    title: 'Wdrożenia i Integracje Systemu Hotres',
-    description: 'Oszczędzaj na rezerwacjach online. Wdrażam systemy rezerwacji działające <strong>bez żadnych przerw</strong>.',
+    title: 'Przebudowa obecnej strony obiektu',
+    description: 'Jeśli obecna strona jest wolna, nieczytelna lub nie sprzedaje pobytów, przebudowuję ją tak, by lepiej pokazywała obiekt i ułatwiała kontakt z gościem.',
     number: '04.',
-    categories: ['Booking Engine', 'Channel Manager', 'Płatności online', 'Automatyzacja rezerwacji', 'Rezerwacje bezpośrednie']
+    categories: ['Lepszy układ', 'Czytelna oferta', 'Nowe CTA', 'Wygoda dla gościa'],
+    href: '/#kontakt'
   }
 ];
 
@@ -45,32 +49,19 @@ const Services = () => {
       titlesRef.current.forEach((titleEl, index) => {
         if (!titleEl) return;
         
-        // Zdobądź pozycję karty powiązanej z danym tytułem
         const card = titleEl.closest(`.${styles.card}`);
         if (!card) return;
         
         const rect = card.getBoundingClientRect();
-        
-        // Animacja wypełniania zaczyna się, gdy karta wejdzie do viewportu,
-        // a kończy, gdy dojdzie do samej góry (rect.top = 0)
-        // Kiedy rect.top == windowHeight -> progress = 0
-        // Kiedy rect.top == 0 -> progress = 1
         let progress = 1 - (rect.top / windowHeight);
-        
-        // Zabezpieczenie wartości między 0 a 1
         progress = Math.max(0, Math.min(1, progress));
         
-        // Przekładamy postęp na pozycję background-position (0 do 100%)
         const bgPosition = progress * 100;
-        
-        // Zmienione na oś X: '0 0' (początek) do '100% 0' (koniec), ale by fill szedł od lewej do prawej
-        // background size to 200% 100%, więc aby tekst wypełniał się od lewej, background position musi iść od 100% do 0%
         titleEl.style.backgroundPosition = `${100 - bgPosition}% 0`;
       });
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    // Inicjalne wywołanie
     handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
@@ -80,9 +71,9 @@ const Services = () => {
     <section id="uslugi" className={`section ${styles.services}`} ref={revealRef}>
       <div className={styles.headerWrapper}>
         <div className={`${styles.header} reveal fade-in`}>
-          <SectionSubtitle>Moje usługi</SectionSubtitle>
-          <h2 className={`heading-lg ${styles.title}`}>Projektowanie Stron Internetowych i Integracje Systemów Rezerwacji</h2>
-          <p className="text-lg">Specjalizacje dopasowane do <strong>Twoich potrzeb</strong>.</p>
+          <SectionSubtitle>Rozwiązania dla branży noclegowej</SectionSubtitle>
+          <h2 className={`heading-lg ${styles.title}`}>Co wdrażam dla obiektów noclegowych</h2>
+          <p className="text-lg">Od strony głównej po system rezerwacji, który pomaga sprzedawać pobyty <strong>prosto z własnej strony</strong>.</p>
         </div>
       </div>
         
@@ -105,7 +96,9 @@ const Services = () => {
                   <p className={styles.cardDescription} dangerouslySetInnerHTML={{ __html: service.description }}></p>
                   
                   <div className={styles.buttonWrapper}>
-                    <GooeyButton href="#kontakt" variant="outline">Sprawdź</GooeyButton>
+                    <GooeyButton href={service.href} variant="outline">
+                      {service.href.startsWith('/#') ? 'Porozmawiajmy' : 'Zobacz podstronę'}
+                    </GooeyButton>
                   </div>
                   
                   <div className={styles.categories}>

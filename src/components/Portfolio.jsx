@@ -8,8 +8,14 @@ const projects = [
   { 
     id: 1,
     title: 'Domki na Zrąbku pod gubałówką',
-    description: 'Elegancka wizytówka dla domków pod Gubałówką, z naciskiem na integrację przycisku do szybkiego sprawdzenia terminu w systemie Roomadmin. Stylizacja drewnem i nowoczesnym alpine luxury.',
-    categories: ['Branża Hotelarska', 'Zakopane'],
+    label: 'Domki premium pod Zakopanem',
+    description: 'Projekt dla obiektu nastawionego na ruch turystyczny z Podhala. Strona miała połączyć klimat miejsca z prostą drogą do sprawdzenia dostępności i kontaktu bez przechodzenia przez pośredników.',
+    categories: ['Zakopane', 'Domki', 'Roomadmin'],
+    highlights: [
+      'czytelny układ oferty noclegowej na telefonie',
+      'szybkie przejście do sprawdzenia terminu',
+      'estetyka dopasowana do charakteru obiektu'
+    ],
     image: '/domkinazrabku.png',
     link: 'https://domkinazrabku.pl',
     scale: 3.0
@@ -17,35 +23,44 @@ const projects = [
   { 
     id: 2,
     title: 'Willa Szymkówka',
-    description: 'Prosta ale zarazem elegancka wizytówka dla Willa Szymkówka, Duża galeria zdjęć i działanie na wszystkich urządzeniach z czytelnym CTA.',
-    categories: ['Branża Hotelarska', 'Strona Wizerunkowa'],
+    label: 'Willa z dużą galerią i wyraźnym CTA',
+    description: 'Celem było uporządkowanie prezentacji obiektu, zdjęć i najważniejszych informacji tak, aby użytkownik szybciej przeszedł od oglądania willi do kontaktu i decyzji o rezerwacji.',
+    categories: ['Willa', 'Galeria', 'Konwersja mobilna'],
+    highlights: [
+      'mocna ekspozycja zdjęć i standardu obiektu',
+      'prostsza ścieżka kontaktu dla użytkownika mobilnego',
+      'bardziej premium odbiór całej oferty'
+    ],
     image: '/willaszymkowka.png',
     link: 'https://willaszymkowka.pl',
     scale: 3.0
   },
   { 
     id: 3,
-    title: 'Meble Maku',
-    description: 'Lekka Wizytówka Firmowa dla pracowni stolarskiej Meble Maku, Nacisk na obszerną galerię oraz czytelność na wszystkich urządzeniach.',
-    categories: ['Wizytówka Firmowa', 'Strona Wizerunkowa'],
-    image: '/meblemakupl.png',
-    link: 'https://meblemaku.pl',
-    scale: 1.0
-  },
-  { 
-    id: 4,
     title: 'Willa Rysy',
-    description: 'Elegancka i profesjonalna strona dla Willi Rysy z góralskimi akcentami.',
-    categories: ['Strona Internetowa', 'Branża Hotelarska'],
+    label: 'Obiekt noclegowy z góralskim charakterem',
+    description: 'Tutaj nacisk poszedł w połączenie lokalnego klimatu z nowoczesnym, czytelnym interfejsem. Strona miała budować zaufanie i pomagać gościowi szybko ocenić, czy to miejsce jest dla niego.',
+    categories: ['Podhale', 'Willa', 'Wizerunek obiektu'],
+    highlights: [
+      'spójny styl dopasowany do regionu',
+      'czytelna prezentacja oferty i wnętrz',
+      'lepsze pierwsze wrażenie przed kontaktem'
+    ],
     image: '/willarysy.png',
     link: 'https://willa-rysy.pl',
     scale: 1.0
   },
   { 
-    id: 5,
+    id: 4,
     title: 'Willa 14',
-    description: 'Prosta strona dla Willa 14, nastawiona na minimalny układ i proste CTA. Glassmorphizm i efekt śniegu / lodu na przyciskach i elementach.',
-    categories: ['Willa Górska', 'Wizytówka'],
+    label: 'Minimalistyczna strona dla obiektu górskiego',
+    description: 'Projekt skupiony na prostocie, szybkim odbiorze oferty i mocnym CTA. To dobry przykład, że obiekt nie potrzebuje przeładowanej strony, jeśli najważniejsze decyzje użytkownika są dobrze poprowadzone.',
+    categories: ['Willa górska', 'Minimalizm', 'CTA'],
+    highlights: [
+      'uproszczona ścieżka decyzji dla gościa',
+      'lekki układ wspierający czytelność',
+      'design, który nie odciąga od kontaktu'
+    ],
     image: '/willa-14.png',
     link: 'https://willa-14.pl',
     scale: 1.0
@@ -72,8 +87,11 @@ const Portfolio = () => {
         
         <div className={`${styles.header} reveal fade-in`}>
           <div className={styles.headerLeft}>
-            <SectionSubtitle>Wybrane Prace</SectionSubtitle>
-            <h2 className={`heading-lg ${styles.title}`}>Ostatnie Projekty</h2>
+            <SectionSubtitle>Realizacje z branży noclegowej</SectionSubtitle>
+            <h2 className={`heading-lg ${styles.title}`}>Przykłady stron, które porządkują ofertę i wspierają rezerwacje bezpośrednie</h2>
+            <p className={styles.lead}>
+              Pokazuję tutaj projekty z obiektów noclegowych, bo to właśnie ten typ wdrożeń chcę najmocniej rozwijać: strony czytelne, szybkie i przygotowane pod decyzję rezerwacyjną.
+            </p>
           </div>
           
           <div className={styles.navigation}>
@@ -93,7 +111,12 @@ const Portfolio = () => {
               <img 
                 src={currentProject.image} 
                 alt={currentProject.title} 
-                className={styles.image} 
+                className={styles.image}
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
+                width="1600"
+                height="1000"
                 style={{ transform: `scale(${currentProject.scale || 1})` }}
               />
             ) : (
@@ -108,11 +131,19 @@ const Portfolio = () => {
               ))}
             </div>
             
-            <p className={styles.projectDescription}>{currentProject.description}</p>
+            <p className={styles.projectLabel}>{currentProject.label}</p>
             <h3 className={styles.projectTitle}>{currentProject.title}</h3>
+            <p className={styles.projectDescription}>{currentProject.description}</p>
+
+            <ul className={styles.highlights}>
+              {currentProject.highlights.map((highlight) => (
+                <li key={highlight}>{highlight}</li>
+              ))}
+            </ul>
             
             <div className={styles.actions}>
-              <GooeyButton variant="outline" href={currentProject.link}>Zobacz stronę</GooeyButton>
+              <GooeyButton variant="outline" href={currentProject.link}>Zobacz stronę klienta</GooeyButton>
+              <GooeyButton variant="outline" href="/#kontakt">Chcę podobne wdrożenie</GooeyButton>
             </div>
           </div>
         </div>

@@ -14,8 +14,8 @@
   --bg: #000000; /* Całkowicie czarne tło */
   --text: #ffffff; /* Biały tekst */
   --gray-light: #111111; /* Ciemniejszy panel/tło drugorzędne */
-  --gray-mid: #222222; /* Obramowania */
-  --gray-dark: #888888; /* Tekst poboczny / wyciszony */
+  --gray-mid: #333333; /* Obramowania */
+  --gray-dark: #aaaaaa; /* Tekst poboczny / wyciszony - rozjaśniony z 888888 */
   --accent: oklch(0.97 0 0);
   --purple-dark: #a020f0; /* Rozjaśniony fiolet (jako akcent do ciemnego tła) */
   --purple-glow: rgba(160, 32, 240, 0.2);
@@ -108,7 +108,35 @@ ul {
   list-style: none;
 }
 
-/* Typography Utility */
+.accentText {
+  color: var(--text);
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.highlightText {
+  color: #ffffff;
+  background-color: var(--purple-dark);
+  padding: 0 0.2rem;
+  border-radius: 4px;
+  display: inline;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  width: 3px;
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  background-color: currentColor;
+  opacity: 0.7;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 .heading-xl, .heading-lg, .heading-md {
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -118,13 +146,13 @@ ul {
 
 .heading-xl {
   font-size: clamp(2.5rem, 8vw, 6rem);
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 .heading-lg {
   font-size: clamp(2rem, 6vw, 4rem);
-  letter-spacing: -0.01em;
+  letter-spacing: normal;
 }
 
 .heading-md {
@@ -183,6 +211,7 @@ ul {
 
 .section {
   padding: var(--section-padding) 0;
+  scroll-margin-top: 120px;
 }
 
 /* Buttons */

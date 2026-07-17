@@ -1,9 +1,16 @@
 import React from 'react';
 import styles from './GooeyButton.module.css';
 
-const GooeyButton = ({ children, href, onClick, variant = 'primary', className = '' }) => {
+const GooeyButton = ({
+  children,
+  href,
+  onClick,
+  variant = 'primary',
+  size = 'default',
+  className = '',
+}) => {
   const content = (
-    <span className={`${styles.wrapper} ${styles[variant]}`}>
+    <span className={`${styles.wrapper} ${styles[variant]} ${styles[size]}`}>
       <span className={styles.text}>{children}</span>
       <span className={styles.circle}>
         <svg width="12" height="12" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">

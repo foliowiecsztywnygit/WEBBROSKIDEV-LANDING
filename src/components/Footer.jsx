@@ -6,10 +6,17 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={`container ${styles.container}`}>
         <div className={styles.brand}>
-          <h2 className={styles.authorName}>Krzysztof Żebrowski</h2>
+          <p className={styles.authorName}>Krzysztof Żebrowski</p>
           <p className={styles.seoFooterText}>
-            WEBBROSKIDEV — Nowoczesne strony www dla hoteli i firm. Działam lokalnie: Kraków, Zakopane, Podhale oraz zdalnie w całej Polsce.
+            WEBBROSKIDEV tworzy strony dla pensjonatów, willi, apartamentów i domków, które pomagają zdobywać więcej rezerwacji z własnej strony i ułatwiają gościowi szybki kontakt.
           </p>
+          <div className={styles.legalInfo}>
+            <Link to="/strony-dla-pensjonatow">Strony dla pensjonatów</Link>
+            <span className={styles.separator}>|</span>
+            <Link to="/wdrozenia-hotres">Wdrożenia Hotres</Link>
+            <span className={styles.separator}>|</span>
+            <Link to="/blog">Blog</Link>
+          </div>
           <div className={styles.legalInfo}>
             <span>&copy; {new Date().getFullYear()} WEBBROSKIDEV</span>
             <span className={styles.separator}>|</span>

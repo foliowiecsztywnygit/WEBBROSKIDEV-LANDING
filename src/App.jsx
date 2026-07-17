@@ -4,18 +4,24 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AboutMe from './components/AboutMe';
 import Services from './components/Services';
+import Pricing from './components/Pricing';
 import RotatingProcess from './components/RotatingProcess';
+import SelectedArticles from './components/SelectedArticles';
 import Portfolio from './components/Portfolio';
 import Partners from './components/Partners';
 import WhyMe from './components/WhyMe';
 import FAQ from './components/FAQ';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
-import CustomCursor from './components/CustomCursor';
 import CookieBanner from './components/CookieBanner';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import NotFound from './pages/NotFound';
+import ServicePage from './pages/ServicePage';
+import BlogIndex from './pages/BlogIndex';
+import BlogPostPage from './pages/BlogPostPage';
+import OfertaPage from './pages/OfertaPage';
+import ScrollToTop from './components/ScrollToTop';
 
 const GooeyFilter = () => (
   <svg style={{ visibility: 'hidden', position: 'absolute' }} width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
@@ -37,10 +43,11 @@ const Home = () => (
       <Hero />
       <AboutMe />
       <Services />
+      <WhyMe />
       <Portfolio />
       <RotatingProcess />
+      <SelectedArticles />
       <Partners />
-      <WhyMe />
       <FAQ />
       <CTA />
     </main>
@@ -51,11 +58,17 @@ const Home = () => (
 function App() {
   return (
     <>
+      <ScrollToTop />
       <CookieBanner />
       <GooeyFilter />
-      <CustomCursor />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/oferta" element={<OfertaPage />} />
+        <Route path="/strony-dla-pensjonatow" element={<ServicePage pageKey="strony-dla-pensjonatow" />} />
+        <Route path="/strony-dla-apartamentow" element={<ServicePage pageKey="strony-dla-apartamentow" />} />
+        <Route path="/wdrozenia-hotres" element={<ServicePage pageKey="wdrozenia-hotres" />} />
+        <Route path="/blog" element={<BlogIndex />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/polityka-prywatnosci" element={<Privacy />} />
         <Route path="/regulamin" element={<Terms />} />
         <Route path="*" element={<NotFound />} />

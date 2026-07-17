@@ -3,29 +3,58 @@ import SectionSubtitle from './ui/SectionSubtitle';
 import GooeyButton from './ui/GooeyButton';
 import styles from './AboutMe.module.css';
 
+const segments = [
+  {
+    title: 'Pensjonaty i wille',
+    description: 'Strony, które porządkują ofertę pokoi, pokazują standard obiektu i prowadzą gościa prosto do kontaktu lub rezerwacji.'
+  },
+  {
+    title: 'Apartamenty i domki',
+    description: 'Układy pod obiekty sezonowe z naciskiem na telefon, galerię, mapę i szybkie sprawdzenie terminu.'
+  },
+  {
+    title: 'Wdrożenia booking engine',
+    description: 'Integracje systemów rezerwacji, które skracają drogę od wejścia na stronę do sprawdzenia terminu i finalizacji pobytu.'
+  },
+  {
+    title: 'Obiekty z regionów turystycznych',
+    description: 'Oferta dopasowana do Podhala, Zakopanego, Szczyrku i polskiego morza, gdzie liczy się telefon, zdjęcia, lokalizacja i szybki kontakt z gościem.'
+  }
+];
+
 const AboutMe = () => {
   const revealRef = useScrollReveal();
 
   return (
-    <section id="o-mnie" className={`section ${styles.aboutMe}`} ref={revealRef}>
+    <section id="dla-kogo" className={`section ${styles.aboutMe}`} ref={revealRef}>
       <div className={`container ${styles.container}`}>
         <div className={`${styles.left} reveal fade-in`}>
-          <SectionSubtitle>Kim jestem?</SectionSubtitle>
+          <SectionSubtitle>Dla kogo pracuję</SectionSubtitle>
+          <h2 className={`heading-lg ${styles.title}`}>Buduję strony, które mają sprzedawać pobyt, a nie tylko dobrze wyglądać.</h2>
         </div>
         
         <div className={`${styles.right} reveal fade-in delay-100`}>
           <div className={styles.textContent}>
             <p>
-              Cześć, nazywam się <strong>Krzysztof Żebrowski</strong>. Od najmłodszych lat jestem związany z komputerami, a dziś jako <strong>freelancer i projektant</strong> łączę <strong>nowoczesny design</strong>, branding i topowe technologie, takie jak <strong>React czy Node</strong>. Tworzę <strong>ultraszybkie i dopracowane</strong> strony oraz aplikacje webowe, które bez zbędnych kompromisów pomagają wyróżnić Twój biznes w sieci.
+              Pracuję przede wszystkim z właścicielami <strong>pensjonatów, willi, apartamentów i domków</strong>, którzy chcą, żeby własna strona realnie pomagała zdobywać zapytania i rezerwacje.
             </p>
             <p>
-              Poza pracą nieustannie szukam wyzwań — <strong>trenuję siłowo</strong>, wspinam się na boulderach i w górach, a adrenalinę odnajduję jeżdżąc na elektrycznych crossach. Tę <strong>samą energię i konsekwencję</strong> przenoszę do projektów, w których przekuwam odważne pomysły w <strong>unikalne, wydajne i zyskowne doświadczenia online</strong>.
+              Moje projekty są nastawione na trzy rzeczy: <strong>czytelną ofertę</strong>, <strong>prostą drogę do kontaktu</strong> i <strong>lepszą widoczność dla osób szukających noclegu w okolicy</strong>. Dzięki temu strona staje się realnym kanałem pozyskiwania gości, a nie tylko internetową wizytówką.
             </p>
+          </div>
+
+          <div className={styles.segmentGrid}>
+            {segments.map((segment) => (
+              <article key={segment.title} className={styles.segmentCard}>
+                <h3>{segment.title}</h3>
+                <p>{segment.description}</p>
+              </article>
+            ))}
           </div>
           
           <div className={styles.actions}>
-            <GooeyButton href="/#kontakt" variant="primary">Umów Bezpłatną Konsultację</GooeyButton>
-            <GooeyButton href="/#portfolio" variant="outline">Poznaj Moje Prace</GooeyButton>
+            <GooeyButton href="/#uslugi" variant="primary">Sprawdź rozwiązania</GooeyButton>
+            <GooeyButton href="/#kontakt" variant="outline">Porozmawiajmy o Twoim obiekcie</GooeyButton>
           </div>
         </div>
       </div>

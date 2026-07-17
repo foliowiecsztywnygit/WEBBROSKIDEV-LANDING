@@ -27,17 +27,19 @@ const Navbar = () => {
 
   return (
     <>
-      <header className={`${styles.navbar} ${scrolled ? styles.scrolled : styles.top} ${isHidden ? styles.hidden : ''}`}>
+      <header data-navbar className={`${styles.navbar} ${scrolled ? styles.scrolled : styles.top} ${isHidden ? styles.hidden : ''}`}>
         <div className={`container ${styles.navContainer}`}>
           <a href="#" className={styles.logo}>
             <img src="/logo.png" alt="WEBBROSKIDEV Logo" className={styles.logoImage} />
           </a>
           <nav className={styles.navLinks}>
+            <a href="/#dla-kogo">Dla kogo</a>
             <a href="/#uslugi">Usługi</a>
-            <a href="/#proces">Proces</a>
+            <a href="/oferta">Oferta</a>
+            <a href="/blog">Blog</a>
             <a href="/#portfolio">Realizacje</a>
             <div className={styles.navBtnWrapper}>
-              <GooeyButton href="/#kontakt" variant="outline">Wycena</GooeyButton>
+              <GooeyButton href="/#kontakt" variant="outline">Kontakt</GooeyButton>
             </div>
           </nav>
         </div>

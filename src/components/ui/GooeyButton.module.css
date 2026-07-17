@@ -31,6 +31,10 @@
   color: var(--text);
 }
 
+.wrapper.compact {
+  padding: 6px 6px 6px 16px;
+}
+
 .text {
   font-family: var(--font-heading);
   font-size: 0.875rem;
@@ -39,6 +43,12 @@
   letter-spacing: 0.05em;
   margin-right: 16px;
   transition: color 0.4s ease;
+}
+
+.wrapper.compact .text {
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  margin-right: 10px;
 }
 
 .circle {
@@ -51,6 +61,11 @@
   position: relative;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(0);
+}
+
+.wrapper.compact .circle {
+  width: 34px;
+  height: 34px;
 }
 
 .wrapper.primary .circle {

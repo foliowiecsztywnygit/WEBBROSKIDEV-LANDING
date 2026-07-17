@@ -21,8 +21,8 @@
 
 .title {
   margin-bottom: 1rem;
-  font-weight: 800;
-  text-transform: uppercase;
+  font-weight: 700;
+  text-transform: none;
 }
 
 .header p {
@@ -98,7 +98,8 @@
     font-size: clamp(1.25rem, 6vw, 1.75rem);
     line-height: 1.15;
     margin-bottom: 0.75rem;
-    hyphens: auto; /* Zapobiega łamaniu długich słów poza kontener */
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
   
   .cardDescription {
@@ -141,24 +142,21 @@
 }
 
 .cardTitle {
-  font-size: clamp(2.5rem, 4vw, 4rem);
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: 1.1;
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 700;
+  text-transform: none;
+  line-height: 1.15;
   margin-bottom: 1.5rem;
-  
-  /* Zamiast obrysu (outline), używamy tekstu ze zmniejszonym kryciem */
   color: rgba(255, 255, 255, 0.15);
-  -webkit-text-stroke: 0px; /* Resetujemy stroke z poprzedniej wersji */
-  
-  /* Przygotowanie tła (od lewej do prawej) */
+  -webkit-text-stroke: 0px;
   background-image: linear-gradient(to right, var(--text) 50%, transparent 50%);
   background-size: 200% 100%;
-  background-position: 100% 0; /* Zmieniane przez JS na 0 0 */
+  background-position: 100% 0;
   -webkit-background-clip: text;
   background-clip: text;
-  
-  transition: background-position 0.1s ease-out; /* Płynne podążanie za scrollem */
+  transition: background-position 0.1s ease-out;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .cardDescription {

@@ -1,95 +1,59 @@
 .section {
   background-color: var(--bg);
   position: relative;
-  /* Scroll distance. 250vh daje dużo miejsca na przejście wszystkich etapów */
-  height: 300vh; 
+  min-height: 290vh;
 }
 
 .stickyWrapper {
   position: sticky;
-  top: 0;
-  height: 100vh;
-  width: 100%;
+  top: 112px;
+  min-height: calc(100vh - 112px);
   display: flex;
   align-items: center;
-  justify-content: center;
-  overflow: hidden; /* Odcina prawą połowę koła wychodzącą za ekran */
 }
 
 .container {
-  display: flex;
-  width: 100%;
-  max-width: 1571px; /* Styl Duda */
-  margin: 0 auto;
-  padding: 0 40px;
-  position: relative;
-  z-index: 2;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 3rem;
+  align-items: start;
 }
 
-.leftContent {
-  flex: 1;
-  max-width: 500px;
-  z-index: 10;
+.header {
+  max-width: 820px;
 }
 
 .mainTitle {
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-top: 1rem;
   font-weight: 800;
-  color: var(--text);
-  margin-bottom: 4rem;
-  line-height: 1.1;
-  text-transform: uppercase;
+  text-transform: none;
+  font-size: clamp(2rem, 4.6vw, 3.6rem);
+  max-width: 14ch;
+  text-wrap: balance;
 }
 
-.activeDetails {
+.lead {
+  margin-top: 1.25rem;
+  color: var(--gray-dark);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 68ch;
+  text-wrap: pretty;
+}
+
+.progressSection {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-}
-
-.activeId {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--purple-dark);
-}
-
-.activeTitle {
-  font-family: var(--font-heading);
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--text);
-  margin-bottom: 0.5rem;
-}
-
-.activeDesc {
-  font-size: 1.125rem;
-  color: var(--gray-dark);
-  line-height: 1.6;
-}
-
-.activeDesc strong {
-  color: var(--text); /* Wyróżnienie tagów strong jasnym tekstem na ciemnym tle */
-  font-weight: 800;
-}
-
-/* Nowy pasek postępu - domyślnie ukryty */
-.mobileProgressBar {
-  display: none;
-  width: 100%;
-  margin-top: 4rem;
-  padding: 0 1rem;
+  gap: 2.5rem;
+  padding-top: 2.5rem;
 }
 
 .track {
   position: relative;
-  height: 8px;
+  height: 10px;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-  margin-bottom: 2rem; /* Dodajemy miejsce na labelki na dole */
+  border-radius: 999px;
+  margin: 1rem 1rem 4rem;
 }
 
 .fill {
@@ -98,9 +62,8 @@
   left: 0;
   height: 100%;
   background: var(--purple-dark);
-  border-radius: 4px;
-  /* transition na transform pozwala na płynniejszy ruch bez szarpania na słabszych telefonach */
-  transition: width 0.1s linear; 
+  border-radius: 999px;
+  transition: width 0.35s ease;
 }
 
 .stop {
@@ -110,17 +73,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 5;
+  gap: 0.6rem;
 }
 
 .stopDot {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   background: var(--bg);
   border: 3px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   transition: all 0.3s ease;
-  position: relative; /* Potrzebne dla absolutnie pozycjonowanych particles wewnątrz */
+}
+
+.stopLabel {
+  position: absolute;
+  top: 30px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gray-dark);
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease, opacity 0.3s ease;
+  opacity: 0.65;
 }
 
 .stopActive .stopDot {
@@ -129,75 +104,14 @@
   box-shadow: 0 0 12px var(--purple-glow);
 }
 
-.stopCurrent .stopDot {
-  background: var(--text); /* Obecny aktywny punkt mocniej się wyróżnia (biały w środku) */
-  animation: popEffect 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-}
-
-@keyframes popEffect {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.5); }
-  100% { transform: scale(1.3); }
-}
-
-/* System cząsteczek przy aktywacji stacji */
-.particles {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  border-radius: 50%;
-  animation: particleBurst 0.8s ease-out forwards;
-}
-
-@keyframes particleBurst {
-  0% {
-    box-shadow:
-      0 0 0 0 var(--purple-dark),
-      0 0 0 0 var(--purple-dark),
-      0 0 0 0 var(--purple-dark),
-      0 0 0 0 var(--purple-dark);
-    opacity: 1;
-  }
-  100% {
-    box-shadow:
-      -25px -25px 0 -4px var(--purple-dark),
-      25px -25px 0 -4px var(--purple-dark),
-      -25px 25px 0 -4px var(--purple-dark),
-      25px 25px 0 -4px var(--purple-dark);
-    opacity: 0;
-  }
-}
-
-.stopLabel {
-  position: absolute;
-  top: 30px; /* Zwiększony odstęp od kropki aby uniknąć nakładania na scale(1.3) */
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--gray-dark);
-  white-space: nowrap;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  transition: all 0.3s ease;
-  opacity: 0.5;
-}
-
-@media (max-width: 480px) {
-  .stopLabel {
-    font-size: 0.6rem;
-    /* Łamiemy długie napisy na małych ekranach, jeśli to konieczne */
-    white-space: normal;
-    text-align: center;
-    width: 60px;
-  }
-}
-
 .stopActive .stopLabel {
   color: var(--text);
-  opacity: 0.8;
+  opacity: 0.9;
+}
+
+.stopCurrent .stopDot {
+  background: var(--text);
+  transform: scale(1.15);
 }
 
 .stopCurrent .stopLabel {
@@ -205,125 +119,110 @@
   opacity: 1;
 }
 
-/* Prawa strona - Koło */
-.rightContent {
-  flex: 1;
-  position: relative;
+.activeCard {
+  border: 1px solid var(--gray-mid);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.025);
+  min-height: 300px;
   display: flex;
-  align-items: center;
-  justify-content: flex-end; /* Spycha koło do prawej krawędzi ekranu */
+  flex-direction: column;
+  justify-content: center;
 }
 
-.circleWrapper {
-  position: absolute;
-  right: -1000px; 
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1600px;
-  height: 1600px;
-  --radius: 480px;
+.activeId {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: var(--purple-dark);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
 }
 
-.circle {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.15); /* Zwiększona widoczność obwódki */
-  /* Dodajemy lekkie tło dla efektu "wheel" */
-  background: radial-gradient(circle, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0) 70%);
-  transition: transform 0.1s linear; /* Wygładzanie dodatkowe z lerp w JS */
+.activeTitle {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+  text-wrap: balance;
 }
 
-/* Ozdobne pierścienie wewnątrz koła */
-.ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  pointer-events: none;
+.activeDesc {
+  color: var(--gray-dark);
+  line-height: 1.75;
+  font-size: 1.05rem;
+  max-width: 42ch;
+  text-wrap: pretty;
 }
 
-/* Ozdobne szprychy wewnątrz koła */
-.spoke {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 1px;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.08);
-  pointer-events: none;
-}
-
-/* Stacje na obwodzie */
-.station {
-  width: max-content;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: left;
-  opacity: 0.2;
-  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+.activeDesc strong {
   color: var(--text);
 }
 
-.stationTitle {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  white-space: nowrap;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.stationActive {
-  opacity: 1;
-}
-
-.stationActive .stationTitle {
-  font-size: 2.25rem;
-  font-weight: 800;
-  color: var(--purple-dark); /* Wyróżnienie aktywnego etapu kolorem wiodącym */
-  text-shadow: 0px 0px 20px var(--purple-glow);
-}
-
-/* Responsywność */
-@media (max-width: 1024px) {
-  .container {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-  }
-  
-  .leftContent {
-    max-width: 100%;
-    margin-bottom: 2rem;
-  }
-  
-  /* Ukrywamy całe koło na ekranach mobilnych / tabletach i pokazujemy pasek */
-  .rightContent {
-    display: none;
-  }
-  
-  .mobileProgressBar {
-    display: block;
-  }
-}
-
 @media (max-width: 768px) {
+  .section {
+    min-height: 200vh;
+  }
+
+  .stickyWrapper {
+    top: 0px;
+    min-height: calc(100svh - 110px);
+    padding: 3.5rem 0;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
   .mainTitle {
-    font-size: clamp(1.75rem, 8vw, 2rem);
-    margin-bottom: 1rem;
-    word-wrap: break-word;
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+    line-height: 1.2;
+  }
+
+  .lead {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-top: 0.5rem;
+    display: none; /* Ukrywamy na mobile, żeby zrobić miejsce na pasek postępu */
+  }
+
+  .progressSection {
+    padding-top: 0.5rem;
+    gap: 1rem;
+  }
+
+  .track {
+    margin: 1rem 0.5rem 3.5rem;
+  }
+
+  .stopLabel {
+    white-space: normal;
+    width: 72px;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 0.65rem;
+    top: 25px;
+  }
+
+  .activeCard {
+    padding: 1.25rem;
+    min-height: 180px;
+  }
+
+  .activeId {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
   }
 
   .activeTitle {
-    font-size: clamp(1.5rem, 6vw, 2rem);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
   }
 
-  .mobileProgressBar {
-    margin-top: 3rem; /* Troszkę ciaśniej na małych telefonach */
+  .activeDesc {
+    font-size: 0.95rem;
+    line-height: 1.45;
   }
 }

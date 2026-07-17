@@ -1,12 +1,46 @@
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
-import GooeyButton from './ui/GooeyButton';
 import styles from './CTA.module.css';
+
+const talkPoints = [
+  'sprawdzimy, dlaczego obecna strona nie daje tylu telefonów i rezerwacji, ile powinna',
+  'ustalimy, czy lepsza będzie nowa strona, przebudowa czy podpięcie systemu rezerwacji',
+  'pokażę Ci prosty kierunek zmian pod Twój obiekt i sposób pracy'
+];
 
 const CTA = () => {
   const revealRef = useScrollReveal();
+  const calendarTriggerRef = useRef(null);
+  const [calendarLoaded, setCalendarLoaded] = useState(false);
 
   useEffect(() => {
+    const trigger = calendarTriggerRef.current;
+    if (!trigger) return undefined;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setCalendarLoaded(true);
+            observer.disconnect();
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: '200px 0px',
+        threshold: 0.15,
+      }
+    );
+
+    observer.observe(trigger);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!calendarLoaded) return undefined;
+
     (function (C, A, L) {
       let p = function (a, ar) {
         a.q.push(ar);
@@ -54,18 +88,28 @@ const CTA = () => {
       hideEventTypeDetails: false,
       layout: 'month_view',
     });
-  }, []);
+  }, [calendarLoaded]);
 
   return (
     <section id="kontakt" className={`section ${styles.cta}`} ref={revealRef}>
       <div className={`container ${styles.container}`}>
-        <h2 className={`heading-xl ${styles.title} reveal fade-in`}>Masz pomysł? <strong>Zróbmy z tego stronę.</strong></h2>
+        <h2 className={`heading-xl ${styles.title} reveal fade-in`}>Chcesz odzyskać więcej rezerwacji <strong>z własnej strony?</strong></h2>
         <p className={`text-lg ${styles.description} reveal fade-in delay-100`}>
-          Nie trać klientów przez przestarzałą architekturę. <strong>Zbudujmy coś niezwykłego</strong>, co zarobi na siebie.
+          Umów bezpłatną rozmowę i sprawdźmy, co dziś blokuje kontakt z gościem albo przejście do rezerwacji z własnej strony.
         </p>
+
+        <div className={`${styles.auditBox} reveal fade-in delay-100`}>
+          <h3 className={styles.auditTitle}>Na rozmowie przechodzimy przez konkret</h3>
+          <ul className={styles.auditList}>
+            {talkPoints.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
+        </div>
+
         <div className={`${styles.directContact} reveal fade-in delay-200`}>
           <div className={styles.contactItem}>
-            <span className={styles.contactLabel}>Napisz maila:</span>
+            <span className={styles.contactLabel}>Wyślij link do obecnej strony:</span>
             <a href="mailto:kontakt@webbroskidev.pl" className={styles.contactLink}>
               kontakt@webbroskidev.pl
               <span className={styles.pointerEmoji} style={{ animationDelay: '0s' }}>👆</span>
@@ -73,7 +117,7 @@ const CTA = () => {
           </div>
           
           <div className={styles.contactItem}>
-            <span className={styles.contactLabel}>Zadzwoń do mnie:</span>
+            <span className={styles.contactLabel}>Zadzwoń, jeśli chcesz omówić obiekt od razu:</span>
             <a href="tel:+48600176361" className={styles.contactLink}>
               +48 600 176 361
               <span className={styles.pointerEmoji} style={{ animationDelay: '0.3s' }}>👆</span>
@@ -81,7 +125,7 @@ const CTA = () => {
           </div>
           
           <div className={styles.contactItem}>
-            <span className={styles.contactLabel}>Lub napisz na WhatsApp:</span>
+            <span className={styles.contactLabel}>Albo napisz na WhatsApp:</span>
             <a 
               href="https://wa.me/48600176361" 
               target="_blank" 
@@ -97,14 +141,20 @@ const CTA = () => {
           </div>
         </div>
         
-        <div className={`${styles.calendarSection} reveal fade-in delay-300`}>
-          <h3 className={styles.calendarTitle}>Albo umówmy się na bezpłatną konsultację</h3>
-          <p className={styles.calendarSubtitle}>Wybierz dogodny dla siebie termin z kalendarza poniżej</p>
+        <div className={`${styles.calendarSection} reveal fade-in delay-300`} ref={calendarTriggerRef}>
+          <h3 className={styles.calendarTitle}>Umów rozmowę o swojej stronie i rezerwacjach</h3>
+          <p className={styles.calendarSubtitle}>Wybierz termin i pokaż mi, jak dziś wygląda kontakt i sprzedaż noclegów z Twojej strony</p>
           <div className={styles.calendarContainer}>
-            <div 
-              style={{ width: '100%', height: '100%', overflow: 'scroll' }} 
-              id="my-cal-inline-rozmowa-przedstawienie-oferty-omowienie-planu-działania"
-            ></div>
+            {calendarLoaded ? (
+              <div
+                style={{ width: '100%', height: '100%', overflow: 'scroll' }}
+                id="my-cal-inline-rozmowa-przedstawienie-oferty-omowienie-planu-działania"
+              ></div>
+            ) : (
+              <div className={styles.calendarPlaceholder}>
+                <p>Wczytuję kalendarz konsultacji. Sekcja ładuje się dopiero przy kontakcie, żeby strona startowała szybciej na urządzeniach mobilnych.</p>
+              </div>
+            )}
           </div>
         </div>
       </div>

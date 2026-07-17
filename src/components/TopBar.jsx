@@ -2,7 +2,7 @@ import styles from './TopBar.module.css';
 
 const TopBar = () => {
   return (
-    <div className={styles.topBar}>
+    <div data-topbar className={styles.topBar}>
       <div className={`container ${styles.container}`}>
         <div className={styles.info}>
           <a href="mailto:kontakt@webbroskidev.pl" className={styles.link}>

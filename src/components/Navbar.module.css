@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   z-index: 100;
-  padding: 1.5rem 0;
+  padding: 0.6rem 0;
   transition: background-color 0.3s ease, border-bottom 0.3s ease, backdrop-filter 0.3s ease, top 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -36,7 +36,7 @@
 }
 
 .logoImage {
-  height: 96px;
+  height: 52px;
   width: auto;
   object-fit: contain;
   /* usunięto filter: invert(1), bo w dark mode chcemy białe logo natywnie */
@@ -90,6 +90,21 @@
   }
   .navbar.hidden {
     transform: translateY(0); /* Nie chowaj navbara na desktopach */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 0;
+  }
+
+  .navbar.top .logo {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .logoImage {
+    height: 44px;
   }
 }
 

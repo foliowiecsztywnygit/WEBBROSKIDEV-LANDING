@@ -5,20 +5,28 @@ import styles from './FAQ.module.css';
 
 const faqs = [
   {
-    question: 'Jak zintegrować Hotres ze stroną internetową?',
-    answer: 'Integracja systemu Hotres pozwala na uruchomienie bezpośrednich rezerwacji noclegów bez prowizji dla pośredników. Wdrażam ją bezpośrednio w kodzie strony React, zapewniając pełną responsywność i wysoki współczynnik konwersji. Dzięki temu zyskujesz niezależność od portali typu Booking.com.'
+    question: 'Czy taka strona realnie pomaga zdobywać więcej rezerwacji z własnej strony?',
+    answer: 'Tak, ale tylko wtedy, gdy nie jest zwykłą wizytówką. Strona musi jasno pokazywać ofertę, szybko działać na telefonie i prowadzić do kontaktu albo rezerwacji bez zbędnych kroków. Właśnie pod to projektuję układ i najważniejsze miejsca na stronie.'
   },
   {
-    question: 'Co powinna zawierać skuteczna strona dla pensjonatu lub hotelu?',
-    answer: 'Skuteczna strona www dla branży hotelarskiej musi posiadać intuicyjny system rezerwacji online (np. Hotres), szybki czas ładowania (kluczowe dla Core Web Vitals), mobilny design (RWD), integrację z mapami Google oraz silne akcenty Social Proof (opinie gości i przejrzysta galeria pokoi).'
+    question: 'Czy mogę przebudować obecną stronę obiektu, czy trzeba robić wszystko od zera?',
+    answer: 'W wielu przypadkach da się wykorzystać obecną treść, zdjęcia i strukturę oferty, ale sam układ, komunikaty i ścieżkę kontaktu trzeba przeprojektować. Na początku sprawdzam, co warto zachować, a co dziś blokuje zapytania i rezerwacje.'
   },
   {
-    question: 'Ile trwa stworzenie dedykowanej strony internetowej?',
-    answer: 'Czas realizacji zależy od stopnia skomplikowania projektu. Proste wizytówki online typu Landing Page tworzę zazwyczaj w 3-7 dni od przesłania materiałów. W przypadku integracji z własnym systemem rezerwacji zajmuje mi to trochę więcej czasu.'
+    question: 'Jakie elementy są obowiązkowe na skutecznej stronie pensjonatu, willi albo apartamentów?',
+    answer: 'Najważniejsze są: przejrzysta oferta noclegów, mocna galeria, widoczne CTA, prosty kontakt na telefonie, informacje o lokalizacji i atrakcjach oraz możliwość przejścia do rezerwacji bezpośredniej. Dopiero później liczą się ozdobniki.'
   },
   {
-    question: 'Czy moje strony będą widoczne w Google (SEO)?',
-    answer: 'Tak! Każdy projekt, który tworzę, przechodzi optymalizację techniczną SEO i On-Page. Osobiście dbam o poprawne tagi HTML (H1-H6, Meta Title, Meta Description), szybki hosting, mapy witryny XML oraz dane strukturalne JSON-LD. Stanowi to świetną bazę pod dalsze pozycjonowanie lokalne i ogólnopolskie.'
+    question: 'Czy wdrażasz Hotres, Roomadmin albo inne systemy rezerwacji?',
+    answer: 'Tak, pracuję z wdrożeniami booking engine i dopasowuję stronę do sposobu, w jaki użytkownik ma przechodzić do sprawdzenia terminu i rezerwacji. Chodzi nie tylko o samą integrację, ale o to, żeby była dobrze osadzona w całej ścieżce zakupu.'
+  },
+  {
+    question: 'Czy taka strona pomoże obiektowi być lepiej widocznym na Zakopane, Podhale czy inne regiony?',
+    answer: 'Tak. Fundament buduję pod widoczność lokalną: odpowiednie treści, układ sekcji, szybkość działania i jasne informacje o lokalizacji. Dzięki temu strona lepiej pracuje na osoby, które szukają noclegu właśnie w Twojej okolicy.'
+  },
+  {
+    question: 'Ile trwa wdrożenie i czego potrzebujesz ode mnie na start?',
+    answer: 'Po stronie właściciela obiektu najważniejsze są materiały: logo, zdjęcia, oferta, dane kontaktowe i informacja, jak dziś wygląda proces rezerwacji. Resztę porządkujemy wspólnie. Czas wdrożenia zależy od zakresu, ale już na początku rozbijam projekt na konkretne etapy.'
   }
 ];
 
@@ -34,8 +42,11 @@ const FAQ = () => {
     <section id="faq" className={`section ${styles.faqSection}`} ref={revealRef}>
       <div className="container">
         <div className={styles.header}>
-          <SectionSubtitle>Pytania i Odpowiedzi</SectionSubtitle>
-          <h2 className={`heading-lg ${styles.title}`}>Najczęściej zadawane pytania (FAQ)</h2>
+          <SectionSubtitle>Najczęstsze obiekcje przed wdrożeniem</SectionSubtitle>
+          <h2 className={`heading-lg ${styles.title}`}>Pytania, które najczęściej zadają właściciele obiektów noclegowych</h2>
+          <p className={styles.lead}>
+            Zanim podejmiesz decyzję, warto uporządkować to, co realnie wpływa na sprzedaż: telefon, wygodę dla gościa, system rezerwacji i to, jak łatwo znaleźć obiekt w Google.
+          </p>
         </div>
         
         <div className={styles.accordionContainer}>
@@ -56,7 +67,7 @@ const FAQ = () => {
               </button>
               <div 
                 className={styles.accordionBody}
-                style={{ maxHeight: openIndex === index ? '500px' : '0' }}
+                style={{ maxHeight: openIndex === index ? '700px' : '0' }}
               >
                 <div className={styles.answer}>
                   <p>{faq.answer}</p>
