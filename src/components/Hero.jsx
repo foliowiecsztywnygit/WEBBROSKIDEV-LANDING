@@ -94,16 +94,16 @@ const Hero = () => {
           <h1 className={`${styles.title} fade-in reveal delay-100`}>
             {compactHero ? (
               <>
-                <span className={styles.titleLine}>Strona dla noclegów,</span>
-                <span className={styles.titleLine}>która daje</span>
+                <span className={styles.titleLine}>Strona dla noclegów, </span>
+                <span className={styles.titleLine}>która daje </span>
                 <strong className="highlightText">
                   <Typewriter words={["więcej rezerwacji bezpośrednich", "niezależność od portali", "poczucie własnej marki"]} />
                 </strong>
               </>
             ) : (
               <>
-                <span className={styles.titleLine}>Strony dla noclegów,</span>
-                <span className={styles.titleLine}>które dają</span>
+                <span className={styles.titleLine}>Strony dla noclegów, </span>
+                <span className={styles.titleLine}>które dają </span>
                 <strong className="highlightText">
                   <Typewriter words={["więcej rezerwacji bezpośrednich", "niezależność od portali", "poczucie własnej marki"]} />
                 </strong>
