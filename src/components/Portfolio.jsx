@@ -5,8 +5,23 @@ import SectionSubtitle from './ui/SectionSubtitle';
 import styles from './Portfolio.module.css';
 
 const projects = [
+      {
+      id: 1,
+      title: 'Tatrzański Wierch',
+      label: 'Kameralna agroturystyka z widokiem na Tatry',
+      description: 'Projekt zorientowany na maksymalizację konwersji z użyciem technologii spaceru 360° i budowanie niezależności od portali OTA. Zastosowano estetykę alpine luxury z góralskimi akcentami w nowoczesnym wydaniu.',
+      categories: ['Bańska Wyżna', 'Agroturystyka', 'CRO & SEO'],
+      highlights: [
+        'architektura pod rezerwacje bezpośrednie (zero prowizji)',
+        'spacer 360°',
+        'idealne zachowanie na mobile (RWD, typografia clamp)'
+      ],
+      image: '/tatrzanski-wierch.png',
+      link: 'https://tatrzanski-wierch.pl',
+      scale: 1.0
+    },
   { 
-    id: 1,
+    id: 2,
     title: 'Domki na Zrąbku pod gubałówką',
     label: 'Domki premium pod Zakopanem',
     description: 'Projekt dla obiektu nastawionego na ruch turystyczny z Podhala. Strona miała połączyć klimat miejsca z prostą drogą do sprawdzenia dostępności i kontaktu bez przechodzenia przez pośredników.',
@@ -21,7 +36,7 @@ const projects = [
     scale: 1.0
   },
   { 
-    id: 2,
+    id: 3,
     title: 'Willa Szymkówka',
     label: 'Willa z dużą galerią i wyraźnym CTA',
     description: 'Celem było uporządkowanie prezentacji obiektu, zdjęć i najważniejszych informacji tak, aby użytkownik szybciej przeszedł od oglądania willi do kontaktu i decyzji o rezerwacji.',
@@ -36,7 +51,7 @@ const projects = [
     scale: 1.0
   },
   { 
-    id: 3,
+    id: 4,
     title: 'Willa Rysy',
     label: 'Obiekt noclegowy z góralskim charakterem',
     description: 'Tutaj nacisk poszedł w połączenie lokalnego klimatu z nowoczesnym, czytelnym interfejsem. Strona miała budować zaufanie i pomagać gościowi szybko ocenić, czy to miejsce jest dla niego.',
@@ -51,7 +66,7 @@ const projects = [
     scale: 1.0
   },
   { 
-    id: 4,
+    id: 5,
     title: 'Willa 14',
     label: 'Minimalistyczna strona dla obiektu górskiego',
     description: 'Projekt skupiony na prostocie, szybkim odbiorze oferty i mocnym CTA. To dobry przykład, że obiekt nie potrzebuje przeładowanej strony, jeśli najważniejsze decyzje użytkownika są dobrze poprowadzone.',
