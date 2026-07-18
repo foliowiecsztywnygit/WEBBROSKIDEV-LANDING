@@ -18,7 +18,7 @@ const projects = [
     ],
     image: '/domkinazrabku.png',
     link: 'https://domkinazrabku.pl',
-    scale: 3.0
+    scale: 1.0
   },
   { 
     id: 2,
@@ -33,7 +33,7 @@ const projects = [
     ],
     image: '/willaszymkowka.png',
     link: 'https://willaszymkowka.pl',
-    scale: 3.0
+    scale: 1.0
   },
   { 
     id: 3,
