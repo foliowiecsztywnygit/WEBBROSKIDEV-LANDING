@@ -16,7 +16,7 @@ const BlogIndex = () => {
           name="description"
           content="Blog dla właścicieli noclegów w Zakopanem, na Podhalu i w Szczyrku. Artykuły o stronach, rezerwacjach bezpośrednich i automatyzacji obsługi obiektu."
         />
-        <link rel="canonical" href="https://webbroskidev.pl/blog" />
+        <link rel="canonical" href="https://www.webbroskidev.pl/blog" />
       </Helmet>
       <TopBar />
       <Navbar />

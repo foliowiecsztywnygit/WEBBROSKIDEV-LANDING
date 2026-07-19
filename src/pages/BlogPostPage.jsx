@@ -25,7 +25,7 @@ const BlogPostPage = () => {
       <Helmet>
         <title>{post.metaTitle}</title>
         <meta name="description" content={post.metaDescription} />
-        <link rel="canonical" href={`https://webbroskidev.pl${post.path}`} />
+        <link rel="canonical" href={`https://www.webbroskidev.pl${post.path}`} />
       </Helmet>
       <TopBar />
       <Navbar />
