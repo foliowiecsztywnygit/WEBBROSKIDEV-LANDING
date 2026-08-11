@@ -1,5 +1,140 @@
 export const blogPosts = [
   {
+    slug: 'booking-hotres-co-to-jest',
+    path: '/blog/booking-hotres-co-to-jest',
+    title: 'Booking Hotres – co to jest, jak działa i czy warto wdrożyć go w swoim obiekcie?',
+    metaTitle: 'Booking Hotres - co to jest? Opinie i wdrożenie | WEBBROSKIDEV',
+    metaDescription: 'Zastanawiasz się, co to jest Hotres i jak działa? Zobacz, jak ten polski booking engine pomaga odzyskać rezerwacje i uniezależnić się od wielkich portali.',
+    excerpt: 'Hotres to jeden z najpopularniejszych polskich systemów rezerwacyjnych. Sprawdź, dlaczego pensjonaty i apartamenty masowo z niego korzystają.',
+    category: 'Automatyzacja i rezerwacje',
+    readTime: '6 min',
+    updatedAt: '12 sierpnia 2026',
+    intro: 'Wpisując w Google hasło "booking hotres co to", prawdopodobnie szukasz alternatywy dla gigantów prowizyjnych lub sposobu na opanowanie chaosu w rezerwacjach. Hotres to polski, sprawdzony system, który zdejmuje z właścicieli obiektów noclegowych mnóstwo ręcznej pracy. Zobaczmy, dlaczego warto się nim zainteresować.',
+    sections: [
+      {
+        heading: '1. Czym dokładnie jest Hotres?',
+        paragraphs: [
+          'W telegraficznym skrócie: Hotres to zintegrowany system rezerwacyjny (Booking Engine) oraz menedżer kanałów (Channel Manager). Służy do tego, abyś mógł przyjmować rezerwacje bezpośrednio przez własną stronę internetową, a jednocześnie synchronizował dostępność pokoi na portalach takich jak Booking.com czy Airbnb.',
+          'Zamiast płacić 15% prowizji od każdej transakcji, płacisz stały abonament. Reszta zostaje w Twojej kieszeni, a gość ma pewność, że rezerwuje pobyt bezpiecznie.'
+        ]
+      },
+      {
+        heading: '2. Jak Hotres działa na Twojej stronie?',
+        paragraphs: [
+          'Dla Twojego gościa Hotres to po prostu nowoczesny, ładny kalendarz. Klient wybiera datę przyjazdu, widzi od razu cenę, klika "Rezerwuj" i przechodzi do szybkiej płatności (BLIK, Przelewy24, PayU). Płatność trafia prosto na Twoje konto.',
+          'Dla Ciebie to z kolei "wirtualna recepcja". Gdy klient dokona rezerwacji na Twojej stronie, Hotres natychmiast, w ułamku sekundy, blokuje ten sam termin na Bookingu i Airbnb. Dzięki temu całkowicie eliminujesz ryzyko tzw. overbookingu.'
+        ]
+      },
+      {
+        heading: '3. Dlaczego warto go wdrożyć (i jak to zrobić dobrze)?',
+        paragraphs: [
+          'Wielu właścicieli popełnia błąd, wklejając link do Hotresa byle gdzie na starej, brzydkiej stronie. To nie zadziała. Żeby Booking Engine zarabiał, musi być płynnie wbudowany w układ strony głównej i podstron.',
+          'Profesjonalnie wdrożony system rezerwacji buduje potężne zaufanie i zachęca gości do bezpośrednich płatności, co w krótkim czasie potrafi zwrócić koszt budowy nowej witryny internetowej.'
+        ]
+      }
+    ],
+    relatedSlugs: [
+      'booking-engine-dla-domkow-i-apartamentow-jaki-wybrac',
+      'system-rezerwacji-dla-domkow-w-tatrach-jak-automatycznie-przyjmowac-zadatki'
+    ],
+    cta: {
+      title: 'Wdróż Hotres na swojej nowej stronie',
+      description: 'Zbuduję dla Ciebie nowoczesną witrynę od razu z wbudowanym systemem Hotres, dzięki czemu odzyskasz prowizje z OTA. Start za 0 zł.',
+      label: 'Sprawdź wdrożenia Hotres',
+      href: '/wdrozenia-hotres'
+    }
+  },
+  {
+    slug: 'booking-engine-dla-domkow-i-apartamentow-jaki-wybrac',
+    path: '/blog/booking-engine-dla-domkow-i-apartamentow-jaki-wybrac',
+    title: 'Booking engine dla domków i apartamentów. Jaki system rezerwacji wybrać w 2026 roku?',
+    metaTitle: 'Booking engine dla pensjonatów i apartamentów - ranking | WEBBROSKIDEV',
+    metaDescription: 'Jaki booking engine wybrać dla domku lub apartamentu? Zobacz zestawienie i dowiedz się, co musi mieć nowoczesna strona z systemem rezerwacji.',
+    excerpt: 'Wybór systemu rezerwacji to kluczowa decyzja. Zobacz, na co zwrócić uwagę wybierając booking engine dla swojego obiektu noclegowego.',
+    category: 'Technika, która sprzedaje',
+    readTime: '7 min',
+    updatedAt: '12 sierpnia 2026',
+    intro: 'Wpisując frazę "booking engine dla pensjonatów" albo "booking engine dla apartamentów" trafisz na dziesiątki systemów. Hotres, Roomadmin, IdoSell Booking, Profitroom... Wybór jest potężny, ale prawda jest taka, że najlepszy system to nie ten, który ma najwięcej funkcji, lecz ten, który najłatwiej obsługuje Twojego klienta.',
+    sections: [
+      {
+        heading: '1. Czym różni się Booking Engine od kalendarza z Google?',
+        paragraphs: [
+          'Zwykły kalendarz tylko pokazuje, że termin jest zajęty. Prawdziwy Booking Engine to cała machina sprzedażowa: potrafi pobrać płatność, wyliczyć zniżkę na pobyt powyżej 7 dni, wysłać gościowi kod do drzwi i fakturę.',
+          'Dla apartamentów i małych domków kluczowe jest to, aby booking engine obsługiwał szybkie bramki płatności i był maksymalnie przejrzysty na ekranie małego smartfona.'
+        ]
+      },
+      {
+        heading: '2. Na co zwrócić uwagę przed wyborem?',
+        paragraphs: [
+          'Przede wszystkim na prostotę integracji. Dobry system musi pozwalać na osadzenie tzw. widgetu bezpośrednio na Twojej stronie www (a nie tylko przekierowywać na zewnątrz).',
+          'Druga kwestia to wbudowany Channel Manager (czyli synchronizacja z Bookingiem i Airbnb). Bez tego Twój nowy system tylko dołoży Ci pracy. Pamiętaj też, by unikać systemów pobierających wysokie prowizje – lepiej zapłacić stały abonament.'
+        ]
+      },
+      {
+        heading: '3. Strona www i Booking Engine to naczynia połączone',
+        paragraphs: [
+          'Kupno świetnego systemu nic nie da, jeśli Twoja obecna strona odstrasza wyglądem z 2012 roku. Goście nie zaufają systemowi płatności na nieresponsywnej witrynie.',
+          'Dlatego zawsze polecam wdrażać Booking Engine w duecie z nowoczesną, szybką stroną internetową. Taka kombinacja sprawia, że turysta rezerwuje szybko i chętnie, a Ty odzyskujesz swoją prowizję.'
+        ]
+      }
+    ],
+    relatedSlugs: [
+      'booking-hotres-co-to-jest',
+      'strona-to-wizytowka-czy-maszyna-do-zarabiania-3-bledy'
+    ],
+    cta: {
+      title: 'Strona + Booking Engine = Czysty Zysk',
+      description: 'Stworzę dla Twojego pensjonatu profesjonalną witrynę z nowoczesnym systemem rezerwacji. Koniec z oddawaniem pieniędzy korporacjom.',
+      label: 'Poznaj szczegóły oferty',
+      href: '/oferta'
+    }
+  },
+  {
+    slug: 'automatyzacja-wiadomosci-booking-com-i-airbnb',
+    path: '/blog/automatyzacja-wiadomosci-booking-com-i-airbnb',
+    title: 'Automatyzacja wiadomości Booking.com i Airbnb. Jak oszczędzić 10 godzin tygodniowo na obsłudze gości?',
+    metaTitle: 'Automatyzacja wiadomości Booking.com i Airbnb | WEBBROSKIDEV',
+    metaDescription: 'Masz dość odpowiadania na te same pytania? Zobacz, jak automatyzacja wiadomości na Booking i Airbnb ułatwia prowadzenie pensjonatu i apartamentu.',
+    excerpt: 'Pisanie po raz setny kodu do drzwi i hasła do WiFi bywa męczące. Dowiedz się, jak automatycznie wysyłać szablony wiadomości do gości z OTA.',
+    category: 'Automatyzacja i rezerwacje',
+    readTime: '5 min',
+    updatedAt: '12 sierpnia 2026',
+    intro: '"O której jest doba hotelowa?", "Gdzie mogę zaparkować?", "Jaki jest kod do domku?". Jeśli prowadzisz apartament lub pensjonat na Podhalu, te pytania to Twoja codzienność. Zamiast ciągle siedzieć z nosem w telefonie, możesz zautomatyzować wymianę wiadomości na Booking.com i Airbnb i odzyskać swój czas wolny.',
+    sections: [
+      {
+        heading: '1. Gdzie ucieka najwięcej czasu?',
+        paragraphs: [
+          'Podczas każdego standardowego pobytu wysyłasz zazwyczaj od 3 do 5 wiadomości: potwierdzenie rezerwacji, instrukcje przyjazdu/check-inu, pytanie o zadowolenie w trakcie pobytu, oraz podziękowanie połączone z prośbą o opinię po wyjeździe.',
+          'Mnożąc to przez 10 apartamentów i pełny kalendarz w wakacje, robisz się pełnoetatowym pracownikiem infolinii. To ogromna strata czasu, który mógłbyś poświęcić rodzinie lub na rozwój biznesu.'
+        ]
+      },
+      {
+        heading: '2. Jak działa automatyzacja wiadomości?',
+        paragraphs: [
+          'Dzięki systemom typu Channel Manager (np. Hotres) lub wbudowanym opcjom Booking/Airbnb, możesz skonfigurować tzw. triggery (wyzwalacze). System wie, że dany gość przyjeżdża jutro.',
+          'Wtedy automatycznie wysyła do niego zaplanowaną wiadomość ze spersonalizowanym powitaniem i kodami dostępu. Klient myśli, że czuwasz przy telefonie 24/7, a Ty w tym czasie spokojnie pijesz kawę lub jeździsz na nartach.'
+        ]
+      },
+      {
+        heading: '3. Buduj własną bazę do rezerwacji bezpośrednich',
+        paragraphs: [
+          'W ostatniej automatycznej wiadomości po wymeldowaniu koniecznie prześlij gościowi link do TWOJEJ strony z adnotacją: "Na kolejny pobyt otrzymasz 10% rabatu rezerwując bezpośrednio przez naszą stronę".',
+          'Goście chętnie klikną i zapamiętają adres. Jeśli Twoja strona będzie profesjonalna i wyposazona w szybki Booking Engine, przy następnej wizycie w Zakopanem lub Szczyrku ominą portale z daleka.'
+        ]
+      }
+    ],
+    relatedSlugs: [
+      'booking-hotres-co-to-jest',
+      'dlaczego-turysci-wola-rezerwowac-bezposrednio'
+    ],
+    cta: {
+      title: 'Automatyzacja, która daje Ci wolność',
+      description: 'Zbuduję Ci stronę-maszynę, która sprzedaje noclegi i automatyzuje obsługę. Pracuj mądrzej, a nie więcej.',
+      label: 'Wybierz Pakiet PRO',
+      href: '/oferta'
+    }
+  },
+  {
     slug: 'ile-naprawde-kosztuje-booking-w-sezonie',
     path: '/blog/ile-naprawde-kosztuje-booking-w-sezonie',
     title: 'Ile tak naprawdę kosztuje Cię Booking w sezonie? Policz, ile pieniędzy oddajesz korporacji.',

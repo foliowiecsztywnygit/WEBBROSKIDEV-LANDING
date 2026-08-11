@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import GooeyButton from './ui/GooeyButton';
 import { Phone } from 'lucide-react';
 import styles from './Navbar.module.css';
@@ -35,8 +36,8 @@ const Navbar = () => {
           <nav className={styles.navLinks}>
             <a href="/#dla-kogo">Dla kogo</a>
             <a href="/#uslugi">Usługi</a>
-            <a href="/oferta">Oferta</a>
-            <a href="/blog">Blog</a>
+            <Link to="/oferta">Oferta</Link>
+            <Link to="/blog">Blog</Link>
             <a href="/#portfolio">Realizacje</a>
             <div className={styles.navBtnWrapper}>
               <GooeyButton href="/#kontakt" variant="outline">Kontakt</GooeyButton>

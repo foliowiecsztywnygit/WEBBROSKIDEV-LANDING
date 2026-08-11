@@ -42,16 +42,16 @@ const Home = () => (
     <Navbar />
     <main>
       <Hero />
-      <AboutMe />
+      <CommissionCalculator />
       <Services />
-      <WhyMe />
       <Portfolio />
+      <AboutMe />
+      <WhyMe />
       <RotatingProcess />
-      <SelectedArticles />
       <Partners />
       <FAQ />
-      <CommissionCalculator />
       <CTA />
+      <SelectedArticles />
     </main>
     <Footer />
   </>
