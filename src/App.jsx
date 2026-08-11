@@ -11,6 +11,7 @@ import Portfolio from './components/Portfolio';
 import Partners from './components/Partners';
 import WhyMe from './components/WhyMe';
 import FAQ from './components/FAQ';
+import CommissionCalculator from './components/CommissionCalculator';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import CookieBanner from './components/CookieBanner';
@@ -49,6 +50,7 @@ const Home = () => (
       <SelectedArticles />
       <Partners />
       <FAQ />
+      <CommissionCalculator />
       <CTA />
     </main>
     <Footer />

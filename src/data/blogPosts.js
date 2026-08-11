@@ -1,5 +1,140 @@
 export const blogPosts = [
   {
+    slug: 'ile-naprawde-kosztuje-booking-w-sezonie',
+    path: '/blog/ile-naprawde-kosztuje-booking-w-sezonie',
+    title: 'Ile tak naprawdę kosztuje Cię Booking w sezonie? Policz, ile pieniędzy oddajesz korporacji.',
+    metaTitle: 'Ile kosztuje Booking w sezonie? Policz prowizje | WEBBROSKIDEV',
+    metaDescription: 'Sprawdź kalkulację, ile tracisz na prowizjach portali OTA w szczycie sezonu i dlaczego te pieniądze mogłyby pracować na rozwój Twojego obiektu.',
+    excerpt: 'Z pozoru 15% to niewiele. W praktyce, przy pełnym obłożeniu oddajesz pośrednikom tysiące złotych, za które można by postawić balię dla gości.',
+    category: 'Zarabianie na wynajmie',
+    readTime: '6 min',
+    updatedAt: '12 sierpnia 2026',
+    intro: 'Dla wielu właścicieli domków wczasowych i apartamentów obecność na portalach rezerwacyjnych to konieczność. Dają zasięgi i gwarantują stały napływ gości. Niestety, w szczycie sezonu – gdy popyt i tak jest ogromny – ta "wygoda" kosztuje najwięcej. Czas sprawdzić, ile naprawdę pieniędzy znika z Twojego konta.',
+    sections: [
+      {
+        heading: '1. Matematyka, która boli najbardziej',
+        paragraphs: [
+          'Założenie jest proste: większość portali pobiera od 15% do nawet 18% prowizji od każdej zrealizowanej rezerwacji. Jeśli Twój apartament zarabia w danym miesiącu 10 000 zł, oddajesz korporacji niemal 2 000 zł.',
+          'Zróbmy krok dalej. Pomnóżmy to przez trzy miesiące mocnego sezonu, a potem dorzućmy ferie, majówkę i długie weekendy. Nagle okazuje się, że w skali roku oddajesz kilkanaście lub kilkadziesiąt tysięcy złotych za coś, co w dużym stopniu mogłoby dziać się automatycznie na Twojej własnej stronie.'
+        ]
+      },
+      {
+        heading: '2. Co mógłbyś mieć za te pieniądze?',
+        paragraphs: [
+          'Wyobraź sobie, co oznacza oszczędzenie 10 000 - 15 000 zł na przestrzeni roku. Za te pieniądze spokojnie postawisz na tarasie nowoczesną balię, kupisz saunę beczkę, przeprowadzisz kompleksowy remont salonu albo zamówisz profesjonalną sesję zdjęciową, która podniesie standard oferty.',
+          'Płacąc gigantyczne prowizje, tak naprawdę inwestujesz w cudzy biznes. Booking rośnie, a Ty zostajesz w miejscu, pozbawiając się kapitału na rozwój swojego obiektu.'
+        ]
+      },
+      {
+        heading: '3. Odzyskaj niezależność z systemem rezerwacji',
+        paragraphs: [
+          'Nie musisz od razu znikać z portali. Mądrą strategią jest dywersyfikacja. Klienci powracający, goście z poleceń czy osoby z Twoich mediów społecznościowych absolutnie nie powinni przechodzić przez zewnętrzny portal.',
+          'Wystarczy wyposażyć własną stronę w profesjonalny system rezerwacji, który pozwala na wygodne sprawdzenie wolnych terminów i opłacenie zadatku BLIKIEM. Przekierowując tylko 30-40% ruchu na stronę bezpośrednią, zwracasz koszt jej wdrożenia już w pierwszym sezonie.'
+        ]
+      }
+    ],
+    relatedSlugs: [
+      'strona-to-wizytowka-czy-maszyna-do-zarabiania-3-bledy',
+      'dlaczego-turysci-wola-rezerwowac-bezposrednio'
+    ],
+    cta: {
+      title: 'Przestań płacić haracz korporacjom',
+      description: 'Zbudujmy profesjonalną stronę z automatycznym systemem rezerwacji. Zacznij przejmować zyski i uniezależnij się od wysokich prowizji OTA.',
+      label: 'Sprawdź ofertę',
+      href: '/oferta'
+    }
+  },
+  {
+    slug: 'strona-to-wizytowka-czy-maszyna-do-zarabiania-3-bledy',
+    path: '/blog/strona-to-wizytowka-czy-maszyna-do-zarabiania-3-bledy',
+    title: 'Twoja strona internetowa to wizytówka, czy maszyna do zarabiania? 3 najczęstsze błędy.',
+    metaTitle: 'Błędy na stronie internetowej obiektu - wizytówka czy biznes? | WEBBROSKIDEV',
+    metaDescription: 'Strona internetowa domku powinna sprzedawać noclegi, a nie tylko wyglądać. Sprawdź 3 najczęstsze błędy, przez które tracisz rezerwacje.',
+    excerpt: 'Turyści chcą rezerwować w 2 minuty z telefonu, a nie dzwonić i pytać o dostępność. Zobacz, dlaczego Twoja strona nie konwertuje.',
+    category: 'Technika, która sprzedaje',
+    readTime: '5 min',
+    updatedAt: '12 sierpnia 2026',
+    intro: 'Istnieje ogromna różnica między witryną-wizytówką a stroną, która zarabia. Ta pierwsza ma po prostu "ładne zdjęcia" i numer telefonu. Ta druga działa jak wirtualny recepcjonista dostępny 24/7. Jeśli zauważyłeś, że masz dużo wejść, ale mało zapytań, prawdopodobnie popełniasz jeden z poniższych błędów.',
+    sections: [
+      {
+        heading: '1. Tylko numer telefonu zamiast rezerwacji online',
+        paragraphs: [
+          'Wyobraź sobie gościa, który szuka domku po pracy, najczęściej po godzinie 20:00. Chce mieć problem z głowy i zaplanować urlop. Wchodzi na Twoją stronę i widzi komunikat: "Zadzwoń, żeby sprawdzić dostępność".',
+          'W obecnych czasach ludzie nie chcą dzwonić. Są zmęczeni, brakuje im czasu. Wolą kliknąć w kalendarz, zobaczyć, że weekend jest wolny, kliknąć "Rezerwuj" i iść spać. Brak rezerwacji online sprawia, że bezpowrotnie tracisz gości na rzecz konkurencji, która ten proces maksymalnie ułatwia.'
+        ]
+      },
+      {
+        heading: '2. Strona wygląda jak "rozsypana" na telefonie',
+        paragraphs: [
+          'Ponad 70% ruchu przy wyszukiwaniu noclegów pochodzi ze smartfonów. Jeśli Twoja strona każe gościowi powiększać tekst palcami, a formularz kontaktowy wychodzi poza ekran, to jest to wyraźny sygnał: "nie nadążamy".',
+          'Gość nie ma cierpliwości do nieresponsywnej witryny. Zirytowany, bardzo szybko zamknie kartę i z ogromną przyjemnością skorzysta z wygodnej, perfekcyjnie działającej na mobile aplikacji znanego portalu.'
+        ]
+      },
+      {
+        heading: '3. Brak szybkich, nowoczesnych płatności',
+        paragraphs: [
+          'Czasy, gdy wysyłało się mailem numer konta i czekało 3 dni na zaksięgowanie zadatku, powoli odchodzą do lamusa. Dziś absolutnym standardem jest zapłata BLIKIEM lub szybkimi przelewami online (np. Przelewy24, PayU).',
+          'Wdrożenie szybkich płatności na stronie wywołuje u gościa poczucie ulgi i pewności. Wie, że transakcja jest bezpieczna, zadatek wpłacony automatycznie, a wymarzonego terminu nikt mu sprzed nosa nie zwinie.'
+        ]
+      }
+    ],
+    relatedSlugs: [
+      'ile-naprawde-kosztuje-booking-w-sezonie',
+      'dlaczego-turysci-wola-rezerwowac-bezposrednio'
+    ],
+    cta: {
+      title: 'Zamień stronę-wizytówkę na maszynę do rezerwacji',
+      description: 'Zbuduję dla Ciebie szybką, responsywną stronę internetową ze zintegrowanymi płatnościami online, która pracuje i zarabia dla Ciebie 24/7.',
+      label: 'Zobacz naszą ofertę',
+      href: '/oferta'
+    }
+  },
+  {
+    slug: 'dlaczego-turysci-wola-rezerwowac-bezposrednio',
+    path: '/blog/dlaczego-turysci-wola-rezerwowac-bezposrednio',
+    title: 'Dlaczego turyści wolą rezerwować bezpośrednio u właściciela? (I jak im to ułatwić)',
+    metaTitle: 'Rezerwacje bezpośrednie - dlaczego goście wolą stronę obiektu? | WEBBROSKIDEV',
+    metaDescription: 'Zrozum psychologię turysty. Goście chcą kontaktować się z właścicielami i liczą na lepszą cenę, ale boją się oszustów. Jak temu zaradzić?',
+    excerpt: 'Z jednej strony klienci chętnie unikają dużych portali licząc na niższe ceny. Z drugiej – paraliżuje ich strach przed byciem oszukanym.',
+    category: 'Automatyzacja i rezerwacje',
+    readTime: '6 min',
+    updatedAt: '12 sierpnia 2026',
+    intro: 'Kiedy zapytasz turystów o ich preferencje, usłyszysz wyraźny schemat. Bardzo duża grupa chętnie omija wielkie platformy z prowizją i kieruje się bezpośrednio do właściciela. Liczą na lepszą, bardziej ludzką komunikację i zauważalnie korzystniejszą cenę. Dlaczego więc na koniec dnia tak często znowu klikają "Rezerwuj" na Booking.com?',
+    sections: [
+      {
+        heading: '1. Paraliżujący strach przed oszustwami na Facebooku i OLX',
+        paragraphs: [
+          'Media w każdym sezonie letnim i zimowym trąbią o fałszywych pensjonatach i oszustach żerujących na OLX. Nic dziwnego, że perspektywa przelania kilkuset złotych zadatku na zwykły rachunek bankowy podany w prywatnej wiadomości na Messengerze budzi ogromne opory.',
+          'Dla statystycznego gościa to jest po prostu zbyt duże ryzyko. Turyści bardzo chcą kupować bezpośrednio u Ciebie, ale potrzebują żelaznej gwarancji, że obiekt istnieje, a ich wymarzony urlop naprawdę się odbędzie.'
+        ]
+      },
+      {
+        heading: '2. Jak profesjonalny widget rozwiązuje ten problem?',
+        paragraphs: [
+          'Skutecznym lekarstwem na brak zaufania jest profesjonalna, nowoczesna otoczka Twojego biznesu. Kiedy gość wchodzi na estetyczną witrynę obiektu i widzi zautomatyzowany, sprawdzony system rezerwacji, uchodzi z niego wszelkie napięcie.',
+          'Użytkownik ma pod ręką pełne regulaminy, politykę prywatności i bezpieczne bramki płatności takie jak Przelewy24 czy PayU. Poczuje się dokładnie tak samo bezpiecznie, jak w dobrym sklepie internetowym – podświadomie wie, że współpracuje z poważnym partnerem.'
+        ]
+      },
+      {
+        heading: '3. Zyskują obie strony: układ idealny',
+        paragraphs: [
+          'Oferując klientom tak wygodne i godne zaufania narzędzie, kreujesz sytuację, w której każdy wygrywa. Gość otrzymuje satysfakcjonującą cenę (ponieważ nie musi przepłacać za prowizję portalu), a także błyskawiczne potwierdzenie rezerwacji.',
+          'Ty jako właściciel oszczędzasz pieniądze na haraczu dla korporacji, natychmiast księgujesz środki na swoim koncie i zatrzymujesz pełne dane kontaktowe swojego gościa. Dzięki temu, za rok, możesz mu wysłać przypomnienie lub ofertę specjalną, zupełnie poza radarem wielkich portali.'
+        ]
+      }
+    ],
+    relatedSlugs: [
+      'ile-naprawde-kosztuje-booking-w-sezonie',
+      'strona-to-wizytowka-czy-maszyna-do-zarabiania-3-bledy'
+    ],
+    cta: {
+      title: 'Zacznij budować zaufanie od pierwszej sekundy',
+      description: 'Zainwestuj we własną stronę z wbudowanym systemem bezpiecznych płatności online i zautomatyzowanych rezerwacji. Zobacz pakiety.',
+      label: 'Wybierz Pakiet PRO',
+      href: '/oferta'
+    }
+  },
+  {
     slug: 'jak-ominac-wysokie-prowizje-booking-com-willa-podhale',
     path: '/blog/jak-ominac-wysokie-prowizje-booking-com-willa-podhale',
     title: 'Jak ominąć wysokie prowizje Booking.com w willi na Podhalu?',

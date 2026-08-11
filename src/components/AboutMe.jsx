@@ -4,22 +4,7 @@ import GooeyButton from './ui/GooeyButton';
 import styles from './AboutMe.module.css';
 
 const segments = [
-  {
-    title: 'Dla pensjonatów i willi całorocznych',
-    description: 'Strony, które porządkują ofertę pokoi, pokazują standard obiektu i prowadzą gościa prosto do kontaktu lub rezerwacji.'
-  },
-  {
-    title: 'Dla niezależnych apartamentów i domków',
-    description: 'Układy pod obiekty sezonowe z naciskiem na telefon, galerię, mapę i szybkie sprawdzenie terminu.'
-  },
-  {
-    title: 'Wdrożenia booking engine',
-    description: 'Integracje systemów rezerwacji, które skracają drogę od wejścia na stronę do sprawdzenia terminu i finalizacji pobytu.'
-  },
-  {
-    title: 'Obiekty z regionów turystycznych',
-    description: 'Oferta dopasowana do Podhala, Zakopanego, Szczyrku i polskiego morza, gdzie liczy się telefon, zdjęcia, lokalizacja i szybki kontakt z gościem.'
-  }
+
 ];
 
 const AboutMe = () => {
@@ -29,10 +14,13 @@ const AboutMe = () => {
     <section id="dla-kogo" className={`section ${styles.aboutMe}`} ref={revealRef}>
       <div className={`container ${styles.container}`}>
         <div className={`${styles.left} reveal fade-in`}>
-          <SectionSubtitle>Dla kogo pracuję</SectionSubtitle>
-          <h2 className={`heading-lg ${styles.title}`}>Buduję strony, które mają sprzedawać pobyt, a nie tylko dobrze wyglądać.</h2>
+          <SectionSubtitle>Moje podejście</SectionSubtitle>
+          <h2 className={`heading-lg ${styles.title}`}>Nie komplikuję.</h2>
+          <h2 className={`heading-lg ${styles.title}`}>Marketing i widoczność w sieci</h2>
+          <h2 className={`heading-lg ${styles.title}`}>to nie fizyka kwantowa.</h2>
+          <h2 className={`heading-lg ${styles.title}`}></h2>
         </div>
-        
+
         <div className={`${styles.right} reveal fade-in delay-100`}>
           <div className={styles.textContent}>
             <p>
@@ -51,7 +39,7 @@ const AboutMe = () => {
               </article>
             ))}
           </div>
-          
+
           <div className={styles.actions}>
             <GooeyButton href="/#uslugi" variant="primary">Sprawdź rozwiązania</GooeyButton>
             <GooeyButton href="/#kontakt" variant="outline">Porozmawiajmy o Twoim obiekcie</GooeyButton>
