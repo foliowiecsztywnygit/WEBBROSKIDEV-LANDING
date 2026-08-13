@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import styles from './LegalPages.module.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -6,6 +7,11 @@ import TopBar from '../components/TopBar';
 const Privacy = () => {
   return (
     <>
+      <Helmet>
+        <title>Polityka Prywatności | WEBBROSKIDEV</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="canonical" href="https://www.webbroskidev.pl/polityka-prywatnosci" />
+      </Helmet>
       <TopBar />
       <Navbar />
       <main className={styles.legalMain}>

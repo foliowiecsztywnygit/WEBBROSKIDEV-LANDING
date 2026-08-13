@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import GooeyButton from './ui/GooeyButton';
 import styles from './CommissionCalculator.module.css';
 
 const CommissionCalculator = () => {
@@ -106,6 +107,10 @@ const CommissionCalculator = () => {
               <span className={styles.resultLabelHighlight}>Rocznie tracisz zysku nawet:</span>
               <span className={styles.resultValueHighlight}>{formatCurrency(yearlyCommission)}</span>
               <p className={styles.resultNote}>To budżet, za który dawno zbudowałbyś świetną stronę, a resztę zatrzymał w kieszeni!</p>
+            </div>
+            
+            <div className={styles.ctaWrapper}>
+              <GooeyButton href="/#kontakt" variant="primary">Przestań przepłacać</GooeyButton>
             </div>
           </div>
         </div>

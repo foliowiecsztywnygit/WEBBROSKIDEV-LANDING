@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import styles from './LegalPages.module.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -6,6 +7,11 @@ import TopBar from '../components/TopBar';
 const Terms = () => {
   return (
     <>
+      <Helmet>
+        <title>Regulamin Świadczenia Usług | WEBBROSKIDEV</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="canonical" href="https://www.webbroskidev.pl/regulamin" />
+      </Helmet>
       <TopBar />
       <Navbar />
       <main className={styles.legalMain}>

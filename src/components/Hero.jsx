@@ -97,7 +97,7 @@ const Hero = () => {
                 <span className={styles.titleLine}>Strona dla noclegów, </span>
                 <span className={styles.titleLine}>która daje </span>
                 <strong className="highlightText">
-                  <Typewriter words={["więcej rezerwacji bezpośrednich", "niezależność od portali", "poczucie własnej marki"]} />
+                  <Typewriter words={["więcej rezerwacji bezpośrednich", "niezależność od portali", "koniec z wysokimi prowizjami"]} />
                 </strong>
               </>
             ) : (
@@ -105,7 +105,7 @@ const Hero = () => {
                 <span className={styles.titleLine}>Strony dla noclegów, </span>
                 <span className={styles.titleLine}>które dają </span>
                 <strong className="highlightText">
-                  <Typewriter words={["więcej rezerwacji bezpośrednich", "niezależność od portali", "poczucie własnej marki"]} />
+                  <Typewriter words={["więcej rezerwacji bezpośrednich", "niezależność od portali", "koniec z wysokimi prowizjami"]} />
                 </strong>
               </>
             )}
@@ -130,7 +130,7 @@ const Hero = () => {
                 Projektuję szybkie strony dla pensjonatów, willi, apartamentów i domków, które mają ułatwić gościowi <span className="accentText">kontakt albo rezerwację</span>.
               </p>
               <div className={`${styles.actions} fade-in reveal delay-300`}>
-                <GooeyButton href="/oferta" variant="outline">Zobacz pakiety</GooeyButton>
+                <GooeyButton href="/oferta" variant="primary">Odbierz wycenę</GooeyButton>
                 <GooeyButton href="/#portfolio" variant="outline">Zobacz realizacje</GooeyButton>
               </div>
             </>

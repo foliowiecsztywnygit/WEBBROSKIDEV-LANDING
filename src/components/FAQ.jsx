@@ -42,7 +42,7 @@ const FAQ = () => {
     <section id="faq" className={`section ${styles.faqSection}`} ref={revealRef}>
       <div className="container">
         <div className={styles.header}>
-          <SectionSubtitle>Najczęstsze obiekcje przed wdrożeniem</SectionSubtitle>
+          <SectionSubtitle>Odpowiedzi na pytania przed startem</SectionSubtitle>
           <h2 className={`heading-lg ${styles.title}`}>Pytania, które najczęściej zadają właściciele obiektów noclegowych</h2>
           <p className={styles.lead}>
             Zanim podejmiesz decyzję, warto uporządkować to, co realnie wpływa na sprzedaż: telefon, wygodę dla gościa, system rezerwacji i to, jak łatwo znaleźć obiekt w Google.

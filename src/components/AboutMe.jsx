@@ -31,15 +31,6 @@ const AboutMe = () => {
             </p>
           </div>
 
-          <div className={styles.segmentGrid}>
-            {segments.map((segment) => (
-              <article key={segment.title} className={styles.segmentCard}>
-                <h3>{segment.title}</h3>
-                <p>{segment.description}</p>
-              </article>
-            ))}
-          </div>
-
           <div className={styles.actions}>
             <GooeyButton href="/#uslugi" variant="primary">Sprawdź rozwiązania</GooeyButton>
             <GooeyButton href="/#kontakt" variant="outline">Porozmawiajmy o Twoim obiekcie</GooeyButton>

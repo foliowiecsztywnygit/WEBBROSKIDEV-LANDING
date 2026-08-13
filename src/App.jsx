@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Routes, Route } from 'react-router-dom';
 import TopBar from './components/TopBar';
 import Navbar from './components/Navbar';
@@ -38,6 +39,11 @@ const GooeyFilter = () => (
 
 const Home = () => (
   <>
+    <Helmet>
+      <title>Strony dla pensjonatów i willi | Rezerwacje bezpośrednie</title>
+      <meta name="description" content="Buduję strony dla pensjonatów, domków i willi z systemem rezerwacji bez prowizji. Zwiększ rezerwacje bezpośrednie w Zakopanem i Szczyrku." />
+      <link rel="canonical" href="https://www.webbroskidev.pl/" />
+    </Helmet>
     <TopBar />
     <Navbar />
     <main>
@@ -49,9 +55,9 @@ const Home = () => (
       <WhyMe />
       <RotatingProcess />
       <Partners />
+      <SelectedArticles />
       <FAQ />
       <CTA />
-      <SelectedArticles />
     </main>
     <Footer />
   </>

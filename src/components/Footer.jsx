@@ -20,9 +20,9 @@ const Footer = () => {
           <div className={styles.legalInfo}>
             <span>&copy; {new Date().getFullYear()} WEBBROSKIDEV</span>
             <span className={styles.separator}>|</span>
-            <Link to="/regulamin">Regulamin</Link>
+            <a href="/regulamin" rel="nofollow">Regulamin</a>
             <span className={styles.separator}>|</span>
-            <Link to="/polityka-prywatnosci">Polityka prywatności</Link>
+            <a href="/polityka-prywatnosci" rel="nofollow">Polityka prywatności</a>
           </div>
         </div>
       </div>
