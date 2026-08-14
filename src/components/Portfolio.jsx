@@ -5,8 +5,23 @@ import SectionSubtitle from './ui/SectionSubtitle';
 import styles from './Portfolio.module.css';
 
 const projects = [
-      {
-      id: 1,
+  {
+    id: 6,
+    title: 'CICHA PRZYSTAŃ DZIANISZ',
+    label: 'KOMPLEKS TRZECH LUKSUSOWYCH DOMKÓW Z WIDOKIEM NA TATRY',
+    description: 'Projekt zorientowany na budowanie niezależności od portali OTA i maksymalizację bezpośrednich zapytań o rezerwację dla kompleksu trzech domków. Zastosowano elegancką estetykę premium, która płynnie łączy tradycyjny góralski klimat z nowoczesnym minimalizmem.',
+    categories: ['DZIANISZ', 'WYNAJEM DOMKÓW', 'UX/UI & CRO'],
+    highlights: [
+      'architektura pod rezerwacje bezpośrednie (zero prowizji)',
+      'autorska, responsywna galeria zdjęć z systemem płynnego filtrowania',
+      'idealne zachowanie na mobile i angażujące mikroanimacje (Framer Motion)'
+    ],
+    image: '/cichaprzystandzianisz.png',
+    link: 'https://cichaprzystandzianisz.pl',
+    scale: 1.0
+  },
+  {
+    id: 1,
       title: 'Tatrzański Wierch',
       label: 'Kameralna agroturystyka z widokiem na Tatry',
       description: 'Projekt zorientowany na maksymalizację konwersji z użyciem technologii spaceru 360° i budowanie niezależności od portali OTA. Zastosowano estetykę alpine luxury z góralskimi akcentami w nowoczesnym wydaniu.',

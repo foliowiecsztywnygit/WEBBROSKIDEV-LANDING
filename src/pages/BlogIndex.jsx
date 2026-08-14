@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import GooeyButton from '../components/ui/GooeyButton';
 import { blogPosts } from '../data/blogPosts';
+import Breadcrumbs from '../components/Breadcrumbs';
 import styles from './ContentHub.module.css';
 
 const BlogIndex = () => {
@@ -22,6 +23,7 @@ const BlogIndex = () => {
       <Navbar />
       <main className={styles.pageMain}>
         <div className={`container ${styles.pageContainer}`}>
+          <Breadcrumbs paths={[{ name: 'Strona Główna', url: '/' }, { name: 'Blog', url: '/blog' }]} />
           <section className={styles.hero}>
             <div className={styles.heroContent}>
               <span className={styles.eyebrow}>Blog ekspercki</span>

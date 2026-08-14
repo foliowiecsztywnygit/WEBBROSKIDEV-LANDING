@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import GooeyButton from '../components/ui/GooeyButton';
 import { servicePageMap } from '../data/servicePages';
 import { blogPostMap } from '../data/blogPosts';
+import Breadcrumbs from '../components/Breadcrumbs';
 import styles from './ContentHub.module.css';
 
 const ServicePage = ({ pageKey }) => {
@@ -26,6 +27,7 @@ const ServicePage = ({ pageKey }) => {
       <Navbar />
       <main className={styles.pageMain}>
         <div className={`container ${styles.pageContainer}`}>
+          <Breadcrumbs paths={[{ name: 'Strona Główna', url: '/' }, { name: 'Usługi', url: '/#uslugi' }, { name: page.title, url: page.path }]} />
           <section className={styles.hero}>
             <div className={styles.heroContent}>
               <span className={styles.eyebrow}>Oferta dla obiektu noclegowego</span>

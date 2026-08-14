@@ -3,6 +3,7 @@ import styles from './LegalPages.module.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import TopBar from '../components/TopBar';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const Terms = () => {
   return (
@@ -16,6 +17,7 @@ const Terms = () => {
       <Navbar />
       <main className={styles.legalMain}>
         <div className={`container ${styles.container}`}>
+          <Breadcrumbs paths={[{ name: 'Strona Główna', url: '/' }, { name: 'Regulamin', url: '/regulamin' }]} />
           <div className={styles.header}>
             <h1 className="heading-lg">Regulamin Świadczenia Usług</h1>
             <p className={styles.lastUpdated}>Ostatnia aktualizacja: 30 kwietnia 2026 r.</p>

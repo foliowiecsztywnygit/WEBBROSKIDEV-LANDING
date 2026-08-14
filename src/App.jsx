@@ -12,6 +12,7 @@ import Portfolio from './components/Portfolio';
 import Partners from './components/Partners';
 import WhyMe from './components/WhyMe';
 import FAQ from './components/FAQ';
+import Testimonials from './components/Testimonials';
 import CommissionCalculator from './components/CommissionCalculator';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
@@ -23,6 +24,7 @@ import ServicePage from './pages/ServicePage';
 import BlogIndex from './pages/BlogIndex';
 import BlogPostPage from './pages/BlogPostPage';
 import OfertaPage from './pages/OfertaPage';
+import ThankYou from './pages/ThankYou';
 import ScrollToTop from './components/ScrollToTop';
 
 const GooeyFilter = () => (
@@ -56,6 +58,7 @@ const Home = () => (
       <RotatingProcess />
       <Partners />
       <SelectedArticles />
+      <Testimonials />
       <FAQ />
       <CTA />
     </main>
@@ -79,6 +82,7 @@ function App() {
         <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/polityka-prywatnosci" element={<Privacy />} />
         <Route path="/regulamin" element={<Terms />} />
+        <Route path="/sukces" element={<ThankYou />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

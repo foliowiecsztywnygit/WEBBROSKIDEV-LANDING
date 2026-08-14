@@ -3,6 +3,7 @@ import styles from './LegalPages.module.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import TopBar from '../components/TopBar';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const Privacy = () => {
   return (
@@ -16,6 +17,7 @@ const Privacy = () => {
       <Navbar />
       <main className={styles.legalMain}>
         <div className={`container ${styles.container}`}>
+          <Breadcrumbs paths={[{ name: 'Strona Główna', url: '/' }, { name: 'Polityka Prywatności', url: '/polityka-prywatnosci' }]} />
           <div className={styles.header}>
             <h1 className="heading-lg">Polityka Prywatności</h1>
             <p className={styles.lastUpdated}>Ostatnia aktualizacja: 30 kwietnia 2026 r.</p>

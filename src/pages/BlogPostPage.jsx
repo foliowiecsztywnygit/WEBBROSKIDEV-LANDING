@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import GooeyButton from '../components/ui/GooeyButton';
 import { blogPostMap } from '../data/blogPosts';
 import NotFound from './NotFound';
+import Breadcrumbs from '../components/Breadcrumbs';
 import styles from './ContentHub.module.css';
 
 const BlogPostPage = () => {
@@ -31,6 +32,7 @@ const BlogPostPage = () => {
       <Navbar />
       <main className={styles.pageMain}>
         <div className={`container ${styles.pageContainer}`}>
+          <Breadcrumbs paths={[{ name: 'Strona Główna', url: '/' }, { name: 'Blog', url: '/blog' }, { name: post.title, url: post.path }]} />
           <section className={styles.hero}>
             <div className={styles.heroContent}>
               <span className={styles.eyebrow}>{post.category}</span>

@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import TopBar from '../components/TopBar';
 import Navbar from '../components/Navbar';
 import Pricing from '../components/Pricing';
+import Breadcrumbs from '../components/Breadcrumbs';
 import Footer from '../components/Footer';
 
 const OfertaPage = () => {
@@ -15,6 +16,7 @@ const OfertaPage = () => {
       <TopBar />
       <Navbar />
       <main style={{ paddingTop: '80px' }}>
+        <Breadcrumbs paths={[{ name: 'Strona Główna', url: '/' }, { name: 'Oferta', url: '/oferta' }]} />
         <Pricing />
       </main>
       <Footer />
