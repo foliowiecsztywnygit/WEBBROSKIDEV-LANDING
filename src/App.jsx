@@ -12,7 +12,7 @@ import Portfolio from './components/Portfolio';
 import Partners from './components/Partners';
 import WhyMe from './components/WhyMe';
 import FAQ from './components/FAQ';
-import Testimonials from './components/Testimonials';
+
 import CommissionCalculator from './components/CommissionCalculator';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
@@ -58,7 +58,7 @@ const Home = () => (
       <RotatingProcess />
       <Partners />
       <SelectedArticles />
-      <Testimonials />
+
       <FAQ />
       <CTA />
     </main>

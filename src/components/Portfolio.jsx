@@ -61,6 +61,15 @@ const projects = [
       'prostsza ścieżka kontaktu dla użytkownika mobilnego',
       'bardziej premium odbiór całej oferty'
     ],
+    caseStudy: {
+      title: "🔥 Efekty po zmianach",
+      text: "Wyniki z Google po zaledwie 2,5 miesiąca od odpalenia nowej strony. Bez złotówki wydanej na płatne reklamy - po prostu dobrze zrobiona strona, która przyciąga gości.",
+      metrics: [
+        { value: "5,6 tys.", label: "wyświetleń w Google" },
+        { value: "182", label: "kliknięć w stronę" },
+        { value: "2.6", label: "średnia pozycja" }
+      ]
+    },
     image: '/willaszymkowka.png',
     link: 'https://willaszymkowka.pl',
     scale: 1.0
@@ -170,6 +179,21 @@ const Portfolio = () => {
                 <li key={highlight}>{highlight}</li>
               ))}
             </ul>
+
+            {currentProject.caseStudy && (
+              <div className={styles.caseStudy}>
+                <h4 className={styles.caseStudyTitle}>{currentProject.caseStudy.title}</h4>
+                <p className={styles.caseStudyText}>{currentProject.caseStudy.text}</p>
+                <div className={styles.metricsRow}>
+                  {currentProject.caseStudy.metrics.map((metric, i) => (
+                    <div key={i} className={styles.metric}>
+                      <span className={styles.metricValue}>{metric.value}</span>
+                      <span className={styles.metricLabel}>{metric.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
             
             <div className={styles.actions}>
               <GooeyButton variant="outline" href={currentProject.link}>Zobacz stronę klienta</GooeyButton>
