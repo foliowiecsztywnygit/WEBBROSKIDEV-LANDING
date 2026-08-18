@@ -5,6 +5,30 @@ import SectionSubtitle from './ui/SectionSubtitle';
 import styles from './Portfolio.module.css';
 
 const projects = [
+  { 
+    id: 3,
+    title: 'Willa Szymkówka',
+    label: 'Willa z dużą galerią i wyraźnym CTA',
+    description: 'Celem było uporządkowanie prezentacji obiektu, zdjęć i najważniejszych informacji tak, aby użytkownik szybciej przeszedł od oglądania willi do kontaktu i decyzji o rezerwacji.',
+    categories: ['Willa', 'Galeria', 'Konwersja mobilna'],
+    highlights: [
+      'mocna ekspozycja zdjęć i standardu obiektu',
+      'prostsza ścieżka kontaktu dla użytkownika mobilnego',
+      'bardziej premium odbiór całej oferty'
+    ],
+    caseStudy: {
+      title: "🔥 Efekty po zmianach",
+      text: "Wyniki z Google po zaledwie 2,5 miesiąca od odpalenia nowej strony. Bez złotówki wydanej na płatne reklamy - po prostu dobrze zrobiona strona, która przyciąga gości.",
+      metrics: [
+        { value: "5,6 tys.", label: "wyświetleń w Google" },
+        { value: "182", label: "kliknięć w stronę" },
+        { value: "2.6", label: "średnia pozycja" }
+      ]
+    },
+    image: '/willaszymkowka.png',
+    link: 'https://willaszymkowka.pl',
+    scale: 1.0
+  },
   {
     id: 6,
     title: 'CICHA PRZYSTAŃ DZIANISZ',
@@ -48,30 +72,6 @@ const projects = [
     ],
     image: '/domkinazrabku.png',
     link: 'https://domkinazrabku.pl',
-    scale: 1.0
-  },
-  { 
-    id: 3,
-    title: 'Willa Szymkówka',
-    label: 'Willa z dużą galerią i wyraźnym CTA',
-    description: 'Celem było uporządkowanie prezentacji obiektu, zdjęć i najważniejszych informacji tak, aby użytkownik szybciej przeszedł od oglądania willi do kontaktu i decyzji o rezerwacji.',
-    categories: ['Willa', 'Galeria', 'Konwersja mobilna'],
-    highlights: [
-      'mocna ekspozycja zdjęć i standardu obiektu',
-      'prostsza ścieżka kontaktu dla użytkownika mobilnego',
-      'bardziej premium odbiór całej oferty'
-    ],
-    caseStudy: {
-      title: "🔥 Efekty po zmianach",
-      text: "Wyniki z Google po zaledwie 2,5 miesiąca od odpalenia nowej strony. Bez złotówki wydanej na płatne reklamy - po prostu dobrze zrobiona strona, która przyciąga gości.",
-      metrics: [
-        { value: "5,6 tys.", label: "wyświetleń w Google" },
-        { value: "182", label: "kliknięć w stronę" },
-        { value: "2.6", label: "średnia pozycja" }
-      ]
-    },
-    image: '/willaszymkowka.png',
-    link: 'https://willaszymkowka.pl',
     scale: 1.0
   },
   { 
