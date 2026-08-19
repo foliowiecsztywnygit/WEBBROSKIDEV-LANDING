@@ -8,7 +8,8 @@ const packages = [
     slug: 'wille-domki',
     price: '200 zł / msc',
     badge: 'Wille / Domki',
-    description: 'Dobry start, jeśli chcesz w tydzień ruszyć z nową stroną i zacząć zbierać więcej telefonów oraz wiadomości bez stawiania wszystkiego od zera samodzielnie.',
+    description: 'Prosta strona dla małego obiektu np. 1-2 domki.',
+    theme: 'blue',
     launchFee: '0 zł',
     highlight: false,
     cta: '/strony-dla-pensjonatow',
@@ -49,7 +50,8 @@ const packages = [
     slug: 'pensjonaty',
     price: '250 zł / msc',
     badge: 'Pensjonaty',
-    description: 'Najlepszy wybór, jeśli chcesz uporządkować ofertę, pokazać pokoje czytelniej i przejąć więcej zapytań bez chaosu na telefonie.',
+    description: 'Strona dla większego obiektu np. willa, 3+ domków.',
+    theme: 'purple',
     launchFee: '0 zł',
     highlight: true,
     cta: '/strony-dla-pensjonatow',
@@ -97,7 +99,8 @@ const packages = [
     slug: 'apartamenty-premium',
     price: '350 zł / msc',
     badge: 'Apartamenty / Premium',
-    description: 'Dla obiektów, które chcą mocniej zautomatyzować obsługę, uporządkować wiele apartamentów i wyglądać premium już od pierwszego wejścia.',
+    description: 'Strona + system rezerwacji + channel manager Beds24.',
+    theme: 'gold',
     launchFee: '0 zł',
     highlight: false,
     cta: '/strony-dla-apartamentow',
@@ -151,7 +154,7 @@ const Pricing = () => {
 
         <div className={styles.grid}>
           {packages.map((pkg) => (
-            <article key={pkg.slug} className={`${styles.card} ${pkg.highlight ? styles.cardHighlight : ''}`}>
+            <article key={pkg.slug} className={styles.card} data-theme={pkg.theme}>
               <div className={styles.cardTop}>
                 <span className={styles.badge}>{pkg.badge}</span>
                 {pkg.highlight && <span className={styles.recommended}>Najpopularniejszy</span>}
