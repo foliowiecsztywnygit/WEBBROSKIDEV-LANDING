@@ -61,9 +61,21 @@ const BlogPostPage = () => {
               {post.sections.map((section) => (
                 <section key={section.heading} className={styles.sectionCard}>
                   <h2>{section.heading}</h2>
-                  {section.paragraphs.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
+                  {section.paragraphs.map((paragraph, idx) => {
+                    if (paragraph === 'CTA_BUTTON') {
+                      return (
+                        <div key={idx} style={{ margin: '2.5rem 0' }}>
+                          <GooeyButton href="/oferta" variant="outline" style={{ display: 'block', textAlign: 'center' }}>
+                            Nie chcesz uczyć się skomplikowanych systemów? Wdrożymy to dla Ciebie za 250 zł/mc. Sprawdź demo.
+                          </GooeyButton>
+                        </div>
+                      );
+                    }
+                    if (paragraph.startsWith('Autor: ')) {
+                      return <p key={idx} style={{ fontStyle: 'italic', marginTop: '2rem', textAlign: 'right' }}><strong>{paragraph}</strong></p>;
+                    }
+                    return <p key={idx}>{paragraph}</p>;
+                  })}
                 </section>
               ))}
             </article>

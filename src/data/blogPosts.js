@@ -1,5 +1,226 @@
 export const blogPosts = [
   {
+    slug: 'hotres-vs-prosta-strona-www',
+    path: '/blog/hotres-vs-prosta-strona-www',
+    title: 'Hotres vs. Prosta strona WWW z systemem rezerwacji – co wybrać dla domku w górach?',
+    metaTitle: 'Hotres vs prosta strona WWW z systemem rezerwacji',
+    metaDescription: 'Booking Hotres co to jest? Zobacz, dlaczego zaawansowany system rezerwacji dla domków to często przerost formy nad treścią. Wybierz proste rozwiązanie.',
+    excerpt: 'Kombajn hotelowy to często przerost formy nad treścią dla małego obiektu. Zobacz, czego naprawdę potrzebujesz.',
+    category: 'Automatyzacja i rezerwacje',
+    readTime: '5 min',
+    updatedAt: '20 sierpnia 2026',
+    intro: 'Coraz więcej właścicieli wpisuje w wyszukiwarkę "booking hotres co to", szukając sposobu na uporządkowanie rezerwacji. I słusznie – technologia potrafi ułatwić życie. Ale czy do obsługi 1-2 domków naprawdę potrzebujesz potężnego systemu hotelowego?',
+    sections: [
+      {
+        heading: '1. Świetny system, ale czy dla Ciebie?',
+        paragraphs: [
+          'Trzeba to powiedzieć głośno i obiektywnie: systemy takie jak Hotres to fantastyczne narzędzia. Oferują ogrom funkcji dedykowanych dla dużych hoteli, rozbudowanych ośrodków czy sieci apartamentów. Moduły fakturowania setek gości, rozbudowane raporty i integracje z zamkami hotelowymi to dla wielkich graczy absolutny strzał w dziesiątkę.',
+          'Jednak dla właściciela pojedynczej willi czy dwóch domków to po prostu przerost formy nad treścią. Mały obiekt potrzebuje prostoty, a nie dziesiątek zakładek w panelu konfiguracyjnym.'
+        ]
+      },
+      {
+        heading: '2. Prosty system rezerwacji dla domków to podstawa',
+        paragraphs: [
+          'Zamiast płacić krocie za funkcje, z których i tak nie skorzystasz, lepiej zainwestować w szybką, nowoczesną stronę internetową wyposażoną w prosty i czytelny kalendarz. Gość wchodzi na stronę z telefonu, widzi wolny termin, klika "Rezerwuj", wpłaca zadatek BLIKIEM – i to wszystko.',
+          'CTA_BUTTON',
+          'Takie podejście nie zmusza Cię do nauki obsługi skomplikowanego oprogramowania, a jednocześnie daje Twoim gościom dokładnie to, czego oczekują: szybką, bezproblemową ścieżkę rezerwacji.'
+        ]
+      },
+      {
+        heading: '3. Przestań przepalać budżet',
+        paragraphs: [
+          'Pakiet za 250 zł/mc zapewnia dokładnie to, czego realnie potrzebuje mały obiekt. Dostajesz gotową stronę i w pełni skonfigurowany mechanizm rezerwacji bez konieczności przechodzenia przez żmudne wdrożenia hotelowych gigantów.',
+          'CTA_BUTTON',
+          'Autor: Krzysztof Żebrowski'
+        ]
+      }
+    ],
+    relatedSlugs: ['booking-engine-dla-domkow-i-apartamentow-jaki-wybrac'],
+    cta: {
+      title: 'Skup się na gościach, nie na panelach',
+      description: 'Zbudujemy dla Ciebie stronę, która sprzedaje. Bez ukrytych kosztów i skomplikowanych szkoleń.',
+      label: 'Sprawdź nasze pakiety',
+      href: '/oferta'
+    }
+  },
+  {
+    slug: 'booking-kontra-wlasny-booking-engine',
+    path: '/blog/booking-kontra-wlasny-booking-engine',
+    title: 'Booking.com kontra własny Booking Engine: Ile kosztuje Cię brak bezpośrednich rezerwacji?',
+    metaTitle: 'Prowizja Booking.com kontra własny system rezerwacji',
+    metaDescription: 'Zastanawiasz się, jaką prowizję pobiera Booking? Policz, ile tracisz. Własny booking engine dla pensjonatów to matematyka, która zawsze się opłaca.',
+    excerpt: 'Prowizja Booking.com potrafi zjeść gigantyczną część marży. Policzyliśmy, ile kosztuje Cię oddawanie gości gigantom.',
+    category: 'Zarabianie na wynajmie',
+    readTime: '6 min',
+    updatedAt: '20 sierpnia 2026',
+    intro: 'Hasła typu "prowizja booking" czy "jaką prowizję pobiera booking" krążą po branżowych grupach niczym najstraszniejsze opowieści z dreszczykiem. I słusznie, bo prowizje potrafią w sezonie odebrać Ci znaczną część zysku, który mógłby pracować na rozwój Twojego pensjonatu.',
+    sections: [
+      {
+        heading: '1. Twarda matematyka portali OTA',
+        paragraphs: [
+          'Booking.com to wspaniała maszyna do generowania zasięgów – bez wątpienia warto tam być. Jednak płacenie 15% (lub więcej) od każdej transakcji sprawia, że przy pełnym obłożeniu miesięcznie oddajesz tysiące złotych korporacji.',
+          'Jeśli Twój pensjonat generuje w sezonie 30 000 zł obrotu, prowizja dla portalu może wynieść nawet 4500 zł miesięcznie. To ogromne kwoty, które po prostu ulatniają się z Twojego konta.'
+        ]
+      },
+      {
+        heading: '2. Własny booking engine dla pensjonatów',
+        paragraphs: [
+          'Rozwiązaniem jest profesjonalny, ale prosty w obsłudze booking engine dla pensjonatów wbudowany bezpośrednio w Twoją stronę. Gość rezerwując u Ciebie na stronie, nie obciąża Cię dodatkową marżą.',
+          'CTA_BUTTON',
+          'Zamiast oddawać portalom prowizję z każdej rezerwacji, płacisz stały abonament. Reszta zostaje w Twojej kieszeni, a Ty zyskujesz bezpośredni kontakt do swojego klienta.'
+        ]
+      },
+      {
+        heading: '3. Koszt vs. Zysk',
+        paragraphs: [
+          'Porównajmy to: prowizja rzędu kilku tysięcy złotych miesięcznie kontra własny system, który po prostu wykonuje swoją pracę bez dodatkowych narzutów.',
+          'Kierowanie stałych i powracających gości na własną witrynę to jedyna skuteczna droga do odzyskania kontroli nad swoim biznesem.',
+          'CTA_BUTTON',
+          'Autor: Krzysztof Żebrowski'
+        ]
+      }
+    ],
+    relatedSlugs: ['ile-naprawde-kosztuje-booking-w-sezonie'],
+    cta: {
+      title: 'Zatrzymaj 100% zysków u siebie',
+      description: 'Stworzymy dla Ciebie maszynę sprzedażową z wbudowanym silnikiem rezerwacji, abyś nie musiał przepłacać.',
+      label: 'Zacznij zarabiać więcej',
+      href: '/oferta'
+    }
+  },
+  {
+    slug: 'oprogramowanie-dla-pensjonatow-i-willi-na-2027',
+    path: '/blog/oprogramowanie-dla-pensjonatow-i-willi-na-2027',
+    title: 'Oprogramowanie dla pensjonatów i willi na 2027 rok: Hotres, BedBooking czy proste iCal / Beds24?',
+    metaTitle: 'Jakie oprogramowanie dla pensjonatów wybrać na 2027?',
+    metaDescription: 'Szukasz oprogramowanie dla pensjonatów i willi? Sprawdź nasze porównanie rynkowych kombajnów z prostymi i skutecznymi rozwiązaniami w niskim abonamencie.',
+    excerpt: 'Na rynku znajdziesz mnóstwo drogich systemów rezerwacyjnych. Zobacz, które oprogramowanie dla pensjonatów naprawdę się sprawdza.',
+    category: 'Technika, która sprzedaje',
+    readTime: '7 min',
+    updatedAt: '20 sierpnia 2026',
+    intro: 'Wybór odpowiedniego systemu na kolejne lata to nie lada wyzwanie. Wpisując "oprogramowanie dla pensjonatów i willi", zostajesz zasypany ofertami systemów, które obiecują gruszki na wierzbie, a cenią się jak za obsługę wielkiego resortu spa.',
+    sections: [
+      {
+        heading: '1. Wielcy gracze: Hotres i BedBooking',
+        paragraphs: [
+          'Systemy takie jak Hotres czy BedBooking to bez wątpienia bardzo dobre rozwiązania. Mają niezwykle rozbudowane funkcje, pozwalają na zarządzanie personelem sprzątającym, fakturowanie i analizę wielu statystyk. Są to narzędzia wprost stworzone dla bardzo dużych biznesów noclegowych.',
+          'Jednak dla właściciela mniejszej willi ogrom tych opcji bywa przytłaczający, a koszty wdrożenia i wysokich abonamentów mogą znacznie nadszarpnąć portfel.'
+        ]
+      },
+      {
+        heading: '2. Prostsza droga: synchronizacja przez iCal lub Beds24',
+        paragraphs: [
+          'Zamiast wdrażać kombajn, którego obsługi będziesz musiał uczyć się tygodniami, postaw na bezstresowy model wdrożenia oparty o sprawdzone i stabilne technologie takie jak Beds24. Oferują one bezbłędną synchronizację i prostotę.',
+          'CTA_BUTTON',
+          'Są to systemy stworzone z myślą o sprawnym przyjmowaniu rezerwacji z Twojej nowej strony www oraz perfekcyjnym blokowaniu terminów na portalach takich jak Booking czy Airbnb.'
+        ]
+      },
+      {
+        heading: '3. Twój bezstresowy model pracy',
+        paragraphs: [
+          'Nie daj sobie wmówić, że Twoja willa potrzebuje systemu rodem z hotelu Marriott. Wybierz rozwiązanie, które pozwala Ci przyjmować rezerwacje online i sprawnie zarządzać kalendarzem z poziomu telefonu, bez płacenia ogromnych faktur.',
+          'CTA_BUTTON',
+          'Autor: Krzysztof Żebrowski'
+        ]
+      }
+    ],
+    relatedSlugs: ['booking-hotres-co-to-jest'],
+    cta: {
+      title: 'Bezstresowe wdrożenie systemu rezerwacji',
+      description: 'Skonfigurujemy wszystko dla Ciebie – stronę i system – abyś mógł skupić się na zarabianiu.',
+      label: 'Sprawdź Pakiet Pro',
+      href: '/oferta'
+    }
+  },
+  {
+    slug: 'automatyzacja-wiadomosci-i-synchronizacja-airbnb',
+    path: '/blog/automatyzacja-wiadomosci-i-synchronizacja-airbnb',
+    title: 'Automatyzacja wiadomości i synchronizacja Airbnb: Czy musisz kupować drogi panel?',
+    metaTitle: 'Automatyzacja wiadomości Booking i Airbnb',
+    metaDescription: 'Automatyzacja wiadomości booking.com i airbnb nie musi kosztować fortuny. Zobacz, jak tanio zorganizować synchronizację rezerwacji z airbnb.',
+    excerpt: 'Strata czasu na odpisywanie gościom i lęk przed overbookingiem to codzienne bolączki. Zobacz, jak automatyzacja rozwiązuje to w 100%.',
+    category: 'Automatyzacja i rezerwacje',
+    readTime: '5 min',
+    updatedAt: '20 sierpnia 2026',
+    intro: 'Budzisz się, a w telefonie trzy pytania o kod do drzwi i prośba o wskazówki dojazdu. Brzmi znajomo? Automatyzacja wiadomości booking.com i airbnb to marzenie wielu właścicieli, ale barierą często wydają się ogromne koszty rozbudowanych programów.',
+    sections: [
+      {
+        heading: '1. Pożegnaj ręczne odpisywanie i strach o overbooking',
+        paragraphs: [
+          'Ciągłe czuwanie przy telefonie jest wyczerpujące. Do tego dochodzi stres związany z tym, że synchronizacja rezerwacji z airbnb i Bookingiem "zawiedzie" i dojdzie do nakładania się terminów (overbookingu).',
+          'Na rynku istnieje wiele drogich paneli, które fantastycznie radzą sobie z tymi problemami – i chwała im za to, bo dla dużych graczy to ratunek. Jednak nie musisz przepłacać za te funkcje, jeśli jesteś właścicielem mniejszego obiektu.'
+        ]
+      },
+      {
+        heading: '2. Niezawodne i tanie rozwiązania',
+        paragraphs: [
+          'Możesz wdrożyć automatyzację wiadomości i perfekcyjną synchronizację (channel manager) używając zintegrowanych rozwiązań, które nie rujnują budżetu. System połączony z Twoją stroną sam wysyła wiadomości powitalne i kody do zamków.',
+          'CTA_BUTTON',
+          'Twoje terminy są blokowane w ułamku sekundy, uwalniając Cię od widma podwójnych rezerwacji.'
+        ]
+      },
+      {
+        heading: '3. Rozwiązanie, które realnie działa',
+        paragraphs: [
+          'Udowadniamy, że rzetelnie wdrożona i uproszczona automatyzacja rozwiązuje 100% bólu związanego z obsługą gościa, nie zmuszając Cię jednocześnie do płacenia prowizji czy olbrzymich abonamentów na start.',
+          'CTA_BUTTON',
+          'Autor: Krzysztof Żebrowski'
+        ]
+      }
+    ],
+    relatedSlugs: ['automatyzacja-wiadomosci-booking-com-i-airbnb'],
+    cta: {
+      title: 'Czas na automatyzację bez wielkich kosztów',
+      description: 'Uporządkujmy Twoje rezerwacje, wiadomości i synchronizację. Ty zajmij się rozwojem, a system wykona resztę pracy.',
+      label: 'Sprawdź rozwiązanie',
+      href: '/oferta'
+    }
+  },
+  {
+    slug: 'tani-booking-engine-dla-apartamentow',
+    path: '/blog/tani-booking-engine-dla-apartamentow',
+    title: 'Tani booking engine dla apartamentów a prowizje portali – przegląd rozwiązań na trudne czasy.',
+    metaTitle: 'Tani booking engine dla apartamentów | WEBBROSKIDEV',
+    metaDescription: 'Odzyskaj pełną marżę bez płacenia gigantom. Tani booking engine dla apartamentów to skuteczna ochrona przed wysokimi prowizjami Booking.com i Airbnb.',
+    excerpt: 'Jak odzyskać zyski w trudnych czasach i chronić swój obiekt przed drenażem marży ze strony wielkich portali rezerwacyjnych.',
+    category: 'Zarabianie na wynajmie',
+    readTime: '6 min',
+    updatedAt: '20 sierpnia 2026',
+    intro: 'Gdy rosną koszty prowadzenia biznesu, każda zaoszczędzona złotówka ma ogromne znaczenie. Szukając hasła "booking engine dla apartamentów", najpewniej zmagasz się z frustracją wywołaną wysokimi prowizjami dla portali OTA. Zobaczmy, jak skutecznie i tanio odzyskać swoją marżę.',
+    sections: [
+      {
+        heading: '1. Portale są potrzebne, ale na Twoich zasadach',
+        paragraphs: [
+          'Nie ma sensu całkowicie rezygnować z obecności na największych portalach – to one napędzają nam nowych gości. Ale wielcy dostawcy systemów (np. Hotres) chociaż wyśmienicie sprawdzają się w wielkich sieciach, bywają kosztowni we wdrożeniu i eksploatacji.',
+          'Płacenie za funkcje, z których nikt w pojedynczym apartamencie nie korzysta (jak zaawansowane moduły sprzątania czy pakiety spa), to zwyczajne topienie gotówki.'
+        ]
+      },
+      {
+        heading: '2. Tani i solidny system, który po prostu sprzedaje',
+        paragraphs: [
+          'Skuteczny i zarazem tani booking engine dla apartamentów polega na maksymalnym uproszczeniu. Gość ma widzieć piękną stronę, czytelny kalendarz i szybkie płatności.',
+          'CTA_BUTTON',
+          'Nasz system to właśnie taka przemyślana maszyna. Umożliwia rezerwację w mgnieniu oka, a Ty płacisz niski, stały abonament. Dzięki temu rezerwacje bezpośrednie oznaczają realny, stuprocentowy zysk w Twojej kieszeni.'
+        ]
+      },
+      {
+        heading: '3. Odzyskaj to, co Twoje',
+        paragraphs: [
+          'W dobie spowolnienia gospodarczego nie możesz pozwalać sobie na przepalanie budżetu. Wdrażając naszą prostą, ale niezawodną technologię chronisz swoje marże przed pośrednikami.',
+          'CTA_BUTTON',
+          'Autor: Krzysztof Żebrowski'
+        ]
+      }
+    ],
+    relatedSlugs: ['ile-naprawde-kosztuje-booking-w-sezonie'],
+    cta: {
+      title: 'Zarabiaj na swoich warunkach',
+      description: 'Zbuduj w pełni funkcjonalną witrynę z niedrogim i szybkim systemem rezerwacji. Zatrzymaj każdą złotówkę dla siebie.',
+      label: 'Sprawdź szczegóły',
+      href: '/oferta'
+    }
+  },
+  {
     slug: 'booking-hotres-co-to-jest',
     path: '/blog/booking-hotres-co-to-jest',
     title: 'Booking Hotres – co to jest, jak działa i czy warto wdrożyć go w swoim obiekcie?',
