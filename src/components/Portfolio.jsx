@@ -6,6 +6,21 @@ import styles from './Portfolio.module.css';
 
 const projects = [
   { 
+    id: 7,
+    title: 'DZIANISZ N°54',
+    label: 'ELEGANCKA WIZYTÓWKA KOMPLEKSU DOMKÓW',
+    description: 'Celem było stworzenie eleganckiej wizytówki obiektu, która w uporządkowany sposób prezentuje ogromną przestrzeń domków (160m²) oraz ich atuty lokalizacyjne, tak aby użytkownik płynnie przeszedł od oglądania zdjęć i inspiracji do decyzji o rezerwacji.',
+    categories: ['Dzianisz', 'Kompleks domków', 'Premium Design'],
+    highlights: [
+      'mocna ekspozycja klimatycznych wnętrz i luksusowego standardu',
+      'czytelna prezentacja kluczowych odległości i pobliskich atrakcji (termy, stoki)',
+      'nowoczesny i minimalistyczny design budujący premium odbiór kompleksu'
+    ],
+    image: '/osadadzianiszn54.png',
+    link: 'https://dzianiszn54.pl',
+    scale: 1.0
+  },
+  { 
     id: 3,
     title: 'Willa Szymkówka',
     label: 'Willa z dużą galerią i wyraźnym CTA',
