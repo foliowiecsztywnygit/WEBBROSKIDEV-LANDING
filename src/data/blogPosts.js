@@ -223,8 +223,8 @@ export const blogPosts = [
   {
     slug: 'booking-hotres-co-to-jest',
     path: '/blog/booking-hotres-co-to-jest',
-    title: 'Booking Hotres – co to jest, jak działa i czy warto wdrożyć go w swoim obiekcie?',
-    metaTitle: 'Booking Hotres - co to jest? Opinie i wdrożenie | WEBBROSKIDEV',
+    title: 'Booking okrada Cię w biały dzień! Ile tysięcy złotych tracisz przez brak własnego systemu?',
+    metaTitle: 'Booking okrada Cię w biały dzień! Ile tracisz bez swojego systemu?',
     metaDescription: 'Zastanawiasz się, co to jest Hotres i jak działa? Zobacz, jak ten polski booking engine pomaga odzyskać rezerwacje i uniezależnić się od wielkich portali.',
     excerpt: 'Hotres to jeden z najpopularniejszych polskich systemów rezerwacyjnych. Sprawdź, dlaczego pensjonaty i apartamenty masowo z niego korzystają.',
     category: 'Automatyzacja i rezerwacje',
@@ -268,8 +268,8 @@ export const blogPosts = [
   {
     slug: 'booking-engine-dla-domkow-i-apartamentow-jaki-wybrac',
     path: '/blog/booking-engine-dla-domkow-i-apartamentow-jaki-wybrac',
-    title: 'Booking engine dla domków i apartamentów. Jaki system rezerwacji wybrać w 2026 roku?',
-    metaTitle: 'Booking engine dla pensjonatów i apartamentów - ranking | WEBBROSKIDEV',
+    title: 'Twój system rezerwacji puści Cię z torbami. Czego absolutnie NIE wybierać w 2026 roku?',
+    metaTitle: 'Twój system rezerwacji puści Cię z torbami. Czego NIE wybierać w 2026',
     metaDescription: 'Jaki booking engine wybrać dla domku lub apartamentu? Zobacz zestawienie i dowiedz się, co musi mieć nowoczesna strona z systemem rezerwacji.',
     excerpt: 'Wybór systemu rezerwacji to kluczowa decyzja. Zobacz, na co zwrócić uwagę wybierając booking engine dla swojego obiektu noclegowego.',
     category: 'Technika, która sprzedaje',
@@ -403,8 +403,8 @@ export const blogPosts = [
   {
     slug: 'strona-to-wizytowka-czy-maszyna-do-zarabiania-3-bledy',
     path: '/blog/strona-to-wizytowka-czy-maszyna-do-zarabiania-3-bledy',
-    title: 'Twoja strona internetowa to wizytówka, czy maszyna do zarabiania? 3 najczęstsze błędy.',
-    metaTitle: 'Błędy na stronie internetowej obiektu - wizytówka czy biznes? | WEBBROSKIDEV',
+    title: 'Wyrzuciłeś pieniądze na stronę w błoto? Dlaczego Twoja witryna odstrasza klientów zamiast zarabiać',
+    metaTitle: 'Wyrzuciłeś pieniądze w błoto? Dlaczego Twoja strona odstrasza klientów',
     metaDescription: 'Strona internetowa domku powinna sprzedawać noclegi, a nie tylko wyglądać. Sprawdź 3 najczęstsze błędy, przez które tracisz rezerwacje.',
     excerpt: 'Turyści chcą rezerwować w 2 minuty z telefonu, a nie dzwonić i pytać o dostępność. Zobacz, dlaczego Twoja strona nie konwertuje.',
     category: 'Technika, która sprzedaje',
@@ -493,8 +493,8 @@ export const blogPosts = [
   {
     slug: 'jak-ominac-wysokie-prowizje-booking-com-willa-podhale',
     path: '/blog/jak-ominac-wysokie-prowizje-booking-com-willa-podhale',
-    title: 'Jak ominąć wysokie prowizje Booking.com w willi na Podhalu?',
-    metaTitle: 'Jak ominąć prowizje Booking.com w willi na Podhalu? | WEBBROSKIDEV',
+    title: 'Przestań nabijać kabzę Bookingowi! Jak sprytnie ominąć gigantyczne prowizje na Podhalu?',
+    metaTitle: 'Przestań nabijać kabzę Bookingowi! Jak ominąć gigantyczne prowizje',
     metaDescription:
       'Sprawdź, ile realnie kosztują prowizje Booking.com w willi na Podhalu i jak własna strona z rezerwacją pomaga odzyskać marżę.',
     excerpt:
@@ -605,8 +605,8 @@ export const blogPosts = [
   {
     slug: 'strona-www-dla-pensjonatu-w-zakopanem-3-bledy-przez-ktore-tracisz-gosci-z-google',
     path: '/blog/strona-www-dla-pensjonatu-w-zakopanem-3-bledy-przez-ktore-tracisz-gosci-z-google',
-    title: 'Strona www dla pensjonatu w Zakopanem - 3 błędy, przez które tracisz gości z Google',
-    metaTitle: 'Strona www dla pensjonatu w Zakopanem - 3 błędy | WEBBROSKIDEV',
+    title: 'Turyści uciekają z Twojej strony z krzykiem! 3 powody, przez które oddajesz rezerwacje konkurencji',
+    metaTitle: 'Turyści uciekają z Twojej strony z krzykiem! Zobacz, przez co oddajesz klientów',
     metaDescription:
       'Poznaj 3 najczęstsze błędy stron pensjonatów w Zakopanem: mobile, słabe CTA i wolne galerie. Zobacz, co poprawić.',
     excerpt:
