@@ -9,7 +9,7 @@ const ThankYou = () => {
   return (
     <>
       <Helmet>
-        <title>Dziękuję za wiadomość | WEBBROSKIDEV</title>
+        <title>Dziękuję za wiadomość | BroSystems</title>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <TopBar />

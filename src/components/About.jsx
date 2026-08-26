@@ -7,7 +7,7 @@ const About = () => {
         <div className={styles.content}>
           <h2 className="heading-md">Krzysztof Żebrowski</h2>
           <p className="text-lg">
-            Jestem inżynierem frontendu, twórcą <strong>WEBBROSKIDEV</strong>. 
+            Jestem inżynierem frontendu, twórcą <strong>BroSystems</strong>. 
             Projektuję i wdrażam dedykowane strony internetowe, które łączą <strong>czysty design</strong> z nieskazitelną wydajnością. 
             Mój kod to nie tylko technologia — to <strong>narzędzie do budowy Twojej marki</strong> w sieci.
           </p>

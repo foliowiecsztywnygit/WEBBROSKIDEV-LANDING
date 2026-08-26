@@ -9,9 +9,9 @@ const OfertaPage = () => {
   return (
     <>
       <Helmet>
-        <title>Oferta i cennik stron dla noclegów | WEBBROSKIDEV</title>
+        <title>Oferta i cennik stron dla noclegów | BroSystems</title>
         <meta name="description" content="Pakiety abonamentowe i wdrożenia jednorazowe dla pensjonatów i apartamentów. Sprawdź, ile kosztuje stworzenie nowoczesnej strony z systemem rezerwacji." />
-        <link rel="canonical" href="https://www.webbroskidev.pl/oferta" />
+        <link rel="canonical" href="https://www.brosystems.pl/oferta" />
       </Helmet>
       <TopBar />
       <Navbar />

@@ -9,9 +9,9 @@ const Privacy = () => {
   return (
     <>
       <Helmet>
-        <title>Polityka Prywatności | WEBBROSKIDEV</title>
+        <title>Polityka Prywatności | BroSystems</title>
         <meta name="robots" content="noindex, nofollow" />
-        <link rel="canonical" href="https://www.webbroskidev.pl/polityka-prywatnosci" />
+        <link rel="canonical" href="https://www.brosystems.pl/polityka-prywatnosci" />
       </Helmet>
       <TopBar />
       <Navbar />
@@ -26,15 +26,15 @@ const Privacy = () => {
           <div className={styles.content}>
             <section className={styles.section}>
               <h2>1. Informacje ogólne</h2>
-              <p>Niniejsza Polityka Prywatności określa zasady przetwarzania i ochrony danych osobowych przekazanych przez Użytkowników w związku z korzystaniem z usług i strony internetowej prowadzonej przez WEBBROSKIDEV Krzysztof Żebrowski (dalej &quot;Administrator&quot;).</p>
+              <p>Niniejsza Polityka Prywatności określa zasady przetwarzania i ochrony danych osobowych przekazanych przez Użytkowników w związku z korzystaniem z usług i strony internetowej prowadzonej przez BroSystems Krzysztof Żebrowski (dalej &quot;Administrator&quot;).</p>
               <p>Polityka jest zgodna z wymogami Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych (RODO).</p>
             </section>
 
             <section className={styles.section}>
               <h2>2. Administrator Danych Osobowych</h2>
-              <p>Administratorem Twoich danych osobowych jest Krzysztof Żebrowski, działający pod marką WEBBROSKIDEV jako osoba fizyczna nieprowadząca działalności gospodarczej. Możesz skontaktować się z Administratorem:</p>
+              <p>Administratorem Twoich danych osobowych jest Krzysztof Żebrowski, działający pod marką BroSystems jako osoba fizyczna nieprowadząca działalności gospodarczej. Możesz skontaktować się z Administratorem:</p>
               <ul>
-                <li>Za pośrednictwem poczty elektronicznej: <strong>kontakt@webbroskidev.pl</strong></li>
+                <li>Za pośrednictwem poczty elektronicznej: <strong>kontakt@brosystems.pl</strong></li>
                 <li>Telefonicznie: <strong>+48 600 176 361</strong></li>
               </ul>
             </section>
@@ -72,7 +72,7 @@ const Privacy = () => {
                 <li>Prawo wniesienia sprzeciwu wobec przetwarzania.</li>
                 <li>Prawo do cofnięcia zgody w dowolnym momencie (jeśli przetwarzanie odbywa się na jej podstawie).</li>
               </ul>
-              <p>W celu realizacji swoich praw, skontaktuj się z Administratorem pod adresem: kontakt@webbroskidev.pl.</p>
+              <p>W celu realizacji swoich praw, skontaktuj się z Administratorem pod adresem: kontakt@brosystems.pl.</p>
             </section>
 
             <section className={styles.section}>

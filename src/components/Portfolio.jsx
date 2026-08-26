@@ -5,7 +5,7 @@ import SectionSubtitle from './ui/SectionSubtitle';
 import styles from './Portfolio.module.css';
 
 const projects = [
-  { 
+  {
     id: 7,
     title: 'DZIANISZ N°54',
     label: 'ELEGANCKA WIZYTÓWKA KOMPLEKSU DOMKÓW',
@@ -17,10 +17,10 @@ const projects = [
       'nowoczesny i minimalistyczny design budujący premium odbiór kompleksu'
     ],
     image: '/osadadzianiszn54.png',
-    link: 'https://dzianiszn54.pl',
+    link: 'https://osadadzianiszn54.pl',
     scale: 1.0
   },
-  { 
+  {
     id: 3,
     title: 'Willa Szymkówka',
     label: 'Willa z dużą galerią i wyraźnym CTA',
@@ -61,20 +61,20 @@ const projects = [
   },
   {
     id: 1,
-      title: 'Tatrzański Wierch',
-      label: 'Kameralna agroturystyka z widokiem na Tatry',
-      description: 'Projekt zorientowany na maksymalizację konwersji z użyciem technologii spaceru 360° i budowanie niezależności od portali OTA. Zastosowano estetykę alpine luxury z góralskimi akcentami w nowoczesnym wydaniu.',
-      categories: ['Bańska Wyżna', 'Agroturystyka', 'CRO & SEO'],
-      highlights: [
-        'architektura pod rezerwacje bezpośrednie (zero prowizji)',
-        'spacer 360°',
-        'idealne zachowanie na mobile (RWD, typografia clamp)'
-      ],
-      image: '/tatrzanski-wierch.png',
-      link: 'https://tatrzanski-wierch.pl',
-      scale: 1.0
-    },
-  { 
+    title: 'Tatrzański Wierch',
+    label: 'Kameralna agroturystyka z widokiem na Tatry',
+    description: 'Projekt zorientowany na maksymalizację konwersji z użyciem technologii spaceru 360° i budowanie niezależności od portali OTA. Zastosowano estetykę alpine luxury z góralskimi akcentami w nowoczesnym wydaniu.',
+    categories: ['Bańska Wyżna', 'Agroturystyka', 'CRO & SEO'],
+    highlights: [
+      'architektura pod rezerwacje bezpośrednie (zero prowizji)',
+      'spacer 360°',
+      'idealne zachowanie na mobile (RWD, typografia clamp)'
+    ],
+    image: '/tatrzanski-wierch.png',
+    link: 'https://tatrzanski-wierch.pl',
+    scale: 1.0
+  },
+  {
     id: 2,
     title: 'Domki na Zrąbku pod gubałówką',
     label: 'Domki premium pod Zakopanem',
@@ -89,7 +89,7 @@ const projects = [
     link: 'https://domkinazrabku.pl',
     scale: 1.0
   },
-  { 
+  {
     id: 4,
     title: 'Willa Rysy',
     label: 'Obiekt noclegowy z góralskim charakterem',
@@ -104,7 +104,7 @@ const projects = [
     link: 'https://willa-rysy.pl',
     scale: 1.0
   },
-  { 
+  {
     id: 5,
     title: 'Willa 14',
     label: 'Minimalistyczna strona dla obiektu górskiego',
@@ -138,7 +138,7 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className={`section ${styles.portfolio}`} ref={revealRef}>
       <div className={`container ${styles.container}`}>
-        
+
         <div className={`${styles.header} reveal fade-in`}>
           <div className={styles.headerLeft}>
             <SectionSubtitle>Realizacje z branży noclegowej</SectionSubtitle>
@@ -147,24 +147,24 @@ const Portfolio = () => {
               Pokazuję tutaj projekty z obiektów noclegowych, bo to właśnie ten typ wdrożeń chcę najmocniej rozwijać: strony czytelne, szybkie i przygotowane pod decyzję rezerwacyjną.
             </p>
           </div>
-          
+
           <div className={styles.navigation}>
             <button className={styles.navButton} onClick={prevProject} aria-label="Poprzedni projekt">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
             </button>
             <button className={styles.navButton} onClick={nextProject} aria-label="Następny projekt">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </button>
           </div>
         </div>
-        
+
         {/* Kontener karuzeli przeładowujący się animacją na podstawie ID projektu */}
         <div className={`${styles.carousel} reveal fade-in delay-100`} key={currentProject.id}>
           <div className={styles.imageColumn}>
             {currentProject.image ? (
-              <img 
-                src={currentProject.image} 
-                alt={currentProject.title} 
+              <img
+                src={currentProject.image}
+                alt={currentProject.title}
                 className={styles.image}
                 loading="lazy"
                 decoding="async"
@@ -177,14 +177,14 @@ const Portfolio = () => {
               <div className={styles.placeholder}>Brak zdjęcia mockupu</div>
             )}
           </div>
-          
+
           <div className={styles.contentColumn}>
             <div className={styles.categories}>
               {currentProject.categories.map((cat, i) => (
                 <span key={i} className={styles.categoryTag}>{cat}</span>
               ))}
             </div>
-            
+
             <p className={styles.projectLabel}>{currentProject.label}</p>
             <h3 className={styles.projectTitle}>{currentProject.title}</h3>
             <p className={styles.projectDescription}>{currentProject.description}</p>
@@ -209,7 +209,7 @@ const Portfolio = () => {
                 </div>
               </div>
             )}
-            
+
             <div className={styles.actions}>
               <GooeyButton variant="outline" href={currentProject.link}>Zobacz stronę klienta</GooeyButton>
               <GooeyButton variant="outline" href="/#kontakt">Chcę podobne wdrożenie</GooeyButton>

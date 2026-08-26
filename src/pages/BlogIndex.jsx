@@ -12,12 +12,12 @@ const BlogIndex = () => {
   return (
     <>
       <Helmet>
-        <title>Blog dla noclegów w Zakopanem i Szczyrku | WEBBROSKIDEV</title>
+        <title>Blog dla noclegów w Zakopanem i Szczyrku | BroSystems</title>
         <meta
           name="description"
           content="Blog dla właścicieli noclegów w Zakopanem, na Podhalu i w Szczyrku. Artykuły o stronach, rezerwacjach bezpośrednich i automatyzacji obsługi obiektu."
         />
-        <link rel="canonical" href="https://www.webbroskidev.pl/blog" />
+        <link rel="canonical" href="https://www.brosystems.pl/blog" />
       </Helmet>
       <TopBar />
       <Navbar />

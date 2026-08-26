@@ -8,7 +8,7 @@ const Footer = () => {
         <div className={styles.brand}>
           <p className={styles.authorName}>Krzysztof Żebrowski</p>
           <p className={styles.seoFooterText}>
-            WEBBROSKIDEV tworzy strony dla pensjonatów, willi, apartamentów i domków, które pomagają zdobywać więcej rezerwacji z własnej strony i ułatwiają gościowi szybki kontakt.
+            BroSystems tworzy strony dla pensjonatów, willi, apartamentów i domków, które pomagają zdobywać więcej rezerwacji z własnej strony i ułatwiają gościowi szybki kontakt.
           </p>
           <div className={styles.legalInfo}>
             <Link to="/strony-dla-pensjonatow">Strony dla pensjonatów</Link>
@@ -18,7 +18,7 @@ const Footer = () => {
             <Link to="/blog">Blog</Link>
           </div>
           <div className={styles.legalInfo}>
-            <span>&copy; {new Date().getFullYear()} WEBBROSKIDEV</span>
+            <span>&copy; {new Date().getFullYear()} BroSystems</span>
             <span className={styles.separator}>|</span>
             <a href="/regulamin" rel="nofollow">Regulamin</a>
             <span className={styles.separator}>|</span>

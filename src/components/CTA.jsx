@@ -81,7 +81,7 @@ const CTA = () => {
     Cal.ns['rozmowa-przedstawienie-oferty-omowienie-planu-działania']('inline', {
       elementOrSelector: '#my-cal-inline-rozmowa-przedstawienie-oferty-omowienie-planu-działania',
       config: { layout: 'month_view', useSlotsViewOnSmallScreen: 'true' },
-      calLink: 'webbroskidev/rozmowa-przedstawienie-oferty-omowienie-planu-działania',
+      calLink: 'brosystems/rozmowa-przedstawienie-oferty-omowienie-planu-działania',
     });
 
     Cal.ns['rozmowa-przedstawienie-oferty-omowienie-planu-działania']('ui', {
@@ -110,8 +110,8 @@ const CTA = () => {
         <div className={`${styles.directContact} reveal fade-in delay-200`}>
           <div className={styles.contactItem}>
             <span className={styles.contactLabel}>Wyślij link do obecnej strony:</span>
-            <a href="mailto:kontakt@webbroskidev.pl" className={styles.contactLink}>
-              kontakt@webbroskidev.pl
+            <a href="mailto:kontakt@brosystems.pl" className={styles.contactLink}>
+              kontakt@brosystems.pl
               <span className={styles.pointerEmoji} style={{ animationDelay: '0s' }}>👆</span>
             </a>
           </div>

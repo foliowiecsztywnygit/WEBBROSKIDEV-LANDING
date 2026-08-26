@@ -180,7 +180,7 @@ export const blogPosts = [
     slug: 'tani-booking-engine-dla-apartamentow',
     path: '/blog/tani-booking-engine-dla-apartamentow',
     title: 'Tani booking engine dla apartamentów a prowizje portali – przegląd rozwiązań na trudne czasy.',
-    metaTitle: 'Tani booking engine dla apartamentów | WEBBROSKIDEV',
+    metaTitle: 'Tani booking engine dla apartamentów | BroSystems',
     metaDescription: 'Odzyskaj pełną marżę bez płacenia gigantom. Tani booking engine dla apartamentów to skuteczna ochrona przed wysokimi prowizjami Booking.com i Airbnb.',
     excerpt: 'Jak odzyskać zyski w trudnych czasach i chronić swój obiekt przed drenażem marży ze strony wielkich portali rezerwacyjnych.',
     category: 'Zarabianie na wynajmie',
@@ -314,7 +314,7 @@ export const blogPosts = [
     slug: 'automatyzacja-wiadomosci-booking-com-i-airbnb',
     path: '/blog/automatyzacja-wiadomosci-booking-com-i-airbnb',
     title: 'Automatyzacja wiadomości Booking.com i Airbnb. Jak oszczędzić 10 godzin tygodniowo na obsłudze gości?',
-    metaTitle: 'Automatyzacja wiadomości Booking.com i Airbnb | WEBBROSKIDEV',
+    metaTitle: 'Automatyzacja wiadomości Booking.com i Airbnb | BroSystems',
     metaDescription: 'Masz dość odpowiadania na te same pytania? Zobacz, jak automatyzacja wiadomości na Booking i Airbnb ułatwia prowadzenie pensjonatu i apartamentu.',
     excerpt: 'Pisanie po raz setny kodu do drzwi i hasła do WiFi bywa męczące. Dowiedz się, jak automatycznie wysyłać szablony wiadomości do gości z OTA.',
     category: 'Automatyzacja i rezerwacje',
@@ -359,7 +359,7 @@ export const blogPosts = [
     slug: 'ile-naprawde-kosztuje-booking-w-sezonie',
     path: '/blog/ile-naprawde-kosztuje-booking-w-sezonie',
     title: 'Ile tak naprawdę kosztuje Cię Booking w sezonie? Policz, ile pieniędzy oddajesz korporacji.',
-    metaTitle: 'Ile kosztuje Booking w sezonie? Policz prowizje | WEBBROSKIDEV',
+    metaTitle: 'Ile kosztuje Booking w sezonie? Policz prowizje | BroSystems',
     metaDescription: 'Sprawdź kalkulację, ile tracisz na prowizjach portali OTA w szczycie sezonu i dlaczego te pieniądze mogłyby pracować na rozwój Twojego obiektu.',
     excerpt: 'Z pozoru 15% to niewiele. W praktyce, przy pełnym obłożeniu oddajesz pośrednikom tysiące złotych, za które można by postawić balię dla gości.',
     category: 'Zarabianie na wynajmie',
@@ -449,7 +449,7 @@ export const blogPosts = [
     slug: 'dlaczego-turysci-wola-rezerwowac-bezposrednio',
     path: '/blog/dlaczego-turysci-wola-rezerwowac-bezposrednio',
     title: 'Dlaczego turyści wolą rezerwować bezpośrednio u właściciela? (I jak im to ułatwić)',
-    metaTitle: 'Rezerwacje bezpośrednie - dlaczego goście wolą stronę obiektu? | WEBBROSKIDEV',
+    metaTitle: 'Rezerwacje bezpośrednie - dlaczego goście wolą stronę obiektu? | BroSystems',
     metaDescription: 'Zrozum psychologię turysty. Goście chcą kontaktować się z właścicielami i liczą na lepszą cenę, ale boją się oszustów. Jak temu zaradzić?',
     excerpt: 'Z jednej strony klienci chętnie unikają dużych portali licząc na niższe ceny. Z drugiej – paraliżuje ich strach przed byciem oszukanym.',
     category: 'Automatyzacja i rezerwacje',
@@ -550,7 +550,7 @@ export const blogPosts = [
     slug: 'system-rezerwacji-dla-domkow-w-tatrach-jak-automatycznie-przyjmowac-zadatki',
     path: '/blog/system-rezerwacji-dla-domkow-w-tatrach-jak-automatycznie-przyjmowac-zadatki',
     title: 'System rezerwacji dla domków w Tatrach - jak automatycznie przyjmować zadatki?',
-    metaTitle: 'System rezerwacji dla domków w Tatrach | WEBBROSKIDEV',
+    metaTitle: 'System rezerwacji dla domków w Tatrach | BroSystems',
     metaDescription:
       'Dowiedz się, jak wdrożyć system rezerwacji dla domków w Tatrach i automatycznie przyjmować zadatki bez chaosu na telefonie.',
     excerpt:
@@ -662,7 +662,7 @@ export const blogPosts = [
     slug: 'skuteczna-reklama-apartamentow-w-szczyrku-wlasna-strona-kontra-booking',
     path: '/blog/skuteczna-reklama-apartamentow-w-szczyrku-wlasna-strona-kontra-booking',
     title: 'Skuteczna reklama apartamentów w Szczyrku - własna strona kontra Booking',
-    metaTitle: 'Reklama apartamentów w Szczyrku - strona czy Booking? | WEBBROSKIDEV',
+    metaTitle: 'Reklama apartamentów w Szczyrku - strona czy Booking? | BroSystems',
     metaDescription:
       'Porównanie własnej strony i Booking.com dla apartamentów w Szczyrku. Zobacz, kiedy własna strona daje większą kontrolę i lepszy zwrot.',
     excerpt:
@@ -718,7 +718,7 @@ export const blogPosts = [
     slug: 'nowoczesna-strona-i-system-rezerwacji-dla-pensjonatu-w-szczyrku-standard-na-2026-rok',
     path: '/blog/nowoczesna-strona-i-system-rezerwacji-dla-pensjonatu-w-szczyrku-standard-na-2026-rok',
     title: 'Nowoczesna strona i system rezerwacji dla pensjonatu w Szczyrku - standard na 2026 rok',
-    metaTitle: 'Nowoczesna strona pensjonatu w Szczyrku - standard 2026 | WEBBROSKIDEV',
+    metaTitle: 'Nowoczesna strona pensjonatu w Szczyrku - standard 2026 | BroSystems',
     metaDescription:
       'Sprawdź, co powinna mieć nowoczesna strona i system rezerwacji dla pensjonatu w Szczyrku, żeby działać przez cały rok.',
     excerpt:
@@ -774,7 +774,7 @@ export const blogPosts = [
     slug: 'jak-przyciagnac-turystow-do-szczyrku-poza-sezonem',
     path: '/blog/jak-przyciagnac-turystow-do-szczyrku-poza-sezonem',
     title: 'Jak przyciągnąć turystów do Szczyrku poza sezonem? Wiosna i jesień w Beskidach',
-    metaTitle: 'Jak przyciągnąć turystów do Szczyrku poza sezonem? | WEBBROSKIDEV',
+    metaTitle: 'Jak przyciągnąć turystów do Szczyrku poza sezonem? | BroSystems',
     metaDescription:
       'Pomysły na zapełnienie obiektu w Szczyrku poza sezonem: pakiety specjalne, własna strona, baza stałych gości i automatyzacja sprzedaży.',
     excerpt:
@@ -830,7 +830,7 @@ export const blogPosts = [
     slug: 'zakopane-vs-szczyrk-gdzie-trudniej-o-rezerwacje-bezposrednie-i-jak-to-zmienic',
     path: '/blog/zakopane-vs-szczyrk-gdzie-trudniej-o-rezerwacje-bezposrednie-i-jak-to-zmienic',
     title: 'Zakopane vs Szczyrk - gdzie trudniej o rezerwacje bezpośrednie i jak to zmienić?',
-    metaTitle: 'Zakopane vs Szczyrk - rezerwacje bezpośrednie | WEBBROSKIDEV',
+    metaTitle: 'Zakopane vs Szczyrk - rezerwacje bezpośrednie | BroSystems',
     metaDescription:
       'Porównanie Zakopanego i Szczyrku pod kątem rezerwacji bezpośrednich. Zobacz, gdzie jest trudniej i jak dostosować stronę oraz komunikację.',
     excerpt:
@@ -886,7 +886,7 @@ export const blogPosts = [
     slug: 'overbooking-w-sezonie-narciarskim-jak-zsynchronizowac-kalendarz-z-airbnb-i-booking',
     path: '/blog/overbooking-w-sezonie-narciarskim-jak-zsynchronizowac-kalendarz-z-airbnb-i-booking',
     title: 'Overbooking w sezonie narciarskim? Jak zsynchronizować kalendarz na stronie z Airbnb i Booking',
-    metaTitle: 'Overbooking w sezonie narciarskim - jak go uniknąć? | WEBBROSKIDEV',
+    metaTitle: 'Overbooking w sezonie narciarskim - jak go uniknąć? | BroSystems',
     metaDescription:
       'Sprawdź, jak uniknąć overbookingu w Zakopanem i Szczyrku dzięki synchronizacji kalendarza strony z Airbnb i Booking.com.',
     excerpt:
@@ -942,7 +942,7 @@ export const blogPosts = [
     slug: 'dlaczego-powolna-strona-www-niszczy-twoj-biznes-noclegowy',
     path: '/blog/dlaczego-powolna-strona-www-niszczy-twoj-biznes-noclegowy',
     title: 'Dlaczego powolna strona www niszczy Twój biznes noclegowy?',
-    metaTitle: 'Dlaczego powolna strona noclegowa niszczy sprzedaż? | WEBBROSKIDEV',
+    metaTitle: 'Dlaczego powolna strona noclegowa niszczy sprzedaż? | BroSystems',
     metaDescription:
       'Dowiedz się, dlaczego wolna strona noclegowa obniża liczbę rezerwacji i jak szybkość pomaga wygrać na telefonie nawet przy słabym zasięgu w górach.',
     excerpt:

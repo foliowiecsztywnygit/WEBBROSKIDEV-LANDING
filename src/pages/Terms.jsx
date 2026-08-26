@@ -9,9 +9,9 @@ const Terms = () => {
   return (
     <>
       <Helmet>
-        <title>Regulamin Świadczenia Usług | WEBBROSKIDEV</title>
+        <title>Regulamin Świadczenia Usług | BroSystems</title>
         <meta name="robots" content="noindex, nofollow" />
-        <link rel="canonical" href="https://www.webbroskidev.pl/regulamin" />
+        <link rel="canonical" href="https://www.brosystems.pl/regulamin" />
       </Helmet>
       <TopBar />
       <Navbar />
@@ -26,9 +26,9 @@ const Terms = () => {
           <div className={styles.content}>
             <section className={styles.section}>
               <h2>§ 1. Postanowienia ogólne</h2>
-              <p>1. Niniejszy Regulamin określa ogólne warunki, zasady oraz sposób świadczenia usług drogą elektroniczną oraz stacjonarnie przez Krzysztofa Żebrowskiego, działającego pod marką WEBBROSKIDEV (zwanego dalej &quot;Usługodawcą&quot;).</p>
+              <p>1. Niniejszy Regulamin określa ogólne warunki, zasady oraz sposób świadczenia usług drogą elektroniczną oraz stacjonarnie przez Krzysztofa Żebrowskiego, działającego pod marką BroSystems (zwanego dalej &quot;Usługodawcą&quot;).</p>
               <p>2. Usługodawca działa jako osoba fizyczna, nieprowadząca zarejestrowanej działalności gospodarczej. Rozliczenia z Klientami (wystawianie faktur VAT, podpisywanie umów o dzieło z przeniesieniem praw autorskich) realizowane są za pośrednictwem zewnętrznej platformy dla freelancerów – <strong>UseMe.com</strong> (Useme Sp. z o.o.).</p>
-              <p>3. Z Usługodawcą można kontaktować się poprzez adres e-mail: <strong>kontakt@webbroskidev.pl</strong> lub pod numerem telefonu: <strong>+48 600 176 361</strong>.</p>
+              <p>3. Z Usługodawcą można kontaktować się poprzez adres e-mail: <strong>kontakt@brosystems.pl</strong> lub pod numerem telefonu: <strong>+48 600 176 361</strong>.</p>
               <p>4. Regulamin jest nieprzerwanie i nieodpłatnie udostępniony przez Usługodawcę na stronie internetowej w sposób umożliwiający jego pozyskanie, odtwarzanie i utrwalanie.</p>
             </section>
 
@@ -36,7 +36,7 @@ const Terms = () => {
               <h2>§ 2. Definicje</h2>
               <ul>
                 <li><strong>Klient</strong> - osoba fizyczna, osoba prawna lub jednostka organizacyjna nieposiadająca osobowości prawnej, która korzysta z usług świadczonych przez Usługodawcę.</li>
-                <li><strong>Usługi</strong> - wszelkie usługi świadczone przez WEBBROSKIDEV, w szczególności: projektowanie, tworzenie stron internetowych, aplikacji webowych, sklepów e-commerce, konsultacje technologiczne, SEO.</li>
+                <li><strong>Usługi</strong> - wszelkie usługi świadczone przez BroSystems, w szczególności: projektowanie, tworzenie stron internetowych, aplikacji webowych, sklepów e-commerce, konsultacje technologiczne, SEO.</li>
                 <li><strong>Umowa</strong> - umowa o świadczenie usług zawierana na odległość lub stacjonarnie między Klientem a Usługodawcą, na zasadach określonych w niniejszym Regulaminie oraz szczegółowych ustaleniach ofertowych.</li>
               </ul>
             </section>
@@ -77,7 +77,7 @@ const Terms = () => {
 
             <section className={styles.section}>
               <h2>§ 8. Postępowanie reklamacyjne i rozwiązywanie sporów</h2>
-              <p>1. Wszelkie reklamacje związane ze świadczeniem Usług należy zgłaszać na adres: kontakt@webbroskidev.pl.</p>
+              <p>1. Wszelkie reklamacje związane ze świadczeniem Usług należy zgłaszać na adres: kontakt@brosystems.pl.</p>
               <p>2. Reklamacja powinna zawierać szczegółowy opis problemu oraz oczekiwania Klienta. Usługodawca rozpatruje reklamacje w terminie 14 dni roboczych.</p>
               <p>3. Wszelkie spory wynikające z realizacji umów strony będą starały się rozwiązywać polubownie. W przypadku braku porozumienia sądem właściwym będzie sąd właściwy dla siedziby Usługodawcy.</p>
             </section>

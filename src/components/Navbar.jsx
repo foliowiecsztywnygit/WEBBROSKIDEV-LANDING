@@ -31,7 +31,7 @@ const Navbar = () => {
       <header data-navbar className={`${styles.navbar} ${scrolled ? styles.scrolled : styles.top} ${isHidden ? styles.hidden : ''}`}>
         <div className={`container ${styles.navContainer}`}>
           <a href="#" className={styles.logo}>
-            <img src="/logo.png" alt="WEBBROSKIDEV Logo" className={styles.logoImage} />
+            <img src="/logo.png" alt="BroSystems Logo" className={styles.logoImage} />
           </a>
           <nav className={styles.navLinks}>
             <a href="/#dla-kogo">Dla kogo</a>

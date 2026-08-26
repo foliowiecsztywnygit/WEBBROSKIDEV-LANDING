@@ -21,7 +21,7 @@ const ServicePage = ({ pageKey }) => {
       <Helmet>
         <title>{page.metaTitle}</title>
         <meta name="description" content={page.metaDescription} />
-        <link rel="canonical" href={`https://www.webbroskidev.pl${page.path}`} />
+        <link rel="canonical" href={`https://www.brosystems.pl${page.path}`} />
       </Helmet>
       <TopBar />
       <Navbar />

@@ -12,7 +12,7 @@ const Benefits = () => {
     <section className={`section bg-grid-dark ${styles.benefits}`}>
       <div className={`container ${styles.container}`}>
         <div className={styles.header}>
-          <h2 className={`heading-lg ${styles.title}`}>Dlaczego WEBBROSKIDEV?</h2>
+          <h2 className={`heading-lg ${styles.title}`}>Dlaczego BroSystems?</h2>
           <p className="text-lg">Konkretne efekty. Zero kompromisów.</p>
         </div>
         <div className={styles.grid}>

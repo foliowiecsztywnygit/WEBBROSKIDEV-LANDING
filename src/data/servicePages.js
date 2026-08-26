@@ -3,7 +3,7 @@ export const servicePages = [
     slug: 'strony-dla-pensjonatow',
     path: '/strony-dla-pensjonatow',
     title: 'Strony www i Booking Engine dla pensjonatów. Zdobądź więcej rezerwacji bezpośrednich',
-    metaTitle: 'Strony www i Booking Engine dla pensjonatów | WEBBROSKIDEV',
+    metaTitle: 'Strony www i Booking Engine dla pensjonatów | BroSystems',
     metaDescription:
       'Projektowanie stron dla pensjonatów z naciskiem na prostą ścieżkę kontaktu, widoczność w Google i większą liczbę rezerwacji z własnej strony.',
     intro:
@@ -35,7 +35,7 @@ export const servicePages = [
     slug: 'strony-dla-apartamentow',
     path: '/strony-dla-apartamentow',
     title: 'Strony www i Booking Engine dla apartamentów premium. Design i wysoka konwersja',
-    metaTitle: 'Strony i Booking Engine dla apartamentów | WEBBROSKIDEV',
+    metaTitle: 'Strony i Booking Engine dla apartamentów | BroSystems',
     metaDescription:
       'Nowoczesne strony dla apartamentów i obiektów premium. Szybkie wdrożenia, lepsza konwersja mobilna i mocniejsza widoczność na lokalne zapytania.',
     intro:
@@ -67,7 +67,7 @@ export const servicePages = [
     slug: 'wdrozenia-hotres',
     path: '/wdrozenia-hotres',
     title: 'Wdrożenia Hotres i systemów rezerwacji. Zdobądź więcej zamówień z własnej strony',
-    metaTitle: 'Wdrożenia Hotres | Booking Engine i system rezerwacji | WEBBROSKIDEV',
+    metaTitle: 'Wdrożenia Hotres | Booking Engine i system rezerwacji | BroSystems',
     metaDescription:
       'Integracja Hotres i systemów rezerwacji z Twoją stroną. Lepsza ścieżka rezerwacji, mniej tarcia i większy udział rezerwacji bezpośrednich.',
     intro:
