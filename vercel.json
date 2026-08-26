@@ -9,7 +9,6 @@
         }
       ],
       "destination": "https://brosystems.pl/$1",
-      "permanent": false,
       "statusCode": 301
     }
   ],
